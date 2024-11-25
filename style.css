@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 30px;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline {
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 40px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.left-container,
+.right-container {
+    border-radius: 15px;
+    padding: 20px;
+    width: 50%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: hsl(184, 14%, 56%);
+}
+
+#Select-tip, #Number-of-people {
+    margin-top: 40px;
+}
+
+#bill {
+    background-image: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#people {
+    background-image: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    border: 2px solid transparent;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+input[type='number']:focus {
+    border-color: hsl(185, 41%, 84%);
+    ;
+    outline: none;
+}
+
+input.error:focus {
+    border-color: rgba(146, 56, 56, 0.809);
+    outline: none;
+}
+
+.error-message {
+    display: block;
+    font-size: 0.9em;
+    color: rgba(146, 56, 56, 0.809);
+    margin-top: 5px;
+    text-align: right;
+}
+
+.tip-selection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tip-button {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tip-button:hover,
+.tip-active {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.custom-tip {
+    text-align: center;
+    padding: 10px;
+    color: hsl(183, 100%, 15%);
+}
+
+.right-container {
+    background-color: hsl(183, 100%, 15%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.result {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.result h2 {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.result .TotalAmount {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.result .TipAmount {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.reset {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+}
+
+.reset:disabled {
+    background-color: hsl(183, 100%, 15%);
+    cursor: not-allowed;
+}
+
+p {
+    color: hsl(172, 67%, 45%)
+}
+
+.tip-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.error-message, .error-message-bill {
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(146, 56, 56, 0.809); 
+}
+
+@media (max-width: 375px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+    }
+
+    .right-container {
+        padding: 20px;
+    }
+
+    .headline {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .tip-selection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result h2 {
+        font-size: 14px;
+    }
+
+    .result .amount {
+        font-size: 28px;
+    }
+
+    .reset {
+        font-size: 16px;
+    }
+
+    .error-message {
+        font-size: 12px;
+    }
+}
