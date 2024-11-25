@@ -1,0 +1,86 @@
+body{
+    background-color:hsl(185, 41%, 84%);
+    font-family: "Space Mono", monospace;
+}
+
+.heading{
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 10px;
+    color: hsl(187, 14%, 34%);
+    margin-top: 2rem;
+    width: 1440px;
+}
+
+.container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 100%);
+    width: 75%;
+    height: 550px;
+    margin-left: 11rem;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px;
+    width: 45%;
+}
+
+.tip-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tip-button{
+    padding: 10px 20px;
+    border: 5px solid white;
+    border-radius: 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 160px;
+    gap: 20px;
+}
+
+#custom{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    
+}
+
+.input{
+    width: 95%;
+    padding: 10px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    margin-top: 5px;
+    border: 5px solid white;
+    border-radius: 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    text-align: right;
+}
+
+.input-sign{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 35px;
+    font-size: 24px;
+    color: hsl(184, 14%, 56%);
+}
+
+#person-symbol{
+    margin-top: 45px;
+}
