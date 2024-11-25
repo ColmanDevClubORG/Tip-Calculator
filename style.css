@@ -145,7 +145,7 @@ input.error:focus {
 
 .right-container {
     background-color: hsl(183, 100%, 15%);
-    color: #FFFFFF;
+    color: hsl(0, 0%, 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
