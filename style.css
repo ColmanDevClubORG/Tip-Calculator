@@ -132,11 +132,13 @@ input.error:focus {
     cursor: pointer;
 }
 
-.tip-button:hover,
-.tip-active {
+.tip-button:hover {
     background-color: hsl(172, 67%, 45%);
 }
 
+.tip-button.selected {
+    background-color: hsl(172, 67%, 45%);
+}
 .custom-tip {
     text-align: center;
     padding: 10px;
