@@ -50,7 +50,7 @@ body{
     color: hsl(0, 0%, 100%);
     cursor: pointer;
     margin-bottom: 15px;
-    width: 150px;
+    width: 140px;
     gap: 20px;
 }
 
@@ -70,6 +70,7 @@ body{
     border-radius: 10px;
     font-family: "Space Mono", monospace;
     font-size: 24px;
+    font-weight: 700;
     text-align: right;
 }
 
@@ -88,45 +89,40 @@ body{
 .right-side{
     display: flex;
     flex-direction: column;
-    padding: 45px;
+    padding: 30px;
     width: 50%;
     background-color: hsl(183, 100%, 15%);
     border-radius: 20px;
-    height: 60%;
-    margin: 20px;
+    margin: 25px;
 }
 
-.tip-amount{
+.tip-amount ,.total{
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 24px;
+    flex-direction: column;
+    margin-top: 15px;
+    font-size: 19px;
     color: hsl(189, 41%, 97%);
 }
 
-#tip{
-    color: hsl(183, 100%, 15%);
-}
-
-.output{
+.right-side-container{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    font-size: 24px;
-    color: hsl(189, 41%, 97%);
 }
 
-.output-sign{
-    font-size: 24px;
+.p-style{
+    margin: 0;
+}
+
+.person-p{
     color: hsl(184, 14%, 56%);
+    margin-top: 0;
 }
 
-#total{
-    color: hsl(183, 100%, 15%);
-}
-
-#total{
-    color: hsl(183, 100%, 15%);
+.money{
+    font-size: 44px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
 }
 
 .reset{
@@ -134,10 +130,10 @@ body{
     border: 1px solid hsl(183, 100%, 15%);
     border-radius: 10px;
     font-family: "Space Mono", monospace;
+    font-weight: 700;
     font-size: 24px;
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
-    cursor: pointer;
-    margin-top: 20px;
+    margin-top: 120px;
     width: 100%;
 }
