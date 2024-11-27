@@ -26,27 +26,51 @@
   <img id="logo" src="./images/logo.svg">
   <div class="container">
     <section class="leftSide">
-      bill and tip
-    </section>
-    <section class="rightSide">
-      <div id="tipAmount">
-        <div id="text">
-          <p id="text101">Tip Amount</p>
-          <p id="text102">/ person</p>
-        </div>
-        <div id="amountNumber">$4.27</div>
+      <div id="part1">
+        <form>
+          <label for="fTextL" id="fTextL">Bill</label><br>
+          <input type="text" id="fPrice">
+          <h id="createdText">142.55</h><br>
+        </form>
       </div>
-      <div id="totalPrice">
-        <div id="totalText">
-          <p id="text101">Total</p>
-          <p id="text102">/ person</p>
-        </div>
-        <div id="amountPrice">$32.79</div>
+      <div id="part2">
+        <p id="fTextL">Select Tip %</p>
       </div>
-      <button id="resetB">
-        <p id="textReset"><b>RESET</b></p>
-      </button>
-    </section>
+      <section class="choosingATip">
+        <button class="chooseTip">5%</button>
+        <button class="chooseTip">10%</button>
+        <button class="chooseTip">15%</button>
+        <button class="chooseTip">25%</button>
+        <button class="chooseTip">50%</button>
+        <button id="chooseTipDifferent">Custom</button>
+      </section>
+  <div id="part3">
+    <form>
+      <label for="fTextL" id="fTextL">Number of People</label><br>
+      <input type="text" id="fNum">
+      <h id="createdText">5</h><br>
+    </form>
+  </div>
+  </section>
+  <section class="rightSide">
+    <div id="tipAmount">
+      <div id="text">
+        <p id="text101">Tip Amount</p>
+        <p id="text102">/ person</p>
+      </div>
+      <div id="amountNumber">$4.27</div>
+    </div>
+    <div id="totalPrice">
+      <div id="totalText">
+        <p id="text101">Total</p>
+        <p id="text102">/ person</p>
+      </div>
+      <div id="amountPrice">$32.79</div>
+    </div>
+    <button id="resetB">
+      <p id="textReset"><b>RESET</b></p>
+    </button>
+  </section>
   </div>
 </body>
 
