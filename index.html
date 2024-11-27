@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@700&family=Space+Mono:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
+
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  <img id="logo" src="./images/logo.svg">
+  <div class="container">
+    <section class="leftSide">
+      bill and tip
+    </section>
+    <section class="rightSide">
+      <div id="tipAmount">
+        <div id="text">
+          Tip Amount
+          / person
+        </div>
+        <div id="amountNumber">$4.27</div>
+      </div>
+      <div id="totalPrice">
+        <div id="totalText">
+          Total
+          / person</div>
+        <div id="amountPrice">$32.79</div>
+      </div>
+      <button id="resetB"><b>RESET</b></button>
+    </section>
+  </div>
 </body>
+
 </html>
+
+
+<!-- 
+Bill
+
+Select Tip %
+5%
+10%
+15%
+25%
+50%
+Custom
+
+Number of People
+
+Tip Amount
+/ person
+
+Total
+/ person
+
+Reset -->
