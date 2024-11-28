@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  color: white;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right {
+  width: 50%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  padding: 2rem;
+  border-radius: 10px;
+  gap: 2rem;
+}
+
+h4 {
+  font-weight: 700;
+  color: hsl(189, 41%, 97%);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.amount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 14%, 43%);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(184, 14%, 56%);
+  box-shadow: 0 5px hsl(185, 91%, 17%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+}
+
+input {
+  height: 2.25rem;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  color: hsl(184, 14%, 56%);
+  font-size: larger;
+  position: relative;
+  padding-right: 1rem;
+  background: url("images/icon-dollar.svg") no-repeat 1rem;
+  background-size: 12px;
+  background-color: hsl(189, 41%, 97%);
+}
+#numOfPeople {
+  background: url("images/icon-person.svg") no-repeat 1rem;
+  background-color: hsl(189, 41%, 97%);
+}
+
+::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* allows items to wrap to the next line */
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.button-container button {
+  flex: 1 1 calc(33.333% - 20px); /* 33% width minus gap adjustment */
+  max-width: 150px; /* Limit button width */
+  height: 50px;
+  font-size: 16px;
+  background-color: hsl(183, 100%, 15%); /* Main color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+  .container {
+    width: 100%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    padding: 1rem;
+  }
+
+  .button-container button {
+    flex: 1 1 calc(50% - 20px); /* 50% width minus gap adjustment */
+  }
+  h1 {
+    font-size: small;
+  }
+}
