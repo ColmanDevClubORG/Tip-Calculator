@@ -1,39 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
+  <link rel="stylesheet" href="index.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .body {
+      background-color: aquamarine;
+    }
   </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="leftSide">
+      <div class="billAndTextBox">
+        <div class="bill">
+          Bill
+        </div>
+        <div class="textBox">
+          <img src="./images/icon-dollar.svg" alt="Dollar Icon" class="icon">
+        </div>
+      </div>
 
-  Bill
+      <div class="selectTipAndButtons">
+        <div class="selectTip">
+          Select Tip %
+        </div>
+        <div class="tipButtons">
+          <div class="tipButton">
+            5%
+          </div>
+          <div class="tipButton">
+            10%
+          </div>
+          <div class="tipButton">
+            15%
+          </div>
+          <div class="tipButton">
+            25%
+          </div>
+          <div class="tipButton">
+            50%
+          </div>
+          <div class="tipButton" id="customButton">
+            Custom
+          </div>
+        </div>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="numberOfPeopleAndTextBox">
+        <div class="NumberOfPeople">
+          Number of People
+        </div>
+        <div class="textBox">
+          <img src="./images/icon-person.svg" alt="Person Icon" class="icon" id="personIcon">
+        </div>
+      </div>
+    </div>
 
-  Number of People
+    <div class="rightSide">
+      <div class="tipPersonAndTotalPerson">
+        <div class="tipAndPerson">
+          <div class="tip">
+            Tip Amount
+          </div>
+          <div class="person">
+            / person
+          </div>
+        </div>
 
-  Tip Amount
-  / person
+        <div class="totalAndPerson">
+          <div class="total">
+            Total
+          </div>
+          <div class="person">
+            / person
+          </div>
+        </div>
+      </div>
 
-  Total
-  / person
-
-  Reset
+      <div class="resetButton">
+        RESET
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
