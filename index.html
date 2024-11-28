@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
+  <link rel="stylesheet" href="index.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .body {
+      background-color: aquamarine;
+    }
   </style>
 </head>
+
 <body>
+  <div class="container">
+    <div class="leftSide">
+      <div class="topLeftSide">
+        Bill
+      </div>
 
-  Bill
+      <div class="middleLeftSide">
+        Select Tip %
+        5%
+        10%
+        15%
+        25%
+        50%
+        Custom
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="bottomLeftSide">
+        Number of People
+      </div>
+    </div>
 
-  Number of People
+    <div class="rightSide">
+      <div class="tipAndTotal">
+        <div class="tip">
+          Tip Amount
+          / person
+        </div>
 
-  Tip Amount
-  / person
+        <div class="total">
+          Total
+          / person
+        </div>
+      </div>
 
-  Total
-  / person
-
-  Reset
+      <div class="resetButton">
+        Reset
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
