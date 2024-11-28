@@ -1,9 +1,11 @@
 body{
-    background-color:rgb(178, 240, 229);
+    background-color: rgb(178, 240, 229);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family:monospace;
+    font-weight: 700;
 }
 
 .container{
@@ -31,7 +33,6 @@ body{
 }
 
 .leftSide{
-    background-color: rgb(52, 131, 131);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +40,8 @@ body{
     width: 380px;
     height: 380px;
     margin-left: auto;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .tipPersonAndTotalPerson{
@@ -61,6 +64,14 @@ body{
     justify-content: center;
     border-radius: 10px;
     color: rgb(52, 131, 131);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.resetButton:hover{
+    color:black;
+    background-color: rgb(115, 223, 199);
 }
 
 .tipAndPerson{
@@ -84,4 +95,100 @@ body{
 .person{
     font-size: 0.7rem;
     opacity: 0.5;
+}
+
+.billAndTextBox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 75px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.selectTipAndButtons{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 100px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.numberOfPeopleAndTextBox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 75px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bill{
+
+}
+
+.textBox{
+    background-color: rgb(238, 233, 233);
+    width: 300px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.selectTip{
+
+}
+
+.tipButtons{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.tipButton{
+    background-color: rgb(52, 131, 131);
+    color: white;
+    width: 50px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#customButton{
+    background-color: rgb(238, 233, 233);
+    color: black;
+}
+
+.tipButton:hover {
+    background-color:  rgb(87, 201, 176);
+    color: black;
+}
+
+#customButton:hover{
+    background-color:  rgb(87, 201, 176);
+}
+
+.NumberOfPeople{
+
+}
+
+.icon {
+    width: 10px;
+    height: 15px;
+    padding-right: 10px;
+}
+
+#personIcon{
+    width: 12px;
+    height: 15px;
 }
