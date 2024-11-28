@@ -41,7 +41,7 @@ body{
     margin-left: auto;
 }
 
-.tipAndTotal{
+.tipPersonAndTotalPerson{
     width: 360px;
     height: 150px;
     display: flex;
@@ -49,6 +49,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    color: white;
 }
 
 .resetButton{
@@ -59,22 +60,28 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    color: rgb(52, 131, 131);
 }
 
-.tip{
-    background-color: white;
-    height: 150px;
+.tipAndPerson{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 330px;
     height: 65px;
+    flex-direction: column;
 }
 
-.total{
-    background-color: white;
-    height: 150px;
+.totalAndPerson{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 330px;
     height: 65px;
+    flex-direction: column;
+}
+
+.person{
+    font-size: 0.7rem;
+    opacity: 0.5;
 }
