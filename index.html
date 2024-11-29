@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip Calculator App</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Bill
+  <header>
+    <img src="images/logo.svg">
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <main>
+    <div class="left_side">
+      <p>Bill</p>
+      <div class="icon_inside_input">
+        <input type="text" placeholder="0.00">
 
-  Number of People
+        <img class="icon_dollar" src="images/icon-dollar.svg">
+      </div>
+      <p>Select Tip %</p>
+      <div class="buttons">
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input type="text" class="custom-input" placeholder="Custom">
+      </div>
 
-  Tip Amount
-  / person
+      <div class="Num_of_People">
+        <p>Number of People</p>
+        <img class="icon_person" src="images/icon-person.svg">
+        <!-- <p class="error">Can't be zero</p> -->
 
-  Total
-  / person
+      </div>
+      <input type="text" placeholder="0">
+    </div>
 
-  Reset
+    <div class="right_side">
+      <div class="output">
+        <p>Tip Amount <br> <span>/ person</span></p>
+        <h1>$0.00</h1>
+      </div>
+      <div class="output">
+        <p>Total <br> <span>/ person</span></p>
+        <h1>$0.00</h1>
+      </div>
+      <button class="reset">RESET</button>
+    </div>
+  </main>
+
 </body>
+
 </html>
