@@ -1,107 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="styles.css">
+  
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <link rel="stylesheet" href="index.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    .body {
-      background-color: aquamarine;
-    }
-  </style>
+  
 </head>
-
 <body>
+
+
   <div class="container">
-    <div class="leftSide">
-      <div class="billAndTextBox">
-        <div class="bill">
-          Bill
-        </div>
-        <div class="textBox">
-          <img src="./images/icon-dollar.svg" alt="Dollar Icon" class="icon">
-        </div>
-      </div>
+    <img class="titleImage" src="./images/logo.svg" alt="Dollar Icon" class="icon">
 
-      <div class="selectTipAndButtons">
-        <div class="selectTip">
-          Select Tip %
-        </div>
-        <div class="tipButtons">
-          <div class="tipButton">
-            5%
-          </div>
-          <div class="tipButton">
-            10%
-          </div>
-          <div class="tipButton">
-            15%
-          </div>
-          <div class="tipButton">
-            25%
-          </div>
-          <div class="tipButton">
-            50%
-          </div>
-          <div class="tipButton" id="customButton">
-            Custom
-          </div>
-        </div>
-      </div>
+    <div class="calculator">
 
-      <div class="numberOfPeopleAndTextBox">
-        <div class="NumberOfPeople">
-          Number of People
-        </div>
-        <div class="textBox">
-          <img src="./images/icon-person.svg" alt="Person Icon" class="icon" id="personIcon">
-        </div>
-      </div>
-    </div>
-
-    <div class="rightSide">
-      <div class="tipPersonAndTotalPerson">
-        <div class="tipAndPerson">
-          <div class="tip">
-            Tip Amount
-          </div>
-          <div class="person">
-            / person
+      <div class="leftSide">
+        <div class="input-group">
+          <label for="bill">Bill</label>
+          <div class="theInput">
+            <div class="inputNumber">
+              <input type="number" id="bill" placeholder="0.00"> 
+            </div>
+            <div class="inputLogo">
+             <img src="./images/icon-dollar.svg" alt="Dollar Icon" class="icon">
+            </div>
           </div>
         </div>
-
-        <div class="totalAndPerson">
-          <div class="total">
-            Total
+        <div class="input-group">
+          <label>Select Tip %</label>
+          <div class="tip-buttons">
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="number" placeholder="Custom">
           </div>
-          <div class="person">
-            / person
+        </div>
+        <div class="input-group">
+          <label for="people">Number of People</label>
+          <div class="theInput">
+            <div class="inputNumber">
+              <input type="number" id="people" placeholder="0.00"> 
+            </div>
+            <div class="inputLogo">
+              <img src="./images/icon-person.svg" alt="Person Icon" class="icon" id="personIcon">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="resetButton">
-        RESET
+      
+      <div class="rightSide">
+        <div class="upperResults">
+          <div class="result">
+            <p>Tip Amount <span>/ person</span></p>
+            <p class="value">$0.00</p>
+          </div>
+            <div class="result">
+              <p>Total <span>/ person</span></p>
+              <pclass="value">$0.00</p>
+            </div>
+        </div>
+        <button class="reset">RESET</button>
       </div>
+
+
     </div>
   </div>
 </body>
-
 </html>
+
