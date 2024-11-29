@@ -27,40 +27,49 @@ body {
     overflow: hidden;
 }
 
-.leftSide{
-    padding:0.56rem;
+.leftSide {
+    padding: 0.56rem;
 }
-#part1, #part2, #part3{
+
+#part1,
+#part2,
+#part3 {
     line-height: 1.5rem;
-    margin-top:1.5rem;
+    margin-top: 1.5rem;
 }
-#part1{
+
+#part1 {
     margin-top: 0.75rem;
 }
-.choosingATip{
+
+.choosingATip {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 0.26fr));
     gap: 0.5rem;
-    
+
 }
-.chooseTip{
-    background-color:  hsl(183, 100%, 15%);
-    color:hsl(0, 0%, 100%);
+
+.chooseTip {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
     width: 4.5rem;
     height: 1.9rem;
     border-radius: 0.31rem;
     font-family: Space Mono;
 }
-#chooseTipDifferent{
-    background-color:hsl(184, 14%, 56%);
-    color:hsl(0, 0%, 100%);
+
+#chooseTipDifferent {
+    background-color: hsl(184, 14%, 56%);
+    color: hsl(0, 0%, 100%);
     border: 2px solid hsl(0, 0%, 100%);
     width: 4.5rem;
     height: 1.9rem;
     border-radius: 0.31rem;
     font-family: Space Mono;
 }
-.chooseTip:hover, #chooseTipDifferent:hover{
+
+.chooseTip:hover,
+#chooseTipDifferent:hover {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
     cursor: pointer;
@@ -75,30 +84,40 @@ body {
 #fNum {
     width: 13.25rem;
     background-color: hsl(189, 41%, 97%);
-    border: 2px solid  hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
     height: 1.5rem;
     background-image: url(./images/icon-dollar.svg);
     background-repeat: no-repeat;
-    background-position: 0.43rem, 0.43rem; 
+    background-position: 0.43rem, 0.43rem;
     background-size: 0.5rem;
     padding-left: 30px;
-    text-align: right; 
+    text-align: right;
     color: hsl(186, 14%, 43%);
+    font-family: Space Mono;
 }
-#createdText{
+#fPrice::placeholder, #fNum::placeholder{
+    color:hsl(183, 100%, 15%);
+    font-size:0.93rem;
+}
+
+#createdText {
     color: hsl(183, 100%, 15%);
-    font-size:0.875rem;
+    font-size: 0.875rem;
 }
+
 #fNum {
-    background-image: url(./images/icon-person.svg); 
+    background-image: url(./images/icon-person.svg);
     background-repeat: no-repeat;
-    background-position: 0.43rem, 0.43rem; 
+    background-position: 0.43rem, 0.43rem;
     background-size: 0.5rem;
 }
-#fPrice:hover, #fNum:hover{
+
+#fPrice:hover,
+#fNum:hover {
     border: 2px solid white !important;
     outline: none !important;
 }
+
 .rightSide {
     background-color: hsl(183, 100%, 15%);
     width: 17rem;
@@ -148,5 +167,50 @@ body {
 #textReset {
     font-size: 0.75rem;
     margin-top: 0.562rem;
-    
+}
+
+@media(max-width:376px){
+    body{
+        /* margin-top: -1.56rem; */
+        height:51rem;
+    }
+    #logo{
+        width: 4.5rem;
+        height: 2.5rem;
+        padding: 1.5rem;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+        border-radius: 1.5rem;
+        height: fit-content;
+        align-items: center;
+        padding: 0;
+    }
+    .choosingATip{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr); 
+    }
+    .chooseTip, #chooseTipDifferent{
+        width:5.5rem;
+    }
+    .rightSide{
+        width: 23.75rem;
+        justify-content: start;
+        
+    }
+    #part1, #part2, #part3{
+        margin-top: 0.75rem;
+    }
+    #tipAmount,
+    #totalPrice {
+        width:18.43rem;
+    }
+    #amountNumber, #amountPrice{
+        margin-left:8rem;
+    }
+    #resetB{
+        margin-top: 1.5rem;
+        width:18.5rem;
+    }
 }
