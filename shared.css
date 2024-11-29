@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Space Mono, "sans-serif";
+}
+
+:root {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --light-teal: hsl(169, 39%, 59%);
+  --error: hsl(0, 84%, 60%);
+}
+
+/* *************** */
+/* BUTTONS */
+/* *************** */
+
+.btn {
+  background-color: var(--very-dark-cyan);
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--white);
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.btn-selected {
+  background-color: var(--light-teal);
+  color: var(--very-dark-cyan);
+}
+
+/* *************** */
+/* Text */
+/* *************** */
+
+.body-text {
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* *************** */
+/* Form */
+/* *************** */
+
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form__input-group--labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__number-input {
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+  background-color: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 6px;
+  direction: rtl;
+  width: 100%;
+  transition: all 50ms ease;
+}
+
+.form__number-input:focus {
+  outline: 2px solid var(--light-teal);
+}
+
+.form__input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.form__input--error {
+  box-shadow: inset 0 0 2px var(--error);
+}
+
+.form__input-container--icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  fill: var(--dark-grayish-cyan);
+}
+
+/* GENERAL */
+
+.hidden {
+  display: none;
+}
