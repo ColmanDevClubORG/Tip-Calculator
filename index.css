@@ -1,8 +1,7 @@
 body
 {
-  font-family: "Space Mono", monospace;
+  font-family: "Space Mono", serif;
   font-weight: 400;
-  font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,10 +42,19 @@ body
     border-radius: 4px;
     color: white;
     font-family:  "Space Mono", monospace;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1rem;
 }
-#custom-btn
+#btn #custom 
 {
-    
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+   font-weight: bold;
+}
+#btn button:hover
+{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    cursor: pointer;
 }
