@@ -15,6 +15,17 @@ body
 {
     display: flex;
     flex-direction: row;
-
-
+    width: 50%;
+    height: 20rem;
+    border-radius: 15px;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    width: 40rem;
+    background-color: white;
+}
+.left section
+{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
