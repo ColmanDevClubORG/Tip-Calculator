@@ -126,7 +126,7 @@ body {
     justify-content: center;
     align-self: center; */
     padding: 10px;
-    width: 80px;
+    width: 75px;
     height: 20px;
     border-radius: 5px;
     text-align: center;
@@ -203,6 +203,12 @@ body {
     color:hsl(183, 100%, 15%) ;
     font-weight: 800;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.reset:hover {
+    background-color: hsl(172, 100%, 79%);
 }
 
 
@@ -231,3 +237,54 @@ body {
     }
     
 }
+
+
+.bill-container .input-box {
+    cursor: pointer;
+    border: 1px solid #ccc; /* Default border */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+.bill-container .input-box:hover {
+    border: 1px solid hsl(172, 100%, 62%);
+    box-shadow: 0 0 5px hwb(172 24% 0%); /* Highlighter shadow effect */
+}
+
+
+
+.tip-boxes #custom {
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+.tip-boxes #custom:hover {
+    border: 1px solid hsl(172, 100%, 62%);
+    box-shadow: 0 0 5px hwb(172 24% 0%); /* Highlighter shadow effect */
+}
+
+
+
+.tip-boxes #box15 {
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.tip-boxes #box15:hover {
+    background-color: hsl(172, 100%, 79%);
+
+}
+
+
+
+.people-container .input-box {
+    cursor: pointer;
+    border: 1px solid #ccc; /* Default border */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+}
+
+.people-container .input-box:hover {
+    border: 1px solid hsl(0, 100%, 62%);
+    box-shadow: 0 0 5px hwb(0 24% 0%); /* Highlighter shadow effect */
+}
+
