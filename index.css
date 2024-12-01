@@ -14,7 +14,7 @@ body{
     font-weight: 700;
     background-image: url(./images/logo.svg);
     background-repeat: no-repeat;
-    background-position: center top 150px;
+    background-position: center top 80px;
 }
 
 
@@ -30,7 +30,7 @@ body{
 
 @media(max-width: 375px){
     body{
-        background-position: center top 60px;
+        background-position: center top 15px;
     }
     .container{
         flex-direction: column;
