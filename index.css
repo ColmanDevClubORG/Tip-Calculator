@@ -116,9 +116,10 @@ input:focus{
 
 
 }
-button.custom{
+input.custom{
     background-color:hsl(189, 41%, 97%) ;
-    color: hsl(184, 14%, 56%);
+    color: hsl(184, 14%, 56%);   
+    text-align:center; 
     }
 .btn:hover{
     background-color: hsl(172, 67%, 45%);

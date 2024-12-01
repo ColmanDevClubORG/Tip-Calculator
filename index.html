@@ -22,37 +22,37 @@
     <div class="info">
 
       <div class="mini">
-        <label for="Bill">Bill</label>
-        <input class="bill" type="number" placeholder="0">
+        <label>Bill</label>
+        <input id="bill" class="bill" type="number" placeholder="0" oninput="selectedBill(event)">
       </div>
       <div class="mini">
-        <label for="Bill">Select Tip %</label>
+        <label >Select Tip %</label>
         <div class="selected-tip">
-          <button class="btn">
+          <button onclick="selectedTip('5')" class="btn">
             5%
           </button>
-          <button class="btn">
+          <button  onclick="selectedTip('10')" class="btn">
             10%
           </button>
-          <button class="btn">
+          <button onclick="selectedTip('15')" class="btn">
             15%
           </button>
-          <button class="btn">
+          <button onclick="selectedTip('25')" class="btn">
             25%
           </button>
-          <button class="btn">
+          <button onclick="selectedTip('50')" class="btn">
             50%
           </button>
-          <button class="btn custom">
-            Custom
-          </button>
+          <input type="number" placeholder="Custom" class="btn custom">
+            
+        </input>
         </div>
 
       </div>
 
       <div class="mini">
-        <label for="number of people">Number of People</label>
-        <input class="ppl" type="number" placeholder="0" required>
+        <label >Number of People</label>
+        <input id="ppl-counter" class="ppl" type="number" placeholder="0" required oninput="selectedNumOfPpl(event)">
       </div>
   </div>
 
@@ -60,14 +60,14 @@
 
     <div class="mini-container">
       <div class="mini-result">
-        <label class="rlabel" for="Tip Amount">Tip Amount <p>/ person</p></label>
-        <h2>$0.00</h2>
+        <label class="rlabel" >Tip Amount <p>/ person</p></label>
+        <h2 id="tip">$0.00</h2>
         
       </div>
       
       <div class="mini-result" id="mini-result-2">
-        <label class="rlabel for="Total">Total <p>/ person</p></label>
-        <h2>$0.00</h2>
+        <label class="rlabel" >Total <p>/ person</p></label>
+        <h2 id="total">$0.00</h2>
       </div>
   </div>
 
@@ -78,7 +78,7 @@
 
 
   </div>
- 
+ <script src="index.js"></script>
   
 </body>
 </html>
