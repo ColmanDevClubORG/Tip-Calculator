@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -16,24 +18,68 @@
 </head>
 <body>
 
-  Bill
+  <div class="container">
+    <div class="info">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="mini">
+        <label for="Bill">Bill</label>
+        <input class="bill" type="number" placeholder="0">
+      </div>
 
-  Number of People
+      <div class="mini">
+        <label for="Bill">Select Tip %</label>
+        <div class="selected-tip">
+          <button class="btn">
+            5%
+          </button>
+          <button class="btn">
+            10%
+          </button>
+          <button class="btn">
+            15%
+          </button>
+          <button class="btn">
+            25%
+          </button>
+          <button class="btn">
+            50%
+          </button>
+          <button class="btn custom">
+            Custom
+          </button>
+        </div>
 
-  Tip Amount
-  / person
+      </div>
 
-  Total
-  / person
+      <div class="mini">
+        <label for="number of people">Number of People</label>
+        <input class="ppl" type="number" placeholder="0" required>
+      </div>
+  </div>
 
-  Reset
+  <div class="result">
+
+    <div class="mini-container">
+      <div class="mini-result">
+        <label class="rlabel" for="Tip Amount">Tip Amount <p>/ person</p></label>
+        <h2>$0.00</h2>
+        
+      </div>
+      
+      <div class="mini-result" id="mini-result-2">
+        <label class="rlabel for="Total">Total <p>/ person</p></label>
+        <h2>$0.00</h2>
+      </div>
+  </div>
+
+    <button class="btn reset"> RESET</button>
+  </div>
+
+
+
+
+  </div>
+ 
+  
 </body>
 </html>
