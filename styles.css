@@ -12,32 +12,31 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+
   color: white;
 }
 
-.flex-column {
+.left {
+  width: 50%;
   display: flex;
   flex-direction: column;
-}
-.outline-container {
   gap: 2rem;
 }
-.filled-container {
+
+.right {
+  width: 50%;
   background-color: hsl(183, 100%, 15%);
   border-radius: 10px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-}
-.text-container {
-  gap: 0.25rem;
-}
-.input-container {
-  gap: 0.5rem;
 }
 
 .container {
   display: flex;
   background-color: hsl(0, 0%, 100%);
+  width: 50%;
   padding: 2rem;
   border-radius: 10px;
   gap: 2rem;
@@ -48,6 +47,12 @@ h4 {
   color: hsl(189, 41%, 97%);
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .amount-container {
   display: flex;
   justify-content: space-between;
@@ -55,9 +60,17 @@ h4 {
   gap: 1.5rem;
 }
 
-label {
-  color: hsl(184, 14%, 56%);
+.reset {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(186, 14%, 43%);
+  font-size: 1rem;
   font-weight: 700;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(184, 14%, 56%);
+  box-shadow: 0 5px hsl(185, 91%, 17%);
 }
 
 input::-webkit-outer-spin-button,
@@ -66,44 +79,26 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input,
-button {
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-button {
-  cursor: pointer;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
 }
 
 input {
   height: 2.25rem;
+  border: none;
+  border-radius: 5px;
   text-align: right;
   color: hsl(184, 14%, 56%);
+  font-size: larger;
   position: relative;
   padding-right: 1rem;
   background: url('images/icon-dollar.svg') no-repeat 1rem;
   background-size: 12px;
   background-color: hsl(189, 41%, 97%);
 }
-
-.reset {
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(186, 14%, 43%);
-  padding: 0.5rem 1rem;
-  box-shadow: 0 5px hsl(185, 91%, 17%);
-}
-
-.button-container button {
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: 150px;
-  height: 50px;
-  background-color: hsl(183, 100%, 15%);
-  color: white;
-}
-
 #numOfPeople {
   background: url('images/icon-person.svg') no-repeat 1rem;
   background-color: hsl(189, 41%, 97%);
@@ -118,4 +113,38 @@ input {
   flex-wrap: wrap; /* allows items to wrap to the next line */
   gap: 10px;
   justify-content: flex-start;
+}
+
+.button-container button {
+  flex: 1 1 calc(33.333% - 20px); /* 33% width minus gap adjustment */
+  max-width: 150px; /* Limit button width */
+  height: 50px;
+  font-size: 16px;
+  background-color: hsl(183, 100%, 15%); /* Main color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1120px) {
+  .container {
+    width: 100%;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .right {
+    padding: 1rem;
+  }
+
+  .button-container button {
+    flex: 1 1 calc(50% - 20px); /* 50% width minus gap adjustment */
+  }
+  h1 {
+    font-size: small;
+  }
 }
