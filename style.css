@@ -1,0 +1,245 @@
+/*easy access to the colors*/
+  :root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+  }
+  
+  /*font,color, place*/
+  body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  /*Main wrapper*/
+  .container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  /*positioned Logo*/
+  .splitter-logo {
+    display: block;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: -4.5rem; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: auto;
+    z-index: 10;
+  }
+
+  /*calculator with two
+   equal-width parts.*/
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: relative;
+  }
+
+  /*Input(left side) Fields*/
+  
+  .selection-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .selection-section label {
+    color: var(--dark-grayish-cyan);
+    font-size: 1rem;
+  }
+  
+  .selection-section input {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: 2px solid var(--very-light-grayish-cyan);
+    border-radius: 0.5rem;
+    color: var(--very-dark-cyan);
+  }
+  
+  .selection-section input:focus {
+    outline: none;
+    border-color: var(--strong-cyan);
+  }
+  
+  /*three button columns*/
+  .tip-percent-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .tip-percent-btn button {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .tip-percent-btn button.custom-btn {
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+  }
+  
+  .tip-percent-btn button:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+  }
+
+  /*icons inside the input fields.*/
+  .input-person-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-light-grayish-cyan);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    position: relative;
+  }
+  
+  .input-person-container .person-icon {
+    position: absolute;
+    left: 1rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none; /* Prevents icon from interfering with input */
+
+  }
+  .input-person-container .dollar-icon {
+    position: absolute; 
+    left: 1rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none; /* Prevents icon from interfering with input */
+
+  }
+  
+  .input-person-container input {
+    flex: 1;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+    color: var(--very-dark-cyan);
+    text-align: right; 
+    padding-left: 2.5rem; 
+  }
+  
+  .input-person-container input:focus {
+    outline: none;
+  }
+  
+  /*Results Display (right side)*/
+  .output-section {
+    background-color: var(--very-dark-cyan);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+
+  }
+  
+  .output-section .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .output-section .result p {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .output-section .result p span {
+    color: var(--grayish-cyan);
+    font-size: 0.8rem;
+  }
+  
+  .output-section .result .value {
+    color: var(--strong-cyan);
+    font-size: 2rem;
+  }
+  
+  .output-section .reset-btn {
+    background-color:  hsl(174, 52%, 24%);
+    color: var(--very-dark-cyan);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .output-section .reset-btn:hover {
+    background-color: var(--strong-cyan);
+  }
+  
+  /*Adjusts for a mobile-friendly experience.*/
+  @media (max-width: 768px) {
+    .body{
+      background-color: var(--light-grayish-cyan);
+      display: flex;
+    }
+    
+    .container {
+      width: 100%;
+      height: inherit;
+    }
+    .top-section {
+      background-color: var(--light-grayish-cyan);
+      padding: 4rem;
+      border-radius: 0.3rem;
+    }
+    .splitter-logo {
+      display: block;
+      position: absolute;
+      top: -3.5rem;
+    }
+  
+    .calculator {
+      grid-template-columns: 1fr;
+    }
+  
+    .tip-percent-btn {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .container {
+      width: 60%;
+    }
+  }
