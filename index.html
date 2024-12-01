@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
+  <div class="h3txt"></div>
+  <div class="ptags">
+    <p>S P L I</p>
+    <p>T T E R</p>
+  </div>
+  </div>
+  <div class="container">
+    <div class="left">
+      <div class="bill-container">
+        <p id="bill">Bill</p>
+        <div class="input-box">
+          <img src="./images/icon-dollar.svg" class="icon-dollar">
+          <span class="price">142.55</span>
+        </div>
+      </div>
+      <div class="tip-container">
+        <p id="tip">Select Tip %</p>
+        <div class="tip-boxes">
+          <div class="box">5%</div>
+          <div class="box">10%</div>
+          <div class="box" id="box15">15%</div>
+          <div class="box">25%</div>
+          <div class="box">50%</div>
+          <div class="box" id="custom">Custom</div>
+        </div>
+      </div>
+      <div class="people-container">
+        <p id="people">Number of People</p>
+        <div class="input-box">
+          <img src="./images/icon-person.svg" class="icon-person">
+          <span class="price">5</span>
+        </div>
+      </div>
+    </div>
 
-  Bill
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <div class="right">
+      <div class="top">
+        <div class="text">
+        <p class="white-txt">Tip Amount</p>
+        <p class="gray-txt">/ person</p>
+      </div>
+      <div class="green-price">$4.27</div>
+      </div>
+      <div class="bottom">
+        <div class="text">
+        <p class="white-txt">Total</p>
+        <p class="gray-txt">/ person</p>
+      </div>
+      <div class="green-price">$32.79</div>
+      </div>
 
-  Number of People
+      <button class="reset">RESET</button>
+      
+    </div>
 
-  Tip Amount
-  / person
 
-  Total
-  / person
 
-  Reset
+
+  </div>
+
+
 </body>
+
 </html>

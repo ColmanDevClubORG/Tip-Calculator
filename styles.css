@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ptags {
+    padding-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 700px;
+    padding-right: 30px;
+    padding-left: 30px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+   /* padding-left: 30px; */
+   padding-top: 10px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+   padding-left: 30px;
+   padding-top: 10px;
+    width: 320px;
+    box-sizing: border-box;
+    height: 90%;
+    border-radius: 10px;
+    background-color:hsl(183, 100%, 15%) ;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid pink; */
+    padding: 10px;
+    border-radius: 7px;
+    background-color: hsla(180, 6%, 93%, 0.683);
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.bill-container , .people-container {
+    width: 100%;
+}
+
+.currency-symbol {
+    color: gray;
+    margin-left: 10px;
+}
+.price {
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 18px;
+}
+.icon-dollar , .icon-person{
+    width: 10px;
+}
+
+.tip-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.tip-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: -10px;
+    width: 100%;
+}
+
+
+.box {
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+
+}
+
+#box15 {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+#custom {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+/* 
+#bill , #people {
+    
+} */
+
+
+.bill-container {
+    margin-bottom: 10px;
+}
