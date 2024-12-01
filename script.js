@@ -3,7 +3,7 @@ const $$ = (selector) => document.querySelectorAll(selector);
 
 const billInput = $('#bill');
 const tipButtons = $$('.tip-button');
-const customTipInput = $('.custom-tip');
+let customTipInput = $('.custom-tip');
 const peopleInput = $('#people');
 const resetButton = $('.reset');
 const tipAmountDisplay = $('.TipAmount');
@@ -23,10 +23,12 @@ const validateInput = (input, messageElement, errorMessage, minValue) => {
   return true;
 };
 
-const calculateAmounts = (bill, tipPercentage, people) => {
-  const tipAmount = (bill * (tipPercentage / 100)) / people;
-  const totalAmount = (bill * (1 + tipPercentage / 100)) / people;
-  return { tipAmount, totalAmount };
+const calculateTipAmount = (bill, tipPercentage, people) => {
+  return (bill * (tipPercentage / 100)) / people;
+};
+
+const calculateTotalAmount = (bill, tipPercentage, people) => {
+  return (bill * (1 + tipPercentage / 100)) / people;
 };
 
 const updateDisplay = (tipAmount, totalAmount) => {
@@ -34,9 +36,18 @@ const updateDisplay = (tipAmount, totalAmount) => {
   totalAmountDisplay.textContent = `$${totalAmount.toFixed(2)}`;
 };
 
-const calculateTip = (tipPercentage) => {
+const calculateTip = () => {
   const bill = parseFloat(billInput.value) || 0;
   const people = parseInt(peopleInput.value) || 1;
+
+  let tipPercentage = 0;
+
+  const selectedButton = $('.tip-button.selected');
+  if (selectedButton) {
+    tipPercentage = parseInt(selectedButton.textContent);
+  } else if (customTipInput.value) {
+    tipPercentage = parseFloat(customTipInput.value);
+  }
 
   const isBillValid = validateInput(billInput, errorMessageBill, "Can't be zero", 0);
   const isPeopleValid = validateInput(peopleInput, errorMessagePerson, "Can't be zero", 0);
@@ -46,21 +57,39 @@ const calculateTip = (tipPercentage) => {
     return;
   }
 
-  const { tipAmount, totalAmount } = calculateAmounts(bill, tipPercentage, people);
+  const tipAmount = calculateTipAmount(bill, tipPercentage, people);
+  const totalAmount = calculateTotalAmount(bill, tipPercentage, people);
   updateDisplay(tipAmount, totalAmount);
 };
 
-const handleTipButtonClick = (event) => {
+const clearTipButtonSelection = () => {
   tipButtons.forEach((btn) => btn.classList.remove('selected'));
-  event.target.classList.add('selected');
-  customTipInput.value = '';
-  calculateTip(parseFloat(event.target.textContent));
+};
+
+const handleTipButtonClick = (event) => {
+  if (event.target.classList.contains('selected')) {
+    event.target.classList.remove('selected');
+    customTipInput.value = '';
+  } else {
+    clearTipButtonSelection();
+    event.target.classList.add('selected');
+    customTipInput.value = '';
+  }
+  calculateTip();
 };
 
 const handleCustomTipInput = () => {
-  tipButtons.forEach((btn) => btn.classList.remove('selected'));
-  const tipPercentage = parseFloat(customTipInput.value) || 0;
-  calculateTip(tipPercentage);
+  const customTipValue = parseFloat(customTipInput.value);
+  if (customTipValue < 1) {
+    customTipInput.value = '';
+    customTipInput.classList.add('error');
+    customTipInput.setAttribute('placeholder', 'Must be > 1');
+  } else {
+    customTipInput.classList.remove('error');
+    customTipInput.setAttribute('placeholder', 'Custom');
+    clearTipButtonSelection();
+    calculateTip();
+  }
 };
 
 const resetAll = () => {
@@ -71,19 +100,53 @@ const resetAll = () => {
 
   tipAmountDisplay.textContent = '$0.00';
   totalAmountDisplay.textContent = '$0.00';
-  tipButtons.forEach((btn) => btn.classList.remove('selected'));
+  clearTipButtonSelection();
   errorMessageBill.textContent = '';
   errorMessagePerson.textContent = '';
 };
 
+const handleBillInputChange = () => {
+  const isBillValid = parseFloat(billInput.value) > 0;
+  if (isBillValid) {
+    peopleInput.disabled = false;
+    customTipInput.disabled = false;
+    tipButtons.forEach((btn) => (btn.disabled = false));
+  } else {
+    peopleInput.disabled = true;
+    customTipInput.disabled = true;
+    tipButtons.forEach((btn) => (btn.disabled = true));
+  }
+  calculateTip();
+};
+
+const createTipButtons = () => {
+  const tipSelectionContainer = $('.tip-selection');
+  const tipPercentages = [5, 10, 15, 25, 50];
+
+  tipPercentages.forEach((percentage) => {
+    const button = document.createElement('button');
+    button.classList.add('tip-button');
+    button.textContent = `${percentage}%`;
+    button.addEventListener('click', handleTipButtonClick);
+    tipSelectionContainer.appendChild(button);
+  });
+
+  customTipInput = document.createElement('input');
+  customTipInput.type = 'number';
+  customTipInput.classList.add('custom-tip');
+  customTipInput.id = 'custom-tip';
+  customTipInput.placeholder = 'Custom';
+  customTipInput.min = 0;
+  customTipInput.addEventListener('input', handleCustomTipInput);
+  tipSelectionContainer.appendChild(customTipInput);
+};
+
 const initializeListeners = () => {
-  tipButtons.forEach((button) =>
-    button.addEventListener('click', handleTipButtonClick)
-  );
   [billInput, customTipInput, peopleInput].forEach((input) =>
-    input.addEventListener('input', handleCustomTipInput)
+    input.addEventListener('input', calculateTip)
   );
   resetButton.addEventListener('click', resetAll);
 };
 
+createTipButtons();
 initializeListeners();
