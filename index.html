@@ -6,34 +6,85 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Mono">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Bill
+  <header class="heading">
+    <h1> SPLI <br> TTER </h1>
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <section>
+    <div class="container">
 
-  Number of People
+      <div class="left-side">
+        <div class="bill">
+          <p>Bill</p>
+          <span class="input-sign">$</span>
+          <input type="text" id="bill" placeholder="0.00" class="input">
+        </div>
 
-  Tip Amount
-  / person
+        <div class="tip">
+          <label for="Select Tip %">Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="tip-button">5%</button>
+            <button class="tip-button">10%</button>
+            <button class="tip-button">15%</button>
+            <button class="tip-button">25%</button>
+            <button class="tip-button">50%</button>
+            <button class="tip-button" id="custom">Custom</button>
+          </div>
+        </div>
 
-  Total
-  / person
+        <div class="people">
+          <p>Number of People</p>
+          <span class="input-sign fa fa-user" id="person-symbol"></span>
+          <input type="text" id="people" placeholder="0" class="input">
+          
 
-  Reset
+      </div>
+        
+    </div>
+
+    <div class="right-side">
+      <div class="tip-amount">
+        <div class="right-side-container">
+          <div>
+            <p class="p-style">Tip Amount</p>
+            <p class="person-p">/ person</p>
+          </div>
+          <div class="money">
+            <span class="output-sign">$</span>
+            <span class="output" id="tip">0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="right-side-container">
+          <div>
+            <p class="p-style">Total</p>
+            <p class="person-p">/ person</p>
+          </div>
+          <div class="money">
+            <span class="output-sign">$</span>
+            <span class="output" id="total">0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="reset">Reset</button>
+
+  </section>
+ 
 </body>
 </html>
