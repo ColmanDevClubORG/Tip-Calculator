@@ -44,7 +44,7 @@ body {
 
 .choosingATip {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 0.26fr));
+    grid-template-columns: repeat(3, minmax(0, 0.30fr));
     gap: 0.5rem;
 
 }
