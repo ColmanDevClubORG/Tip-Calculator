@@ -10,12 +10,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Space Mono', monospace;
+
+      
 }
 
 .ptags {
     padding-bottom: 30px;
+    font-weight: 900;
+    color: hsl(186, 14%, 43%);
+
 }
 
+#p1 {
+    margin-top: -15px;
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -60,26 +69,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid pink; */
     padding: 10px;
     border-radius: 7px;
     background-color: hsla(180, 6%, 93%, 0.683);
     box-sizing: border-box;
     width: 100%;
     margin-top: -10px;
+    height: 35px;
 }
 
 .bill-container , .people-container {
     width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    color: hsl(186, 14%, 43%);
 }
 
 .currency-symbol {
-    color: gray;
+    color: hsl(186, 14%, 43%);
     margin-left: 10px;
 }
 .price {
     color: hsl(183, 100%, 15%);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
 }
 .icon-dollar , .icon-person{
@@ -92,6 +104,9 @@ body {
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: hsl(186, 14%, 43%);
 }
 
 .tip-boxes {
@@ -101,12 +116,18 @@ body {
     flex-wrap: wrap;
     margin-top: -10px;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .box {
+    /* display: flex;
+    justify-content: center;
+    align-self: center; */
     padding: 10px;
     width: 80px;
+    height: 20px;
     border-radius: 5px;
     text-align: center;
     font-weight: 700;
@@ -133,4 +154,53 @@ body {
 
 .bill-container {
     margin-bottom: 10px;
+}
+
+
+
+.right {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-right: 30px;
+
+}
+
+.top , .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.text {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+}
+
+.green-price {
+    display: inline-block;
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+    font-weight: 800;
+
+}
+.gray-txt {
+    margin-top: -10px;
+    color: hsl(180, 3%, 70%);
+    font-size: 10px;
+}
+
+.reset {
+    width: 100%;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 7px;
+    background-color:hsl(172, 67%, 45%) ;
+    color:hsl(183, 100%, 15%) ;
+    font-weight: 800;
+    border: none;
 }
