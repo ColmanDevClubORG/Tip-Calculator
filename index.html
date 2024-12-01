@@ -1,39 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-</body>
+    <title>Roey Kimhi | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left">
+        <div class="input-container">
+          <label for="bill" style="color:hsl(184, 14%, 56%); font-weight: 700;">Bill</label>
+          <input
+              type="number"
+              id="bill"
+              placeholder="0"
+              min="0"
+          >
+      </div>
+      <div class="select-tip-container">
+        <label style="color:hsl(184, 14%, 56%); font-weight: 700;">Select Tip %</label>
+        <div class="button-container">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button>Custom</button>
+        </div>
+      </div>
+      <div class="input-container">
+        <label for="bill" style="color:hsl(184, 14%, 56%); font-weight: 700;">Number of People</label>
+        <input
+            type="number"
+            id="numOfPeople"
+            placeholder="0"
+            min="0"
+        >
+    </div>
+        
+      </section>
+      <section class="right">
+        <div class="amount-container">
+          <div class="text-container">
+            <h4>Tip Amount</h6>
+              <p style="color: hsl(186, 14%, 43%); ">/ person</p>
+          </div>
+          
+            <h1 style="font-size: 2.5rem; color: hsl(172, 67%, 45%);">$0.00</h1>
+        </div>
+        <div class="amount-container">
+          <div class="text-container">
+            <h4>Total</h6>
+              <p style="color: hsl(186, 14%, 43%); ">/ person</p>
+          </div>
+          
+            <h1 style="font-size: 2.5rem; color: hsl(172, 67%, 45%);">$0.00</h1>
+        </div>
+        <button class="reset">RESET</button>
+      </section>
+    </div>
+  </body>
 </html>
