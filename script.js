@@ -1,10 +1,13 @@
-const billEl = document.querySelector("#bill-input")
-const peopleEl = document.querySelector("#people-number-input")
-const customTipEl = document.querySelector(".custom-input")
-const billError = document.querySelector(".bill-error")
-const peopleError = document.querySelector(".people-error")
-const tipError = document.querySelector(".tip-error")
-const buttons = document.querySelectorAll(".btn-percent")
+const $ = (selector) => document.querySelector(selector)
+const $$ = (selector) => document.querySelectorAll(selector)
+
+const billEl = $("#bill-input")
+const peopleEl = $("#people-number-input")
+const customTipEl = $(".custom-input")
+const billError = $(".bill-error")
+const peopleError = $(".people-error")
+const tipError = $(".tip-error")
+const buttons = $$(".btn-percent")
 let tip = 0
 let people = 0
 let bill = 0
@@ -75,10 +78,10 @@ buttons.forEach(button => {
     updateDashboard()
   });
 });
-const tipAmount = document.querySelector(".tip-amount")
-const totalAmount = document.querySelector(".total-amount")
-const inputs = document.querySelectorAll(".main-input")
-const resetBtn = document.querySelector(".reset-btn")
+const tipAmount = $(".tip-amount")
+const totalAmount = $(".total-amount")
+const inputs = $$(".main-input")
+const resetBtn = $(".reset-btn")
 function updateDashboard(){
   console.log("people: ",people,"tip: ",tip,"bill: ",bill)
   if (people != 0 && tip != "" && bill != 0) {
