@@ -109,7 +109,7 @@
     color: var(--very-dark-cyan);
   }
 
-  /*icons inside the input fields.*/
+  /*icons inside the input fields .*/
   .input-person-container {
     display: flex;
     align-items: center;
