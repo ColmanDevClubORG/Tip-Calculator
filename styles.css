@@ -76,6 +76,7 @@ body {
     width: 100%;
     margin-top: -10px;
     height: 35px;
+    position: relative;
 }
 
 .bill-container , .people-container {
@@ -83,11 +84,15 @@ body {
     font-size: 13px;
     font-weight: 600;
     color: hsl(186, 14%, 43%);
+    
 }
 
 .currency-symbol {
     color: hsl(186, 14%, 43%);
     margin-left: 10px;
+    display: flex;
+  align-items: center;
+   position: absolute;
 }
 .price {
     color: hsl(183, 100%, 15%);
@@ -118,23 +123,25 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
+    
 }
 
 
 .box {
-    /* display: flex;
-    justify-content: center;
-    align-self: center; */
+    
     padding: 10px;
-    width: 75px;
-    height: 20px;
+    width: 80px;
+    height:35px;
     border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    border: none;
     text-align: center;
     font-weight: 700;
     font-size: 18px;
     background-color: hsl(183, 100%, 15%);
     color: white;
-
+    cursor: pointer;
 }
 
 #box15 {
@@ -143,7 +150,7 @@ body {
 }
 
 #custom {
-    background-color: hsl(189, 41%, 97%);
+    background-color: hsl(172, 100%, 93%);
     color: hsl(183, 100%, 15%);
 }
 /* 
@@ -287,4 +294,7 @@ body {
     border: 1px solid hsl(0, 100%, 62%);
     box-shadow: 0 0 5px hwb(0 24% 0%); /* Highlighter shadow effect */
 }
-
+/* 
+.people-container #hover {
+    display: none;
+} */
