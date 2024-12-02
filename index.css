@@ -1,14 +1,14 @@
-body{
-    background-color: rgb(178, 240, 229);
+body {
+    background-color: hsl(185, 41%, 84%);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family:monospace;
+    font-family: monospace;
     font-weight: 700;
 }
 
-.container{
+.container {
     background-color: white;
     display: flex;
     align-items: center;
@@ -16,11 +16,11 @@ body{
     border-radius: 30px;
     width: 850px;
     height: 440px;
-    gap: 30px; 
+    gap: 30px;
 }
 
-.rightSide{
-    background-color: rgb(52, 131, 131);
+.rightSide {
+    background-color: hsl(183, 100%, 15%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,19 +32,18 @@ body{
     gap: 150px;
 }
 
-.leftSide{
+.leftSide {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
     width: 380px;
     height: 380px;
     margin-left: auto;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
-.tipPersonAndTotalPerson{
+.tipPersonAndTotalPerson {
     width: 360px;
     height: 150px;
     display: flex;
@@ -55,26 +54,40 @@ body{
     color: white;
 }
 
-.resetButton{
+.resetButton {
     background-color: rgb(87, 201, 176);
     width: 300px;
-    height:40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    color: rgb(52, 131, 131);
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 1.1rem;
+    border: none;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
-.resetButton:hover{
-    color:black;
+.resetButton:hover {
+    color: black;
     background-color: rgb(115, 223, 199);
 }
 
-.tipAndPerson{
+.tipPersonWithTheAmount,
+.totalPersonWithTheAmount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    height: 65px;
+}
+
+.tipAndPerson {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -83,7 +96,7 @@ body{
     flex-direction: column;
 }
 
-.totalAndPerson{
+.totalAndPerson {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -92,103 +105,107 @@ body{
     flex-direction: column;
 }
 
-.person{
+.person {
     font-size: 0.7rem;
     opacity: 0.5;
 }
 
-.billAndTextBox{
+.amountOfTheTip,
+.amountOfTheTotal {
+    color: hsl(172, 67%, 45%);
+    margin-left: 4.9rem;
+    font-size: 1.81rem;
+    margin-top: 1.31rem;
+}
+
+
+.billAndTextBox {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 330px;
-    height: 75px;
+    height: 90px;
     flex-direction: column;
     gap: 5px;
 }
 
-.selectTipAndButtons{
+.selectTipAndButtons {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 330px;
-    height: 100px;
+    height: 90px;
     flex-direction: column;
     gap: 5px;
 }
 
-.numberOfPeopleAndTextBox{
+.numberOfPeopleAndTextBox {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 330px;
-    height: 75px;
+    height: 90px;
     flex-direction: column;
     gap: 5px;
 }
 
-.bill{
-
-}
-
-.textBox{
-    background-color: rgb(238, 233, 233);
+.textBox {
     width: 300px;
-    height:40px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding-left: 10px;
+    height: 35px;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
+    border-radius: 5px;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px, 10px;
+    background-size: 8px;
+    padding-left: 30px;
+    text-align: right;
+    color: hsl(186, 14%, 43%);
+    font-family: Space Mono;
 }
 
-.selectTip{
-
+#NumberOfPeopleInput {
+    background-image: url(./images/icon-person.svg);
 }
 
-.tipButtons{
+/* .selectTip {} */
+
+.tipButtons {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
-.tipButton{
-    background-color: rgb(52, 131, 131);
+.tipButton {
+    background-color: hsl(183, 100%, 15%);
     color: white;
-    width: 50px;
-    height: 35px;
+    width: 100px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: none;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
-#customButton{
+#customButton {
     background-color: rgb(238, 233, 233);
     color: black;
 }
 
 .tipButton:hover {
-    background-color:  rgb(87, 201, 176);
+    background-color: rgb(87, 201, 176);
     color: black;
 }
 
-#customButton:hover{
-    background-color:  rgb(87, 201, 176);
+#customButton:hover {
+    background-color: rgb(87, 201, 176);
 }
 
-.NumberOfPeople{
-
-}
-
-.icon {
-    width: 10px;
-    height: 15px;
-    padding-right: 10px;
-}
-
-#personIcon{
-    width: 12px;
-    height: 15px;
-}
+/* .NumberOfPeople {} */

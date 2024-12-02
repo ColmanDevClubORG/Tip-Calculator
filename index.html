@@ -29,15 +29,15 @@
 </head>
 
 <body>
+  <script src="index.js"></script>
+
   <div class="container">
     <div class="leftSide">
       <div class="billAndTextBox">
         <div class="bill">
           Bill
         </div>
-        <div class="textBox">
-          <img src="./images/icon-dollar.svg" alt="Dollar Icon" class="icon">
-        </div>
+        <input type="text" class="textBox" id="billInput" placeholder="0.00"><br>
       </div>
 
       <div class="selectTipAndButtons">
@@ -45,24 +45,24 @@
           Select Tip %
         </div>
         <div class="tipButtons">
-          <div class="tipButton">
+          <button class="tipButton" onclick="tip5Func">
             5%
-          </div>
-          <div class="tipButton">
+          </button>
+          <button class="tipButton" onclick="tip10Func">
             10%
-          </div>
-          <div class="tipButton">
+          </button>
+          <button class="tipButton" onclick="tip15Func">
             15%
-          </div>
-          <div class="tipButton">
+          </button>
+          <button class="tipButton" onclick="tip25Func">
             25%
-          </div>
-          <div class="tipButton">
+          </button>
+          <button class="tipButton" onclick="tip50Func">
             50%
-          </div>
-          <div class="tipButton" id="customButton">
+          </button>
+          <button class="tipButton" id="customButton" onclick="tipCustomFunc">
             Custom
-          </div>
+          </button>
         </div>
       </div>
 
@@ -70,36 +70,45 @@
         <div class="NumberOfPeople">
           Number of People
         </div>
-        <div class="textBox">
-          <img src="./images/icon-person.svg" alt="Person Icon" class="icon" id="personIcon">
-        </div>
+        <input type="text" class="textBox" id="NumberOfPeopleInput" placeholder="0.00"><br>
       </div>
     </div>
 
     <div class="rightSide">
       <div class="tipPersonAndTotalPerson">
-        <div class="tipAndPerson">
-          <div class="tip">
-            Tip Amount
+        <div class="tipPersonWithTheAmount">
+          <div class="tipAndPerson">
+            <div class="tip">
+              Tip Amount
+            </div>
+            <div class="person">
+              / person
+            </div>
           </div>
-          <div class="person">
-            / person
+          <div class="amountOfTheTip">
+            $0.00
           </div>
         </div>
 
-        <div class="totalAndPerson">
-          <div class="total">
-            Total
+        <div class="totalPersonWithTheAmount">
+          <div class="totalAndPerson">
+            <div class="total">
+              Total
+            </div>
+            <div class="person">
+              / person
+            </div>
           </div>
-          <div class="person">
-            / person
+
+          <div class="amountOfTheTotal">
+            $0.00
           </div>
         </div>
       </div>
 
-      <div class="resetButton">
+      <button class="resetButton">
         RESET
-      </div>
+      </button>
     </div>
   </div>
 </body>
