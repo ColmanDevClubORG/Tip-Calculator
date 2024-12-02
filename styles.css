@@ -101,11 +101,14 @@ body {
 }
 .icon-dollar , .icon-person{
     width: 10px;
+    position: relative;
+    top: -25px;
+    left: 10px;
 }
 
 .tip-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 10px;
@@ -121,16 +124,15 @@ body {
     flex-wrap: wrap;
     margin-top: -10px;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    
 }
 
 
 .box {
     
     padding: 10px;
-    width: 80px;
+    width: 31%;
     height:35px;
     border-radius: 5px;
     text-align: center;
@@ -144,19 +146,33 @@ body {
     cursor: pointer;
 }
 
+.boxcustom {
+    padding: 10px;
+    width: 25%;
+    height:15px;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    background-color: hsla(180, 6%, 93%, 0.683);
+    color: hsl(183, 100%, 15%);
+}
+
+.boxcustom::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
 #box15 {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }
 
-#custom {
-    background-color: hsl(172, 100%, 93%);
-    color: hsl(183, 100%, 15%);
-}
-/* 
-#bill , #people {
-    
-} */
+
 
 
 .bill-container {
@@ -279,22 +295,17 @@ body {
 
 .tip-boxes #box15:hover {
     background-color: hsl(172, 100%, 79%);
-
 }
-
-
 
 .people-container .input-box {
     cursor: pointer;
-    border: 1px solid #ccc; /* Default border */
+    border: 1px solid #ccc;
     transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
 }
 
 .people-container .input-box:hover {
     border: 1px solid hsl(0, 100%, 62%);
-    box-shadow: 0 0 5px hwb(0 24% 0%); /* Highlighter shadow effect */
+    box-shadow: 0 0 5px hwb(0 5% 0%); 
 }
-/* 
-.people-container #hover {
-    display: none;
-} */
+
+

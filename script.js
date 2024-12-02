@@ -50,6 +50,17 @@ customTip=()=> {
 custom.addEventListener("blur", customTip);
 
 reset=()=>{
+
+
     tipAmountResult.innerText="$0.00";
     totalAmountResult.innerText="$0.00";
-}
+    
+    price.value = '';
+    numOfpeople.value = '';
+    custom.value = '';
+
+
+    hoverWarning.style.display = "none";
+    
+};
+resetBtn.addEventListener("click", reset);
