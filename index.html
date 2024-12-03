@@ -1,39 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
+  <link rel="stylesheet" href="index.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .body {
+      background-color: aquamarine;
+    }
   </style>
 </head>
+
 <body>
+  <script src="index.js"></script>
 
-  Bill
+  <div class="container">
+    <div class="leftSide">
+      <div class="billAndTextBox">
+        <div class="bill">
+          Bill
+        </div>
+        <input type="text" class="textBox" id="billInput" placeholder="0.00"><br>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="selectTipAndButtons">
+        <div class="selectTip">
+          Select Tip %
+        </div>
+        <div class="tipButtons">
+          <button class="tipButton" onclick="tip5Func">
+            5%
+          </button>
+          <button class="tipButton" onclick="tip10Func">
+            10%
+          </button>
+          <button class="tipButton" onclick="tip15Func">
+            15%
+          </button>
+          <button class="tipButton" onclick="tip25Func">
+            25%
+          </button>
+          <button class="tipButton" onclick="tip50Func">
+            50%
+          </button>
+          <button class="tipButton" id="customButton" onclick="tipCustomFunc">
+            Custom
+          </button>
+        </div>
+      </div>
 
-  Number of People
+      <div class="numberOfPeopleAndTextBox">
+        <div class="NumberOfPeople">
+          Number of People
+        </div>
+        <input type="text" class="textBox" id="NumberOfPeopleInput" placeholder="0.00"><br>
+      </div>
+    </div>
 
-  Tip Amount
-  / person
+    <div class="rightSide">
+      <div class="tipPersonAndTotalPerson">
+        <div class="tipPersonWithTheAmount">
+          <div class="tipAndPerson">
+            <div class="tip">
+              Tip Amount
+            </div>
+            <div class="person">
+              / person
+            </div>
+          </div>
+          <div class="amountOfTheTip">
+            $0.00
+          </div>
+        </div>
 
-  Total
-  / person
+        <div class="totalPersonWithTheAmount">
+          <div class="totalAndPerson">
+            <div class="total">
+              Total
+            </div>
+            <div class="person">
+              / person
+            </div>
+          </div>
 
-  Reset
+          <div class="amountOfTheTotal">
+            $0.00
+          </div>
+        </div>
+      </div>
+
+      <button class="resetButton">
+        RESET
+      </button>
+    </div>
+  </div>
 </body>
+
 </html>
