@@ -1,0 +1,194 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    background-color:hsl(180, 53%, 72%);
+}
+
+#title{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.container{
+    gap: 32px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 32px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+.calculatoer{
+    flex: 1;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+.input{
+    position: relative;
+}
+
+.input img{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+}
+
+.input input {
+    width: 85%;
+    padding: 10px 15px 10px 40px;
+    font-size: 16px;
+    border: 2px solid hsl(184, 14%, 56%);
+    border-radius: 5px;
+    color: hsl(186, 14%, 43%);
+    outline: none;
+    text-align: right; 
+    direction: rtl;
+  }
+
+
+  .tip-buttons {
+    display: grid;
+    margin-bottom: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .tip-buttons button {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+
+  .tip-buttons button:hover {
+    background-color: hsl(172, 50%, 40%);
+    transition: 0.3s;
+  }
+  
+  #custom-tip
+  {
+    width: 95%;
+    background-color: hsl(180, 52%, 96%);
+    color: hsl(186, 14%, 43%);
+    border: 2px solid hsl(184, 14%, 56%);
+    border-radius: 5px;
+    text-align: center;
+  }
+/*------------------------------------*/
+  
+  .output {
+    background-color: hsl(183, 94%, 18%);
+    color: white;
+    border-radius: 15px;
+    padding: 32px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .results {
+  margin-bottom: 32px;
+  }
+
+  .result{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom:24px;
+  }
+
+  .result p{
+    font-size: 14px;
+    color: hsl(172, 33%, 91%);
+    position: absolute;
+  }
+
+  #person
+  {
+    top: 20px;
+    color: grey;
+    margin-top: 2px;
+    text-align:start;
+  }
+
+ 
+  .price {
+    font-size: 24px;
+    text-align:end;
+    color: hsl(172, 67%, 45%);
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .reset {
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: hsl(183, 100%, 15%);
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;    
+    margin-top: 90px;
+  }
+  
+  .reset:hover {
+    background-color: hsl(172, 50%, 40%);
+  }
+
+ 
+  /*------------------------------------*/
+
+  @media (max-width: 800px) {
+
+    .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .calculatoer {
+        border-radius: 20px;
+        padding: 1.5rem;
+    }
+
+    .reset {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    
+    .header {
+        font-size: 1.8rem;
+    }
+
+    .input{
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .claculator.tip-buttons{
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .outpot {
+        font-size: 2rem;
+    }
+}
