@@ -76,24 +76,24 @@
           <div class="row g-3">
             <!-- First Row -->
             <div class="col-4 col-md-4">
-              <button class="btn btn-primary w-100">5%</button>
+              <button onclick="getTip(1.05)" id="5" class="btn btn-primary w-100">5%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button class="btn btn-primary w-100">10%</button>
+              <button onclick="getTip(1.10)" id="10" class="btn btn-primary w-100">10%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button class="btn btn-primary w-100">15%</button>
+              <button onclick="getTip(1.15)" id="15" class="btn btn-primary w-100">15%</button>
             </div>
           
             <!-- Second Row -->
             <div class="col-4 col-md-4">
-              <button class="btn btn-primary w-100">25%</button>
+              <button onclick="getTip(1.25)" id="25" class="btn btn-primary w-100">25%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button class="btn btn-primary w-100">50%</button>
+              <button onclick="getTip(1.5)" id="50" class="btn btn-primary w-100">50%</button>
             </div>
             <div class="col-4 col-md-4">
-              <input type="text" class="form-control" placeholder="Custom tip %" />
+              <input oninput="specificTip(this.value)" type="text" class="form-control" placeholder="Custom tip %" />
             </div>
           </div>
         </div>
@@ -110,20 +110,20 @@
     <div class="right">
       <div class="first_line">
        <p>Tip amount <br> /person</p>
-        <button>$0.00</button>
+        <button id="tip-amountB" >$0.00</button>
       </div>
       <div class="first_line">
         <p>Total <br> /person</p>
-         <button>$0.00</button>
+         <button id="PayPerPerson">$0.00</button>
        </div>
-       <button id="reset">reset</button>
+       <button onclick="resetFunc()" id="reset">reset</button>
 
 
     </div>
   </main>
 
   <!-- Scripts -->
-  <script src="jquery.js"></script>
+  <script src="index.js"></script>
   <script src="bootstrap.min.js"></script>
 </body>
 </html>
