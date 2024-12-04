@@ -50,6 +50,11 @@ const checkAndCalculate = () => {
     }
 }
 
+const custom= document.getElementById("custom");
+custom.addEventListener("change", ()=>{
+    selectedTip= custom.value;
+})
+
 const resetBtn= document.getElementById("reset");
 resetBtn.addEventListener("click", ()=>{
     selectedTip=0;
@@ -58,6 +63,7 @@ resetBtn.addEventListener("click", ()=>{
 
     document.getElementById("bill-input").value= "";
     document.getElementById("people-input").value="";
+    document.getElementById("custom").value="";
 
     document.getElementById("tipPerPerson").textContent= "$0";
     document.getElementById("totalAmount").textContent= "$0";

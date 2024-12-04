@@ -87,6 +87,14 @@ body
     color: hsl(186, 14%, 43%);
    font-weight: bold;
 }
+#custom
+{
+    width: 4.5rem;
+    height: 2rem;
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    padding-left: 0.5rem;
+}
 #btn button:hover
 {
     color: hsl(183, 100%, 15%);
