@@ -29,7 +29,7 @@
       <div id="part1">
         <form>
           <label for="fTextL" id="fTextL">Bill</label><br>
-          <input type="text" id="fPrice" placeholder="0"><br>
+          <input type="text" id="fPrice" onchange="changeTipAmount()"  placeholder="0"><br>
           <!-- <input type="text" id="fPrice">
           <h id="createdText">142.55</h><br> -->
         </form>
@@ -38,17 +38,18 @@
         <p id="fTextL">Select Tip %</p>
       </div>
       <section class="choosingATip">
-        <button class="chooseTip">5%</button>
-        <button class="chooseTip">10%</button>
-        <button class="chooseTip">15%</button>
-        <button class="chooseTip">25%</button>
-        <button class="chooseTip">50%</button>
-        <button id="chooseTipDifferent">Custom</button>
+        <button class="chooseTip" onclick="Tip(0.05)">5%</button>
+        <button class="chooseTip" onclick="Tip(0.1)">10%</button>
+        <button class="chooseTip" onclick="Tip(0.15)">15%</button>
+        <button class="chooseTip" onclick="Tip(0.25)">25%</button>
+        <button class="chooseTip" onclick="Tip(0.3)">50%</button>
+        <input type="text" id="chooseTipDifferent" onchange="chooseTipDifferent()"  placeholder="Custom"><br>
+        <!-- <button id="chooseTipDifferent">Custom</button> -->
       </section>
   <div id="part3">
     <form>
       <label for="fTextL" id="fTextL">Number of People</label><br>
-      <input type="text" id="fNum" placeholder="0"><br>
+      <input type="text" id="fNum" onchange="changeTipAmount()" placeholder="0"><br>
       <!-- <input type="text" id="fNum">
       <h id="createdText">5</h><br> -->
     </form>
@@ -70,10 +71,11 @@
       <div id="amountPrice">$0</div>
     </div>
     <button id="resetB">
-      <p id="textReset"><b>RESET</b></p>
+      <p id="textReset" onclick="resetAll()"><b>RESET</b></p>
     </button>
   </section>
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
