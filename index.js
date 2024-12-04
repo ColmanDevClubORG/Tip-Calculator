@@ -19,9 +19,18 @@ const getPeople= () =>
     checkAndCalculate();
 }
 
-const tip = (value) => {
+const tip = (value,btn) => {
     selectedTip = value;
     console.log(selectedTip)
+
+    const buttons = document.querySelectorAll("#btn button");
+    buttons.forEach(button => {
+        button.style.backgroundColor = "hsl(183, 100%, 15%)"; 
+        button.style.color = "#ffffff"; 
+    });
+
+    btn.style.backgroundColor = "hsl(172, 67%, 45%)";
+    btn.style.color = "hsl(183, 100%, 15%)";
     checkAndCalculate();
 }
 
@@ -67,7 +76,13 @@ resetBtn.addEventListener("click", ()=>{
 
     document.getElementById("tipPerPerson").textContent= "$0";
     document.getElementById("totalAmount").textContent= "$0";
-    
+
+    const buttons = document.querySelectorAll("#btn button");
+    buttons.forEach(button => {
+        button.style.backgroundColor = "hsl(183, 100%, 15%)"; 
+        button.style.color = "#ffffff"; 
+    });
+
 });
 
 priceInput.addEventListener("change", getPrice);
