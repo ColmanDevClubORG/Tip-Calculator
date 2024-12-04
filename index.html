@@ -21,12 +21,12 @@
     <input id="bill-input" type="text" placeholder="">
     <h3>Select Tip %</h2>
     <div id="btn">
-      <button>5%</button>
-      <button>10%</button>
-      <button>15%</button>
-      <button>25%</button>
-      <button>50%</button>
-      <button id="custom">Custom</button>
+      <button onclick="tip(5)">5%</button>
+      <button onclick="tip(10)">10%</button>
+      <button onclick="tip(15)">15%</button>
+      <button onclick="tip(25)">25%</button>
+      <button onclick="tip(50)">50%</button>
+      <button onclick="tip()">Custom</button>
     </div>
     <h3>Number of People</h2>
     <input id="people-input" type="text" placeholder="">
@@ -38,14 +38,14 @@
         <h3>Tip Amount</h3>
         <h5>/ person</h5>
       </div>
-      <div id="num"><h1>$0</h1></div>
+      <div id="num-amount"><h1 id="tipPerPerson">$0</h1></div>
     </div>
     <div id="tip-amount">
       <div id="text">
         <h3> Total</h3>
         <h5>/ person</h5>
       </div>
-      <div id="num"><h1>$0</h1></div>
+      <div id="num-price"><h1 id="totalAmount">$0</h1></div>
     </div>
     <footer class="footer">
       <button> RESET</button>
@@ -53,15 +53,6 @@
   </section>
 </div>
   
-
-
-  
-
-
-
-  
-  
-
- 
+<script src="index.js"></script>
 </body>
 </html>
