@@ -14,33 +14,33 @@
   <title>Tip calculator app</title>
 
 </head>
-<body>
-
+<header>
+  <div>SPLI</div>
+  <div>TTER</div>
+</header>
   <div class="container">
     <div class="input-container">
       <div class="bill-container">
         <p>Bill</p>
-        <img src="images/icon-dollar.svg" alt="Dollar Icon" class="dollar-icon">
-        <input type="text" id="amountOfBill" class="amountInput">
+        <input type="text" id="amountOfBill" class="bill-input" placeholder="0.00">
       </div>
 
 
       <div class="selection-container">
         <p>Select Tip %</p>
         <div class="tip-buttons">
-          <button class="tipButton">5%</button>
-          <button class="tipButton">10%</button>
-          <button class="tipButton">15%</button>
-          <button class="tipButton">25%</button>
-          <button class="tipButton">50%</button>
+          <button class="tipButton" onclick="calculateTip(1.05)">5%</button>
+          <button class="tipButton" onclick="calculateTip(1.1)">10%</button>
+          <button class="tipButton" onclick="calculateTip(1.15)">15%</button>
+          <button class="tipButton" onclick="calculateTip(1.25)">25%</button>
+          <button class="tipButton" onclick="calculateTip(1.50)">50%</button>
           <input type="text" class="customTip" placeholder="Custom">
         </div>
       </div>
 
       <div class="people-container">
         <p>Number of People</p>
-        <img src="images/icon-person.svg" alt="Dollar Icon" class="person-icon">
-        <input type="number" id="numOfPeople" class="peopleInput" placeholder="0">
+        <input type="number" id="numOfPeople" class="people-input" placeholder="0" oninput="updatePeople()">
       </div>
     </div>
   
@@ -52,7 +52,7 @@
           <p>Tip Amount</p>
           <p class="tip-amount-value">/ person</p>
         </div>
-        <output class="tip-amount-output">$0.0</output>
+        <output class="tip-amount-output" id="tip-amount">$0.0</output>
       </div>
 
       <div class="total-amount">
@@ -60,12 +60,12 @@
           <p>Total</p>
           <p class="total-amount-value">/ person</p>
         </div>
-        <output class="total-amount-output">$0.0</output>
+        <output class="total-amount-output" id="total-amount">$0.0</output>
       </div>
 
-    <button class="reset-button">RESET</button>
+    <button class="reset-button" onclick="reset()">RESET</button>
   </div>
 
-
+<script src="index.js"> defer</script>
 </body>
 </html>

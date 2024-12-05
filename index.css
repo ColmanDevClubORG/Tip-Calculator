@@ -12,7 +12,7 @@ html{
     padding: 30px;
     width: 700px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 3%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     color: hsl(186, 14%, 43%);
     margin-bottom: 10%;
@@ -20,6 +20,14 @@ html{
     
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 20px;
+    color: hsl(183, 100%, 15%);
+}
 
   .input-container p {
     font-size: 16px;
@@ -30,9 +38,9 @@ html{
 
 
   .dollar-icon {
-    position: absolute;
-    left: 26.5%; /* Adjust based on your design */
-    top: 36.6%;
+    padding-left: 25px;
+    background: url("./images/icon-dollar.svg") no-repeat left;
+    background-size: 20px;
     transform: translateY(-50%);
     pointer-events: none; /* Prevent interaction with the symbol */
     color: #aaa; /* Adjust color to match your design */
@@ -48,7 +56,26 @@ html{
   }
   
 
-input {
+  .bill-input {
+    background: url("./images/icon-dollar.svg") no-repeat left;
+    background-size: 17px;
+    font-family: 'Space-Mono' ,monospace;
+    font-weight: bold;
+    font-display: right;
+    color: hsl(183, 100%, 15%);
+    direction: rtl; /* Right to left */
+    width: 100%;
+    padding: 10px 10px 10px 30px; /* Padding to leave space for the dollar sign */
+    font-size: 21px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: hsl(189, 41%, 97%);
+  }
+
+  .people-input {
+    background: url("./images/icon-person.svg") no-repeat left;
+    background-size: 17px;
     font-family: 'Space-Mono' ,monospace;
     font-weight: bold;
     font-display: right;
@@ -87,11 +114,11 @@ input::placeholder {
   }
 
   .tipButton, .customTip {
+    border: none;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
     padding: 10px;
     font-size: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
     box-sizing: border-box;
@@ -113,13 +140,11 @@ input::placeholder {
     background-color: hsl(189, 41%, 97%);
     font-size: 16px;
     width: 100%;
-    border: 1px solid #ccc;
   }
 
   .tip-amount {
     display: flex;
     justify-content: space-between;
-
     padding: 20px;
     background-color: hsl(183, 100%, 15%);
     color: white;
@@ -171,4 +196,22 @@ input::placeholder {
     cursor: pointer;
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
+}
+
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 1030px) {
+    .container{
+        flex-direction: column;
+        height: 75%;
+        width: 100%;
+    }
+
+    .output-container{
+        margin-top: 3%;
+        width: 90%;
+    }
+
 }
