@@ -36,19 +36,19 @@
         <div class="tip">
           <label for="Select Tip %">Select Tip %</label>
           <div class="tip-buttons">
-            <button class="tip-button">5%</button>
-            <button class="tip-button">10%</button>
-            <button class="tip-button">15%</button>
-            <button class="tip-button">25%</button>
-            <button class="tip-button">50%</button>
-            <button class="tip-button" id="custom">Custom</button>
+            <button class="tip-button" data-tip ="1.05" >5%</button>
+            <button class="tip-button" data-tip ="1.1" >10%</button>
+            <button class="tip-button" data-tip ="1.15" >15%</button>
+            <button class="tip-button" data-tip ="1.25" >25%</button>
+            <button class="tip-button" data-tip ="1.5" >50%</button>
+            <input class="tip-button" id="custom" placeholder="Custom" oninput="customTipAmount(event)"></input>
           </div>
         </div>
 
         <div class="people">
           <p>Number of People</p>
           <span class="input-sign fa fa-user" id="person-symbol"></span>
-          <input type="text" id="people" placeholder="0" class="input">
+          <input type="text" id="people" placeholder="0" class="input" oninput="showTipAmount(event)">
           
 
       </div>
@@ -82,9 +82,10 @@
         </div>
       </div>
 
-      <button class="reset">Reset</button>
+      <button class="reset" id="reset-calc" onclick="resetCalc()">Reset</button>
 
   </section>
  
+  <script src="index.js"> </script>
 </body>
 </html>
