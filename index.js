@@ -47,18 +47,23 @@ document.getElementById("people-count").addEventListener("input", function(e){
 
 button5.addEventListener("click", function(){
     button5.style.backgroundColor = "hsl(172, 67%, 45%)";
+    document.getElementById("specificTip").value="";
 })
 button10.addEventListener("click", function(){
     button10.style.backgroundColor = "hsl(172, 67%, 45%)";
+    document.getElementById("specificTip").value="";
 })
 button15.addEventListener("click", function(){
     button15.style.backgroundColor = "hsl(172, 67%, 45%)";
+    document.getElementById("specificTip").value="";
 })
 button25.addEventListener("click", function(){
     button25.style.backgroundColor = "hsl(172, 67%, 45%)";
+    document.getElementById("specificTip").value="";
 })
 button50.addEventListener("click", function(){
     button50.style.backgroundColor = "hsl(172, 67%, 45%)";
+    document.getElementById("specificTip").value="";
 })
 
 const specificTip = (number) =>{
