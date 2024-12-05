@@ -78,6 +78,8 @@ const resetFunc=()=>{
     document.getElementById("people-count").value="";
     document.getElementById("tip-amountB").innerText="$0.00";
     document.getElementById("PayPerPerson").innerText="$0.00";
+    document.getElementById("specificTip").value="";
+
     price=0;
     amountPeople=0;
     TotalPrice=0;
