@@ -38,11 +38,11 @@
         <p id="fTextL">Select Tip %</p>
       </div>
       <section class="choosingATip">
-        <button class="chooseTip" onclick="Tip(0.05)">5%</button>
-        <button class="chooseTip" onclick="Tip(0.1)">10%</button>
-        <button class="chooseTip" onclick="Tip(0.15)">15%</button>
-        <button class="chooseTip" onclick="Tip(0.25)">25%</button>
-        <button class="chooseTip" onclick="Tip(0.3)">50%</button>
+        <button class="chooseTip" onclick="Tip(this, 0.05)">5%</button>
+        <button class="chooseTip" onclick="Tip(this,0.1)">10%</button>
+        <button class="chooseTip" onclick="Tip(this,0.15)">15%</button>
+        <button class="chooseTip" onclick="Tip(this,0.25)">25%</button>
+        <button class="chooseTip" onclick="Tip(this,0.3)">50%</button>
         <input type="text" id="chooseTipDifferent" onchange="chooseTipDifferent()"  placeholder="Custom"><br>
         <!-- <button id="chooseTipDifferent">Custom</button> -->
       </section>
