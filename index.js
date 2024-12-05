@@ -2,6 +2,7 @@
         let tipPrc = 0;
         let customTip = 0;
         
+        
         document.getElementById('bill').addEventListener('input', function(event) {
         billAmt = event.target.value;
         });
@@ -22,9 +23,15 @@
 
         const showTipAmount = (event) => {
         const numOfPeople = event.target.value; 
-        if (tipPrc === 0) {
+        if (tipPrc === 0 || tipPrc === undefined) {
             tipPrc = (customTip / 100) + 1;
         }
+
+        if (billAmt <= 0 || tipPrc < 0 || tipPrc === undefined || numOfPeople <= 0) {
+            alert("Please enter a valid bill amount, number of people and tip percentage.");
+            return;
+        }
+
         const totalBill = calculateBill(billAmt, tipPrc);
         const totalBillPerPerson = totalBill / numOfPeople;
         const totalTipPerPerson = (totalBill - billAmt) / numOfPeople;
