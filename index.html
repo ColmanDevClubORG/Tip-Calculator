@@ -76,24 +76,24 @@
           <div class="row g-3">
             <!-- First Row -->
             <div class="col-4 col-md-4">
-              <button onclick="getTip(1.05)" id="5" class="btn btn-primary w-100">5%</button>
+              <button onclick="getTip(1.05)" id="5" class="tip-button btn btn-primary w-100">5%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button onclick="getTip(1.10)" id="10" class="btn btn-primary w-100">10%</button>
+              <button onclick="getTip(1.10)" id="10" class="tip-button btn btn-primary w-100">10%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button onclick="getTip(1.15)" id="15" class="btn btn-primary w-100">15%</button>
+              <button onclick="getTip(1.15)" id="15" class="tip-button btn btn-primary w-100">15%</button>
             </div>
           
             <!-- Second Row -->
             <div class="col-4 col-md-4">
-              <button onclick="getTip(1.25)" id="25" class="btn btn-primary w-100">25%</button>
+              <button onclick="getTip(1.25)" id="25" class="tip-button btn btn-primary w-100">25%</button>
             </div>
             <div class="col-4 col-md-4">
-              <button onclick="getTip(1.5)" id="50" class="btn btn-primary w-100">50%</button>
+              <button onclick="getTip(1.5)" id="50" class="tip-button btn btn-primary w-100">50%</button>
             </div>
             <div class="col-4 col-md-4">
-              <input id="specificTip" oninput="specificTip(this.value)" type="text" class="form-control" placeholder="Custom tip %" />
+              <input id="specificTip" onchange="getTip((this.value/100)+1)" type="text" class="form-control" placeholder="Custom tip %" />
             </div>
           </div>
         </div>

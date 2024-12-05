@@ -122,4 +122,12 @@ body{
 
 }
 
+.btn-primary:disabled {
+    pointer-events: none; /* Disable clicking */
+    opacity: 1;          /* Keep original opacity */
+    background-color: hsl(183, 100%, 15%);; /* Keep original background color */
+    color: white;      /* Keep original text color */
+    border: inherit;     /* Keep original border */
+  }
+
 
