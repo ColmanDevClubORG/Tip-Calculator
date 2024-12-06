@@ -80,8 +80,11 @@ validateInput(elements.customTipEl, elements.tipError, value => tip = value);
 
 
 elements.percentButtons.forEach(button => {
-  const { percentButtons } = elements
+  const { percentButtons,customTipEl,tipError } = elements
   button.addEventListener("click", () => {
+    customTipEl.value = ""
+    tipError.textContent = "" 
+    customTipEl.classList.remove("not-valid")
     percentButtons.forEach(button => button.classList.remove("clicked"))
     button.classList.add("clicked")
     tip = button.value

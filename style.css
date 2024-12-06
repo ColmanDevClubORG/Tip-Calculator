@@ -125,6 +125,7 @@ html {
 .people-error,
 .tip-error {
   color: var(--color-red);
+  font-size:1.2rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -290,7 +291,7 @@ input::-webkit-inner-spin-button {
   }
 
   .btn-box {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .dashboard-box {
@@ -322,6 +323,10 @@ input::-webkit-inner-spin-button {
 @media(max-width: 375px) {
   html {
     font-size: 58.5%;
+  }
+
+  .btn-box {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   
