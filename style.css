@@ -84,6 +84,7 @@ body {
   border-radius: 5px;
   border: 2px solid hsl(189, 41%, 97%);
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .output {
@@ -136,6 +137,20 @@ body {
     top:25%;
     left: 3%;
 }
+
+input.placeholder{
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 @media (max-width: 768px) {
   .container{
     height: 100vh;
