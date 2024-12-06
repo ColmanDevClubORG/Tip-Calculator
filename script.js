@@ -1,102 +1,112 @@
 const $ = (selector) => document.querySelector(selector)
 const $$ = (selector) => document.querySelectorAll(selector)
-
-
-const elements = {
-   billEl: $("#bill-input"),
-   peopleEl: $("#people-number-input"),
-   customTipEl: $(".custom-input"),
-   billError: $(".bill-error"),
-   peopleError: $(".people-error"),
-   tipError: $(".tip-error"),
-   tipAmount: $(".tip-amount"),
-   totalAmount: $(".total-amount"),
-   resetBtn: $(".reset-btn"),
-   inputs: $$(".main-input"),
-   buttons : $$(".btn-percent"),
-}
-
 let tip = 0
 let people = 0
 let bill = 0
 
-function reset(){
-  elements.billEl.value = ""
-  elements.peopleEl.value = ""
-  elements.customTipEl.value=""
+const elements = {
+  billEl: $("#bill-input"),
+  peopleEl: $("#people-number-input"),
+  customTipEl: $(".custom-input"),
+  billError: $(".bill-error"),
+  peopleError: $(".people-error"),
+  tipError: $(".tip-error"),
+  tipAmountEl: $(".tip-amount"),
+  totalAmountEl: $(".total-amount"),
+  resetBtn: $(".reset-btn"),
+  inputs: $$(".main-input"),
+  percentButtons: $$(".btn-percent"),
+}
+
+const errorMessages = {
+  zeroError: "Can't be zero",
+  fractureNumberError: "Cannot be fractured number",
+  negativeError: "Cannot be negative",
+}
+
+function reset() {
+  const { billEl, peopleEl, customTipEl, billError, peopleError, tipError, percentButtons } = elements
+
+  billEl.value = ""
+  peopleEl.value = ""
+  customTipEl.value = ""
+  tipError.textContent = ""
+  peopleError.textContent = ""
+  billError.textContent = ""
+
   tip = 0
   people = 0
   bill = 0
-  elements.buttons.forEach(button=>button.classList.remove("clicked"))
+
+  percentButtons.forEach(button => button.classList.remove("clicked"))
   updateDashboard()
-  elements.tipError.textContent = ""
-  elements.peopleError.textContent = ""
-  elements.billError.textContent = ""
 }
 
-function validateInput(inputEl, errorEl, errorMessageZero, errorMessageNegative, updateCounter) {
+function validateInput(inputEl, errorEl, updateCounter) {
+  const { percentButtons } = elements
+  const { zeroError, fractureNumberError, negativeError } = errorMessages
   inputEl.addEventListener("input", () => {
-    if (parseInt(inputEl.value) === 0) {
-      errorEl.textContent = errorMessageZero;
+    if ((inputEl.value).length === 0) {
+      updateCounter(0)
+      updateDashboard();
+    }
+    else if (parseInt(inputEl.value) === 0) {
+      errorEl.textContent = zeroError;
       inputEl.classList.add("not-valid");
     } else if (parseInt(inputEl.value) < 0) {
-      errorEl.textContent = errorMessageNegative;
+      errorEl.textContent = negativeError;
       inputEl.classList.add("not-valid");
-    } 
+    } else if ((inputEl.id == "people-number-input") && (parseFloat((inputEl.value) % 1) !== 0)) {
+      errorEl.textContent = fractureNumberError;
+      inputEl.classList.add("not-valid");
+      people = 0
+      updateDashboard();
+    }
     else {
       errorEl.textContent = "";
       inputEl.classList.remove("not-valid");
       updateCounter(parseFloat(inputEl.value));
       updateDashboard();
     }
-
-    if((elements.inputEl.value).length === 0){
-      updateCounter(0)
-      updateDashboard();
+    if (inputEl.classList[0] == "custom-input") {
+      percentButtons.forEach(button => button.classList.remove("clicked"))
     }
   });
 }
 
-validateInput(elements.billEl, elements.billError, "Can't be zero", "Cannot be negative", value => bill = value);
-validateInput(elements.peopleEl, elements.peopleError, "Can't be zero", "Cannot be negative", value => people = value);
+validateInput(elements.billEl, elements.billError, value => bill = value);
+validateInput(elements.peopleEl, elements.peopleError, value => people = value);
+validateInput(elements.customTipEl, elements.tipError, value => tip = value);
 
-elements.customTipEl.addEventListener("input", () => {
-  if (parseInt(elementscustomTipEl.value) === 0) {
-    elementstipError.textContent = "Can't be zero";
-    customTipEl.classList.add("not-valid");
-  } else if (parseInt(elements.customTipEl.value) < 0) {
-    elements.tipError.textContent = "Cannot be negative";
-    elements.customTipEl.classList.add("not-valid");
-  } 
-  else {
-    elements.tipError.textContent = "";
-    elements.customTipEl.classList.remove("not-valid");
-    elements.buttons.forEach(button => button.classList.remove("clicked"))
-    tip = elements.customTipEl.value
-    updateDashboard()
-  }
-});
 
-elements.buttons.forEach(button => {
+elements.percentButtons.forEach(button => {
+  const { percentButtons } = elements
   button.addEventListener("click", () => {
-    elements.buttons.forEach(button => button.classList.remove("clicked"))
+    percentButtons.forEach(button => button.classList.remove("clicked"))
     button.classList.add("clicked")
     tip = button.value
     updateDashboard()
   });
 });
 
-function updateDashboard(){
-  if (people != 0 && tip != "" && bill != 0) {
-    elements.tipAmount.textContent = `$${(bill * (tip / 100) / people).toFixed(2)}`;
-    elements.totalAmount.textContent = `$${((bill + (bill * (tip / 100))) / people).toFixed(2)}`;
-    elements.resetBtn.classList.add("on")
-    elements.resetBtn.disabled = false
+function updateDashboard() {
+  const { tipAmountEl, totalAmountEl, resetBtn } = elements
+  const valid = (people != 0 && tip != 0 && bill != 0)
+  
+  const totalTip = Number((bill * (tip / 100)).toFixed(2))
+  const tipAmountPerPerson = (totalTip / people).toFixed(2)
+  const totalAmountPerPerson = ((bill + totalTip) / people).toFixed(2)
+
+  if (valid) {
+    tipAmountEl.textContent = `$${tipAmountPerPerson}`;
+    totalAmountEl.textContent = `$${totalAmountPerPerson}`;
+    resetBtn.classList.add("on")
+    resetBtn.disabled = false
   } else {
-    elements.tipAmount.textContent = `$0.00`;
-    elements.totalAmount.textContent = `$0.00`;
-    elements.resetBtn.classList.remove("on")
-    elements.resetBtn.disabled = true
+    tipAmountEl.textContent = `$0.00`;
+    totalAmountEl.textContent = `$0.00`;
+    resetBtn.classList.remove("on")
+    resetBtn.disabled = true
   }
 }
 

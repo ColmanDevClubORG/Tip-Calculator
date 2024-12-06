@@ -6,7 +6,20 @@
   box-sizing: border-box;
 }
 
-
+:root {
+  --color-primary: hsl(228, 45%, 44%);
+  --color-secondary: hsl(186, 14%, 43%);
+  --color-tertiary: hsl(185, 41%, 84%);
+  --color-white: #fff;
+  --color-gray: #888;
+  --color-light-gray: hsl(189, 41%, 97%);
+  --color-dark: hsl(183, 100%, 15%);
+  --color-red: hsl(0, 100%, 50%);
+  --color-light-blue: hsl(184, 79%, 79%);
+  --color-green: hsl(172, 67%, 45%);
+  --color-bright-green: hsl(172, 80%, 51%);
+  --color-muted-blue: hsl(184, 14%, 56%);
+}
 
 .attribution {
   font-size: 11px;
@@ -14,19 +27,20 @@
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-primary);
 }
-
 
 .main-header {
   font-weight: 600;
   letter-spacing: 12px;
   font-size: 20px;
-  color: hsl(186, 14%, 43%);
+  color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
 }
 
 .main-section {
-  background-color: hsl(185, 41%, 84%);
+  background-color: var(--color-tertiary);
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
@@ -35,7 +49,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .container {
   height: 100%;
@@ -52,7 +65,7 @@
 }
 
 .calc-box {
-  background-color: #fff;
+  background-color: var(--color-white);
   width: 50%;
   height: fit-content;
   border-radius: 18px;
@@ -61,14 +74,9 @@
   gap: 48px;
 }
 
-
-
 /* Form style */
-.form-box {
-  width: 100%;
-}
 
-.form-box form {
+.form-box {
   display: flex;
   flex-direction: column;
   gap: 52px;
@@ -83,9 +91,8 @@
 
 .input-title-box label {
   font-weight: 700;
-  color: #888;
+  color: var(--color-gray);
   margin-bottom: 6px;
-
 }
 
 .main-input {
@@ -97,17 +104,15 @@
   direction: rtl;
   font-family: inherit;
   font-weight: 600;
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(183, 100%, 15%);
+  background-color: var(--color-light-gray);
+  color: var(--color-dark);
   border-radius: 4px;
   transition: all .1s;
 }
 
 .main-input:focus {
-  border: 2px solid hsl(172, 67%, 45%);
+  border: 2px solid var(--color-green);
 }
-
-
 
 .input-title-box {
   display: flex;
@@ -117,7 +122,7 @@
 .bill-error,
 .people-error,
 .tip-error {
-  color: red;
+  color: var(--color-red);
 }
 
 /*disabled the arrows in the number inputs*/
@@ -127,12 +132,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.input-box i {
+.icon {
   position: absolute;
   top: 60%;
   left: 6%;
 }
-
 
 /*Percents box*/
 .btn-box {
@@ -144,8 +148,8 @@ input::-webkit-inner-spin-button {
 .btn-percent {
   border: none;
   height: 52px;
-  background-color: hsl(183, 100%, 15%);
-  color: #fff;
+  background-color: var(--color-dark);
+  color: var(--color-white);
   font-family: inherit;
   font-size: 22px;
   border-radius: 4px;
@@ -155,13 +159,13 @@ input::-webkit-inner-spin-button {
 }
 
 .btn-percent:hover {
-  background-color: hsl(184, 79%, 79%);
-  color: hsl(183, 100%, 15%);
+  background-color: var(--color-light-blue);
+  color: var(--color-dark);
 }
 
 .custom-input {
   font-size: 24px;
-  background-color: hsl(189, 41%, 97%);
+  background-color: var(--color-light-gray);
   border: none;
   font-weight: 600;
   font-family: inherit;
@@ -171,43 +175,40 @@ input::-webkit-inner-spin-button {
   padding: 0 12px;
   outline: none;
   text-align: right;
-  color: hsl(183, 100%, 15%);
+  color: var(--color-dark);
   border-radius: 4px;
-
 }
 
 .custom-input:focus {
-  border: 2px solid hsl(172, 67%, 45%);
+  border: 2px solid var(--color-green);
 }
 
 .not-valid:focus {
-  border: 2px solid red;
+  border: 2px solid var(--color-red);
 }
 
 .custom-input::placeholder {
-  color: hsl(186, 14%, 43%);
+  color: var(--color-secondary);
   text-align: center;
-
 }
 
 .clicked {
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(172, 80%, 51%);
+  color: var(--color-dark);
+  background-color: var(--color-bright-green);
 }
 
 .clicked:hover {
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(172, 80%, 51%);
+  color: var(--color-dark);
+  background-color: var(--color-bright-green);
 }
 
 /* Dashboard box */
 .dashboard-box {
-  color: #fff;
-  background-color: hsl(183, 100%, 15%);
+  color: var(--color-white);
+  background-color: var(--color-dark);
   width: 90%;
   border-radius: 8px;
   padding: 48px 36px;
-
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -222,7 +223,7 @@ input::-webkit-inner-spin-button {
 .tip-amount,
 .total-amount {
   font-size: 42px;
-  color: hsl(172, 80%, 51%);
+  color: var(--color-bright-green);
 }
 
 .title-box {
@@ -233,12 +234,12 @@ input::-webkit-inner-spin-button {
 
 .title-box h4 {
   font-size: 14px;
-  color: hsl(189, 41%, 97%)
+  color: var(--color-light-gray);
 }
 
 .title-box p {
   font-size: 12px;
-  color: hsl(184, 14%, 56%);
+  color: var(--color-muted-blue);
   font-weight: 600;
 }
 
@@ -246,8 +247,8 @@ input::-webkit-inner-spin-button {
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(186, 14%, 43%);
+  color: var(--color-dark);
+  background-color: var(--color-secondary);
   font-family: inherit;
   font-weight: 600;
   font-size: 18px;
@@ -255,27 +256,25 @@ input::-webkit-inner-spin-button {
   transition: all .3s;
 }
 
-
 .on {
-  color: hsl(183, 100%, 15%);
-  background-color: hsl(172, 80%, 51%);
+  color: var(--color-dark);
+  background-color: var(--color-bright-green);
   cursor: pointer;
-
 }
 
 .on:hover {
-  background-color: hsl(184, 79%, 79%);
+  background-color: var(--color-light-blue);
 }
-
 
 /* Media query */
 @media(max-width:375px) {
   .container {
-    padding-top: 50px;
     justify-content: flex-start;
     transform: translateY(0%);
+  }
 
-
+  .container::before {
+    content: "";
   }
 
   .calc-box {
@@ -285,7 +284,6 @@ input::-webkit-inner-spin-button {
     height: fit-content;
     display: flex;
     flex-direction: column;
-
   }
 
   .btn-box {
@@ -326,9 +324,7 @@ input::-webkit-inner-spin-button {
     font-size: 20px;
   }
 
-  .form-box form {
+  .form-box {
     gap: 30px;
   }
-
-
 }

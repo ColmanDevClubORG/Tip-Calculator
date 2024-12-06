@@ -19,17 +19,16 @@
 <body>
   <section class="main-section">
     <div class="container">
-      <h2 class="main-header">SPLI<br>TTER</h2>
+      <h2 class="main-header"><span>SPLI</span><span>TTER</span></h2>
       <div class="calc-box">
-        <div class="form-box">
-          <form>
+          <form class="form-box">
             <div class="input-box">
               <div class="input-title-box">
                 <label for="bill-input">Bill</label>
                 <p class="bill-error"></p>
               </div>
               <input type="number" id="bill-input" class="main-input" placeholder="0">
-              <i><img src="/images/icon-dollar.svg" alt="Dollar Icon"></i>
+              <img class="icon" src="/images/icon-dollar.svg" alt="Dollar Icon">
             </div>
 
             <div class="tip-buttons-box">
@@ -41,7 +40,6 @@
                 <button type="button" class="btn-percent" value="5">5%</button>
                 <button type="button" class="btn-percent" value="10">10%</button>
                 <button type="button" class="btn-percent" value="15">15%</button>
-                <!-- clicked -->
                 <button type="button" class="btn-percent" value="25">25%</button>
                 <button type="button" class="btn-percent" value="50">50%</button>
                 <input type="number" class="custom-input main-input" placeholder="Custom">
@@ -54,11 +52,10 @@
                 <p class="people-error"></p>
               </div>
               <input class="main-input" type="number" inputmode="numeric" id="people-number-input" placeholder="0">
-              <i><img src="/images/icon-person.svg" alt="Person Icon"></i>
+              <img class="icon" src="/images/icon-person.svg" alt="Person Icon">
 
             </div>
           </form>
-        </div>
         <div class="dashboard-box">
           <div class="result-box">
             <div class="title-box">
