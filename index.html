@@ -1,39 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper display on all devices -->
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | Tip Calculator App</title>
+
+  <!-- Inline Styles (Optional) -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 <body>
+  
+  <header>
+    <center>
+      <!-- <h1 id="title">SPLI <br> TTER</h1> -->
+      <div class="container-title">
+        <div class="row g-1">
+          <!-- First Row -->
+          <div class="col-3">
+            <p>S</p>
+          </div>
+          <div class="col-3">
+            <p>P</p>          </div>
+          <div class="col-3">
+            <p>L</p>          </div>
+       
+      
+          <!-- Second Row -->
+          <div class="col-3">
+            <p>I</p>          </div>
+          <div class="col-3">
+            <p>T</p>          </div>
+          <div class="col-3">
+            <p>T</p>          </div>
+          <div class="col-3">
+            <p>E</p>          </div>
+          <div class="col-3">
+            <p>R</p>          </div>
+        </div>
+      </div>
+    </center>
+  </header>
 
-  Bill
+  <!-- Main Content -->
+  <main class="card-container">
+    <!-- Left Section -->
+    <div class="left">
+      <!-- Bill Input -->
+      <div>
+        <label for="bill-input">Bill</label>
+        <input class="hey" id="bill-input" type="text" placeholder="Enter bill amount">
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <!-- Tip Selection -->
+      <div>
+        <label for="tip-selection">Select Tip %</label>
+        
+        <div class="container">
+          <div class="row g-3">
+            <!-- First Row -->
+            <div class="col-4 col-md-4">
+              <button onclick="getTip(1.05)" id="5" class="btn btn-primary w-100">5%</button>
+            </div>
+            <div class="col-4 col-md-4">
+              <button onclick="getTip(1.10)" id="10" class="btn btn-primary w-100">10%</button>
+            </div>
+            <div class="col-4 col-md-4">
+              <button onclick="getTip(1.15)" id="15" class="btn btn-primary w-100">15%</button>
+            </div>
+          
+            <!-- Second Row -->
+            <div class="col-4 col-md-4">
+              <button onclick="getTip(1.25)" id="25" class="btn btn-primary w-100">25%</button>
+            </div>
+            <div class="col-4 col-md-4">
+              <button onclick="getTip(1.5)" id="50" class="btn btn-primary w-100">50%</button>
+            </div>
+            <div class="col-4 col-md-4">
+              <input id="specificTip" oninput="specificTip(this.value)" type="text" class="form-control" placeholder="Custom tip %" />
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Number of People
+      <!-- Number of People -->
+      <div>
+        <label for="people-count">Number of People</label>
+        <input class="hey" id="people-count" type="text" placeholder="Enter number of people">
+      </div>
+    </div>
 
-  Tip Amount
-  / person
+    <!-- Right Section -->
+    <div class="right">
+      <div class="first_line">
+       <p>Tip amount <br> /person</p>
+        <button id="tip-amountB" >$0.00</button>
+      </div>
+      <div class="first_line">
+        <p>Total <br> /person</p>
+         <button id="PayPerPerson">$0.00</button>
+       </div>
+       <button onclick="resetFunc()" id="reset">reset</button>
 
-  Total
-  / person
 
-  Reset
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+  <script src="bootstrap.min.js"></script>
 </body>
 </html>
