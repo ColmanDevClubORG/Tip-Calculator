@@ -149,7 +149,7 @@ input:focus {
   font-size: 14px;
 }
 
-.right_side .output h1 {
+.right_side .output .res {
   font-size: 35px;
   font-weight: bold;
   color:  hsl(172, 67%, 45%);;
