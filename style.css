@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 :root {
   --color-primary: hsl(228, 45%, 44%);
   --color-secondary: hsl(186, 14%, 43%);
@@ -22,7 +26,7 @@
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -32,8 +36,8 @@
 
 .main-header {
   font-weight: 600;
-  letter-spacing: 12px;
-  font-size: 20px;
+  letter-spacing: 1.2rem;
+  font-size: 2.2rem;
   color: var(--color-secondary);
   display: flex;
   flex-direction: column;
@@ -51,67 +55,65 @@
 }
 
 .container {
-  height: 100%;
+  height: 60%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 42px;
-  overflow-y: scroll;
-  padding-top: 20px;
+  gap: 2.7rem;
   box-sizing: border-box;
-  transform: translateY(-5%);
+  transform: translateY(-10%);
 }
 
 .calc-box {
   background-color: var(--color-white);
-  width: 50%;
+  width: 80rem;
   height: fit-content;
-  border-radius: 18px;
-  padding: 36px;
+  border-radius: 1.35rem;
+  padding: 2.7rem;
   display: flex;
-  gap: 48px;
+  gap: 2.7rem;
 }
-
-/* Form style */
 
 .form-box {
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 3.5rem;
+  width: 50%;
 }
 
 .input-box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.7rem;
   position: relative;
 }
 
 .input-title-box label {
   font-weight: 700;
   color: var(--color-gray);
-  margin-bottom: 6px;
+  margin-bottom: 0.55rem;
+  font-size:1.4rem;
 }
 
 .main-input {
   border: none;
-  font-size: 22px;
-  height: 46px;
+  font-size: 2rem;
+  height: 4.4rem;
   outline: none;
-  padding: 8px 12px 8px 42px;
+  padding: 0.7rem 1.35rem 0.7rem 3.5rem;
   direction: rtl;
   font-family: inherit;
   font-weight: 600;
   background-color: var(--color-light-gray);
   color: var(--color-dark);
-  border-radius: 4px;
+  border-radius: 0.45rem;
   transition: all .1s;
 }
 
 .main-input:focus {
-  border: 2px solid var(--color-green);
+  border: 0.22rem solid var(--color-green);
 }
 
 .input-title-box {
@@ -125,7 +127,6 @@
   color: var(--color-red);
 }
 
-/*disabled the arrows in the number inputs*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -138,21 +139,21 @@ input::-webkit-inner-spin-button {
   left: 6%;
 }
 
-/*Percents box*/
 .btn-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 1.1rem;
+  width: 100%;
 }
 
 .btn-percent {
   border: none;
-  height: 52px;
+  height: 5rem;
   background-color: var(--color-dark);
   color: var(--color-white);
   font-family: inherit;
-  font-size: 22px;
-  border-radius: 4px;
+  font-size: 1.9rem;
+  border-radius: 0.45rem;
   font-weight: 600;
   cursor: pointer;
   transition: all .4s;
@@ -164,7 +165,7 @@ input::-webkit-inner-spin-button {
 }
 
 .custom-input {
-  font-size: 24px;
+  font-size: 1.9rem;
   background-color: var(--color-light-gray);
   border: none;
   font-weight: 600;
@@ -172,19 +173,19 @@ input::-webkit-inner-spin-button {
   display: inline-block;
   width: 100%;
   height: 100%;
-  padding: 0 12px;
+  padding: 0 1.35rem;
   outline: none;
   text-align: right;
   color: var(--color-dark);
-  border-radius: 4px;
+  border-radius: 0.45rem;
 }
 
 .custom-input:focus {
-  border: 2px solid var(--color-green);
+  border: 0.22rem solid var(--color-green);
 }
 
 .not-valid:focus {
-  border: 2px solid var(--color-red);
+  border: 0.22rem solid var(--color-red);
 }
 
 .custom-input::placeholder {
@@ -202,16 +203,15 @@ input::-webkit-inner-spin-button {
   background-color: var(--color-bright-green);
 }
 
-/* Dashboard box */
 .dashboard-box {
   color: var(--color-white);
   background-color: var(--color-dark);
-  width: 90%;
-  border-radius: 8px;
-  padding: 48px 36px;
+  width: 50%;
+  border-radius: 0.9rem;
+  padding: 3.5rem 2.7rem;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 2.7rem;
 }
 
 .result-box {
@@ -222,36 +222,36 @@ input::-webkit-inner-spin-button {
 
 .tip-amount,
 .total-amount {
-  font-size: 42px;
+  font-size: 3.5rem;
   color: var(--color-bright-green);
 }
 
 .title-box {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.45rem;
 }
 
 .title-box h4 {
-  font-size: 14px;
+  font-size: 1.45rem;
   color: var(--color-light-gray);
 }
 
 .title-box p {
-  font-size: 12px;
+  font-size: 1.3rem;
   color: var(--color-muted-blue);
   font-weight: 600;
 }
 
 .reset-btn {
   border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 1.1rem 2.2rem;
+  border-radius: 0.45rem;
   color: var(--color-dark);
   background-color: var(--color-secondary);
   font-family: inherit;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.7rem;
   margin-top: auto;
   transition: all .3s;
 }
@@ -266,24 +266,27 @@ input::-webkit-inner-spin-button {
   background-color: var(--color-light-blue);
 }
 
-/* Media query */
-@media(max-width:375px) {
-  .container {
-    justify-content: flex-start;
-    transform: translateY(0%);
+@media(max-width: 810px) {
+  html {
+    font-size: 60.5%;
   }
 
-  .container::before {
-    content: "";
+  .container {
+    justify-content: flex-start;
+    transform: translateY(-20%);
   }
 
   .calc-box {
     display: block;
     width: 100%;
-    padding: 48px;
+    padding: 2.7rem;
     height: fit-content;
     display: flex;
     flex-direction: column;
+  }
+
+  .form-box {
+    width: 100%;
   }
 
   .btn-box {
@@ -291,40 +294,37 @@ input::-webkit-inner-spin-button {
   }
 
   .dashboard-box {
-    padding: 22px 16px;
-    width: 95%;
+    padding: 2.2rem 1.35rem;
+    width: 100%;
   }
 
   .tip-amount,
   .total-amount {
-    font-size: 22px;
+    font-size: 2.7rem;
   }
 
   .title-box h4 {
-    font-size: 12px;
+    font-size: 1.3rem;
   }
 
   .title-box p {
-    font-size: 10px;
+    font-size: 1.1rem;
   }
 
   .reset-btn {
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: 0.7rem 1.35rem;
+    font-size: 1.45rem;
   }
 
-  .main-input {
-    width: 95%;
-  }
-
-  .btn-percent,
-  .custom-input {
-    height: 42px;
-    width: 90%;
-    font-size: 20px;
-  }
-
-  .form-box {
-    gap: 30px;
-  }
+  
 }
+
+@media(max-width: 375px) {
+  html {
+    font-size: 58.5%;
+  }
+
+  
+}
+
+
