@@ -212,6 +212,7 @@ body{
     font-size: 10px;
     font-weight: bold;
     color:hsl(183, 100%, 15%) ;
+    cursor: pointer;
 
 }
 
