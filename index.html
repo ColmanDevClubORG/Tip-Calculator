@@ -29,16 +29,16 @@
           <path
             d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
         </svg>
-        <input type="text">
+        <input id="bill" type="text">
       </div>
       <h3>Select Tip %</h3>
       <div class="buttoncont">
-        <button class="tipbutton" id="upbutton">5%</button>
-        <button class="tipbutton" id="upbutton">10%</button>
-        <button class="tipbutton" id="upbutton">15%</button>
-        <button class="tipbutton" id="bottombutton">25%</button>
-        <button class="tipbutton" id="bottombutton">50%</button>
-        <button class="tipbutton" id="custom">Custom</button>
+        <button class="tipbutton" onclick="calcTip(5)" id="button1">5%</button>
+        <button class="tipbutton" onclick="calcTip(10)" id="button2">10%</button>
+        <button class="tipbutton" onclick="calcTip(15)" id="button3">15%</button>
+        <button class="tipbutton" onclick="calcTip(25)" id="button4">25%</button>
+        <button class="tipbutton" onclick="calcTip(50)" id="button5">50%</button>
+        <button class="tipbutton" onclick="customNumber()" id="custom">Custom</button>
       </div>
       <h3>Number of People</h3>
       <div class="input-container">
@@ -46,23 +46,24 @@
           class="bi bi-person-fill" viewBox="0 0 16 16">
           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
         </svg>
-        <input type="text">
+        <input id="numOfPeople" type="text">
       </div>
     </div>
     <div class="rightside">
       <div class="upperrightside">
         <div class="urs1">
           <div class="tip"><span id="tip1">Tip Amount</span><span id="tip2">/ person</span></div>
-          <div id="tipamount">$4.27</div>
+          <div id="tipamount"></div>
         </div>
         <div class="urs2">
           <div class="total"><span id="total1">Total</span><span id="total2">/ person</span></div>
-          <div id="totalamount">$32.79</div>
+          <div id="totalamount"></div>
         </div>
       </div>
-      <button class="resetbutton">Reset</button>
+      <button class="resetbutton" onclick="reset()">Reset</button>
     </div>
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
