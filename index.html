@@ -29,7 +29,7 @@
         <input class="input-box" id="price">
           <img src="./images/icon-dollar.svg" class="icon-dollar">
           <!-- <span class="price">142.55</span> -->
-      </input>
+        </input>
       </div>
       <div class="tip-container">
         <p id="tip">Select Tip %</p>
@@ -37,17 +37,18 @@
           <button class="box" id="tip5" onclick="calcTip(0.05)">5%</button>
           <button class="box" id="tip10" onclick="calcTip(0.1)">10%</button>
           <button class="box" id="box15" onclick="calcTip(0.15)">15%</button>
-          <button class="box" id="box25" onclick="calcTip(0.25)">25%</button>
-          <button class="box" id="box50" onclick="calcTip(0.5)">50%</button>
-          <input class="box custom" id="custom" onclick="customTip()" placeholder="custom" ></input>
+          <button class="box" id="tip25" onclick="calcTip(0.25)">25%</button>
+          <button class="box" id="tip50" onclick="calcTip(0.5)">50%</button>
+          <input class="boxcustom" id="custom" onclick="customTip()" placeholder="custom"></input>
         </div>
       </div>
       <div class="people-container">
         <p id="people">Number of People</p>
-        <p id="hover" style="display:none; color:red;">Can't be zero</p>
-        <input class="input-box" id="numOfPeople">
+        <p id="hover" style="display:none; color:red; margin-left:65%;">Can't be zero</p>
+        <input class="input-box" id="numOfpeople">
           <img src="./images/icon-person.svg" class="icon-person">
-      </input>
+          <!-- <span class="price">5</span> -->
+        </input>
       </div>
     </div>
 
@@ -76,7 +77,10 @@
 
 
   </div>
+
+
+
+<script src="script.js"></script>
 </body>
 
-<script src="index.js"></script>
 </html>
