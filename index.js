@@ -19,12 +19,6 @@ const ChangeTotalAmount =()=>{
     document.getElementById("price").innerHTML =amountPerPerson ;
 
 }
-// const ChangeTipPerPerson=()=>{
-//     const totalAmount = bill ;
-//     const amountPerPerson = totalAmount / numOfPeople;
-
-
-// }
 const changeTipPerPerson = (button) => {
     const tipPercent = parseInt(button.getAttribute('data-tip'));
     const totalAmount = bill ;
