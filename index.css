@@ -66,6 +66,10 @@ body{
     --bs-btn-hover-bg:hsl(172, 67%, 45%);
     --bs-btn-hover-border-color:transparent;
 }
+.btn-primary:hover{
+    background-color: hsl(172, 67%, 45%);
+
+}
 .form-control{
     height: 120%;
     width: 95%;
@@ -82,21 +86,25 @@ body{
 .first_line p{
     color: white;
     margin-top: 0px;
-    /* margin-bottom: 0px; */
+    
 
 
 }
+
 
 .first_line button {
-
-    width: 10vw;
+    width: auto;
+    max-width: 13vw;                      
     color: hsl(172, 67%, 45%);
-    background-color: transparent; 
+    background-color: transparent;
     border-color: transparent;
-    /* font-size:3em; */
-    font-size:clamp(1rem, 2.5vw, 3rem);;
-
+    font-size: 2.5vw;                    
+    white-space: nowrap;               
+    overflow: hidden;                   
+    text-overflow: ellipsis;            
+    margin-right: 2%;
 }
+
 
 #reset{
 
@@ -112,14 +120,17 @@ body{
     background-color: hsl(172, 67%, 45%);
 }
 
-/* h1{
-    margin-bottom: 100%;
-    
-} */
+
 
 .container-title{
     margin-bottom: 60%;
 
 }
 
-
+.btn-primary:disabled {
+    pointer-events: none; 
+    opacity: 1;          
+    background-color: hsl(183, 100%, 15%);; 
+    color: white;      
+    border: inherit;     
+  }
