@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 15px;
     width: 850px;
     height: 440px;
     gap: 30px;
@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 15px;
     width: 380px;
     height: 380px;
     margin-right: auto;
@@ -163,10 +163,21 @@ body {
     text-align: right;
     color: hsl(186, 14%, 43%);
     font-family: Space Mono;
+    color: hsl(172, 67%, 45%);
+    font-size: 1.81rem;
+    font-weight: 500;
 }
 
 #NumberOfPeopleInput {
     background-image: url(./images/icon-person.svg);
+}
+
+.textBox::placeholder {
+    font-family: Space Mono;
+    color: hsl(172, 67%, 45%);
+    font-size: 1.81rem;
+    font-weight: 500;
+    opacity: 0.8;
 }
 
 /* .selectTip {} */
@@ -197,9 +208,15 @@ body {
 #customButton {
     background-color: rgb(238, 233, 233);
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
 }
 
-.tipButton:hover {
+.tipButton:hover, .tipButton.selected, #customButton.selected {
     background-color: rgb(87, 201, 176);
     color: black;
 }

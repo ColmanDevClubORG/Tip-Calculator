@@ -11,21 +11,6 @@
   <title>Frontend Mentor | Tip calculator app</title>
 
   <link rel="stylesheet" href="index.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    .body {
-      background-color: aquamarine;
-    }
-  </style>
 </head>
 
 <body>
@@ -37,7 +22,7 @@
         <div class="bill">
           Bill
         </div>
-        <input type="text" class="textBox" id="billInput" placeholder="0.00"><br>
+        <input type="text" class="textBox" id="billInput" placeholder="0.00" oninput="updateBill()"><br>
       </div>
 
       <div class="selectTipAndButtons">
@@ -45,24 +30,24 @@
           Select Tip %
         </div>
         <div class="tipButtons">
-          <button class="tipButton" onclick="tip5Func">
+          <button class="tipButton" onclick="getTipButton(this)">
             5%
           </button>
-          <button class="tipButton" onclick="tip10Func">
+          <button class="tipButton" onclick="getTipButton(this)">
             10%
           </button>
-          <button class="tipButton" onclick="tip15Func">
+          <button class="tipButton" onclick="getTipButton(this)">
             15%
           </button>
-          <button class="tipButton" onclick="tip25Func">
+          <button class="tipButton" onclick="getTipButton(this)">
             25%
           </button>
-          <button class="tipButton" onclick="tip50Func">
+          <button class="tipButton" onclick="getTipButton(this)">
             50%
           </button>
-          <button class="tipButton" id="customButton" onclick="tipCustomFunc">
-            Custom
-          </button>
+          <input class="tipButton" id="customButton" type="number" oninput="customTipHandler(this)"
+            onclick="selectCustomTip(this)" placeholder="Custom">
+          </input>
         </div>
       </div>
 
@@ -70,7 +55,7 @@
         <div class="NumberOfPeople">
           Number of People
         </div>
-        <input type="text" class="textBox" id="NumberOfPeopleInput" placeholder="0.00"><br>
+        <input type="text" class="textBox" id="NumberOfPeopleInput" placeholder="1" oninput="updatePeople()"><br>
       </div>
     </div>
 
@@ -106,7 +91,7 @@
         </div>
       </div>
 
-      <button class="resetButton">
+      <button class="resetButton" onclick="Reset()">
         RESET
       </button>
     </div>
