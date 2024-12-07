@@ -66,6 +66,10 @@ body{
     --bs-btn-hover-bg:hsl(172, 67%, 45%);
     --bs-btn-hover-border-color:transparent;
 }
+.btn-primary:hover{
+    background-color: hsl(172, 67%, 45%);
+
+}
 .form-control{
     height: 120%;
     width: 95%;
