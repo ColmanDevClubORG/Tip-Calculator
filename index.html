@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="/style.css">
+
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+  <div class="container">
+    <div class="title">SPLI<br>TTER</div>
+    <div class="form-container">
+      <div class="form">
+        <div class="bill-section">
+          <label for="bill">Bill</label>
+          <div class="input-container">
+            <i class="icon"><img src="/images/icon-dollar.svg" alt=""></i> 
+            <input type="number" id="bill" min="0" placeholder="0">
+            </div>
+        </div>
+        <div class="tip-section">
+          <label for="tip">Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="tip-btn" data-tip="5">5%</button>
+            <button class="tip-btn" data-tip="10">10%</button>
+            <button class="tip-btn" data-tip="15">15%</button>
+            <button class="tip-btn" data-tip="25">25%</button>
+            <button class="tip-btn" data-tip="50">50%</button>
+            <input type="number" class="custom-tip" min="0" placeholder="Custom">
+          </div>
+        </div>
+        <div class="people-section">
+          <label for="people">Number of People</label>
+          <div class="input-container">
+            <i class="icon"><img src="/images/icon-person.svg" alt=""></i> 
+          <input type="number" id="people" min="1" placeholder="1">
+          </div>
+        </div>
+      </div>
+      <div class="output">
+        <div class="tip-amount-total">
+          <div>
+            <p>Tip Amount</p>
+            <p class="amount">$0.00</p>
+          </div>
+          <div>
+            <p>Total</p>
+            <p class="amount">$0.00</p>
+          </div>
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
