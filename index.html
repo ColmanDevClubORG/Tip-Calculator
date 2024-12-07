@@ -30,11 +30,11 @@
             
             <label for="tips">Select Tip %</label>
             <div class="tip-buttons">
-                <button class="tip-btn" data-tip="5">5%</button>
-                <button class="tip-btn" data-tip="10">10%</button>
-                <button class="tip-btn" data-tip="15">15%</button>
-                <button class="tip-btn" data-tip="25">25%</button>
-                <button class="tip-btn" data-tip="50">50%</button>
+                <button class="tip-btn" onclick="calcTip(5)" >5%</button>
+                <button class="tip-btn" onclick="calcTip(10)" >10% </button>
+                <button class="tip-btn" onclick="calcTip(15)">15%</button>
+                <button class="tip-btn" onclick="calcTip(25)">25%</button>
+                <button class="tip-btn" onclick="calcTip(50)">50%</button>
                 <button class="tip-btn" id="custom-btn" data-tip="Custom">Custom</button>
             </div>
 
@@ -43,6 +43,8 @@
                 <input type="number" id="people" placeholder="0">
                 <img src="/images/icon-person.svg" alt="person icon">
             </div>
+             <button class="tip-btn" id="submit-btn" >submit</button>
+
         </div>
 
         <!-- Right things -->
@@ -61,6 +63,6 @@
         </div>
     </div>
 </div>
-
+<script src="index.js"></script>
 </body>
 </html>
