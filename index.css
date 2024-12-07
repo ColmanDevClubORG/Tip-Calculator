@@ -6,14 +6,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     font-family:"Space Mono";
-    gap: 3vw;
     background-color: white;
+
     width: 55vw;
     height: 55vh;
+    gap: 3vw;
+
     padding: 1.4vw;
     padding-top: 5vh;
     padding-bottom: 5vh;
+
     border-radius: 2.5vh;
 }
 
@@ -21,7 +25,7 @@ body{
     background-color: hsl(185, 41%, 84%);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -44,7 +48,7 @@ button:hover{
 
 /* ------------------------------------------------- RIGHT CONTAINER --------------------------------------------*/
 
-.block{
+.summaryBox{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -107,8 +111,7 @@ button:hover{
     background-color: hsl(172, 61%, 73%);
 }
 
-#TotalBlock
-{
+#totalAmountContainer{
     margin-top:6vh;
     margin-bottom: 15vh;
 }
@@ -122,28 +125,30 @@ button:hover{
     overflow-wrap: break-word;
 }
 
-.icon{
+#dollarIcon{
+
     width:0.8vw;
     height: 1.2vw;
+}
 
-    margin-top: 1.65vw;
-    margin-bottom: 1.65vw;
+#personIcon{
+    width:1vw;
+    height: 1.2vw;
+}
+
+.icons{
+
+    margin-top: 0.65vw;
     margin-left: 0.7vw;
 
     position: absolute;
 }
 
-.personIcon
-{
-    width:2vw;
-    height: 0.8vw;
-    size: 100%;
-}
-
 .inputContainer{
     display: flex;
     position: relative;
-    
+    margin-top:2vh;
+
 }
 
 input{
@@ -160,7 +165,6 @@ input{
     border-radius: 0.5vh;
 
     width:100%;
-    margin-top:2vh;
 
 
     transition: 0.5s;
@@ -191,6 +195,7 @@ input:focus{
     border-radius: 0.5vh;
 
     width:6.5vw;
+    height: 20%;
     
 }
 
@@ -203,6 +208,7 @@ input:focus{
 #selectCustomTip{
     width:5.9vw;
     margin-top:0;
+    height: 22%;
 }
 
 #selectCustomTip::placeholder {
@@ -229,9 +235,4 @@ input:focus{
  #selectTipTitle
  {
     margin-top: 8vh;
- }
-
- #billInput
- {
-
  }
