@@ -5,35 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=New+Amsterdam&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<header>
+  <div>SPLI</div>
+  <div>TTER</div>
+</header>
+  <div class="container">
+    <div class="input-container">
+      <div class="bill-container">
+        <p>Bill</p>
+        <input type="text" id="amountOfBill" class="bill-input" placeholder="0.00">
+      </div>
 
-  Bill
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="selection-container">
+        <p>Select Tip %</p>
+        <div class="tip-buttons">
+          <button class="tipButton" onclick="calculateTip(1.05)">5%</button>
+          <button class="tipButton" onclick="calculateTip(1.1)">10%</button>
+          <button class="tipButton" onclick="calculateTip(1.15)">15%</button>
+          <button class="tipButton" onclick="calculateTip(1.25)">25%</button>
+          <button class="tipButton" onclick="calculateTip(1.50)">50%</button>
+          <input type="text" class="customTip" placeholder="Custom">
+        </div>
+      </div>
 
-  Number of People
+      <div class="people-container">
+        <p>Number of People</p>
+        <input type="number" id="numOfPeople" class="people-input" placeholder="0" oninput="updatePeople()">
+      </div>
+    </div>
+  
+  
+    <div class="output-container">
 
-  Tip Amount
-  / person
+      <div class="tip-amount">
+        <div class="output">
+          <p>Tip Amount</p>
+          <p class="tip-amount-value">/ person</p>
+        </div>
+        <output class="tip-amount-output" id="tip-amount">$0.0</output>
+      </div>
 
-  Total
-  / person
+      <div class="total-amount">
+        <div class="output">
+          <p>Total</p>
+          <p class="total-amount-value">/ person</p>
+        </div>
+        <output class="total-amount-output" id="total-amount">$0.0</output>
+      </div>
 
-  Reset
+    <button class="reset-button" onclick="reset()">RESET</button>
+  </div>
+
+<script src="index.js"> defer</script>
 </body>
 </html>
