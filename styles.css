@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c5e4e7;
+    color: #00494d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .titleImage {
+    margin-bottom: 20px;
+  }
+  
+  .theInput{
+    display: flex;
+    flex-direction: row-reverse ;
+    justify-content: space-between;
+    background-color: #f4fafa
+  }
+  .inputLogo{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-left: 10px;
+  }
+
+  input{
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+
+  .calculator {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #f4fafa;
+    border-radius: 5px;
+    background-color: #f4fafa;
+    outline: none;
+  }
+  label {
+    display: block; 
+    text-align: left; 
+    padding-left: 5px; 
+  }
+  
+  .input-group input:focus {
+    border-color: #26c2ae;
+  }
+  
+
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .tip-buttons button {
+    background: #00494d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .tip-buttons button:hover {
+    background: #26c2ae;
+  }
+  
+  .tip-buttons input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #f4fafa;
+    border-radius: 5px;
+    background-color: #f4fafa;
+  }
+  
+
+  .results {
+    background: #00494d;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .result .value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .reset {
+    background: #26c2ae;
+    color: #00494d;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reset:hover {
+    background: #7fdfd4;
+  }
