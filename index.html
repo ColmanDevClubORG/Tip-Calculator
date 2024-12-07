@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip Calculator App</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Bill
+  <header>
+    <img src="images/logo.svg" alt="logoPic">
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <main>
+    <div class="left_side">
+      <p>Bill</p>
+      <div class="icon_inside_input">
+        <input id="BillInput" type="text" placeholder="0.00">
 
-  Number of People
+        <img class="icon_dollar" src="images/icon-dollar.svg" alt="icon-dollar">
+      </div>
+      <p>Select Tip %</p>
+      <div class="buttons" >
+        <button value="5" id="percentage5" onclick="onPercentageClicked(this)">5%</button>
+        <button value="10" id="percentage10" onclick="onPercentageClicked(this)">10%</button>
+        <button value="15" id="percentage15" onclick="onPercentageClicked(this)">15%</button>
+        <button value="25" id="percentage25" onclick="onPercentageClicked(this)">25%</button>
+        <button value="50" id="percentage50" onclick="onPercentageClicked(this)">50%</button>
+        <input id="customInput" oninput="onCustomInput()" type="text" class="custom-input" placeholder="Custom">
+      </div>
 
-  Tip Amount
-  / person
+      <div class="Num_of_People">
+        <p>Number of People</p>
+        <img class="icon_person" src="images/icon-person.svg" alt="icon-person">
+        <!-- <p class="error">Can't be zero</p> -->
 
-  Total
-  / person
+      </div>
+      <input id="Num_of_People" oninput="onCustomNumOfPeopleInput()" type="text" placeholder="0">
+    </div>
 
-  Reset
+    <div class="right_side">
+      <div id="tipAmount" class="output">
+        <p>Tip Amount <br> <span>/ person</span></p>
+        <p class="res">$0.00</p>
+      </div>
+      <div id="total" class="output">
+        <p>Total <br> <span>/ person</span></p>
+        <p class="res">$0.00</p>
+      </div>
+      <button class="reset" onclick="reset()">RESET</button>
+    </div>
+  </main>
+
+
+  <script src="index.js"></script>
 </body>
+
 </html>
