@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #C5E4E7; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #5E7A7D; 
+    margin-bottom: 2rem;
+    letter-spacing: 10px;
+  }
+  
+  .calculator-container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
+  .calculator {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .input-section {
+    flex: 1;
+    font-family: "Montserrat";
+  }
+  
+  .input-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: hsl(186, 14%, 43%); 
+    font-weight: bold;
+  }
+  
+  .input-section input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid #E4F1F3;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tip-buttons button {
+    background-color: hsl(183, 100%, 15%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .tip-buttons .custom {
+    background-color: hsl(185, 41%, 84%); 
+    color: hsl(186, 14%, 43%);
+    font-weight: bold;
+  }
+
+  .tip-buttons button:hover {
+    background-color: #26C0AB;
+    color: hsl(186, 14%, 43%);
+  }
+  
+  .output-section {
+    flex: 1;
+    background-color: hsl(183, 100%, 15%);
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    font-family: "Montserrat";
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .output-item {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 1.5rem;
+  }
+
+  .label-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 0.5rem; 
+  }
+
+  .output-item span {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.value {
+  font-size: 1.5rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  color: #26C0AB;
+}
+
+.per-person {
+    font-size: 1rem;
+    font-weight: normal;
+    color: hsl(184, 14%, 56%);
+    margin-top: -0.5rem; 
+  }
+  
+  .reset-button {
+    background-color: hsl(172, 67%, 45%);
+    color: #00474B;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .value {
+    color: #26C0AB;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .reset-button:hover {
+    background-color: #9FE8DF;
+  }
+  
