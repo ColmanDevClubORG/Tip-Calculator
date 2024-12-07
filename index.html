@@ -6,34 +6,68 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Ofek's Tip calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="white-container">
+    <div class="left-container">
 
-  Bill
+      <div class="bill-input-container">
+        <label for="bill">Bill</label>
+        <input type="number" id="bill" name="bill" placeholder="0" class="special-amnt">
+      </div>
+עןא
+      <div>
+        <p>Select Tip %</p>
+        <div class="per-btns-container">
+            <button onclick="updateTip(5)" class="per-btn" type="button" id="btn-five" >5%</button>
+            <button onclick="updateTip(10)" class="per-btn" type="button" id="btn-ten">10%</button>
+            <button onclick="updateTip(15)" class="per-btn" type="button" id="btn-fifteen">15%</button>
+            <button onclick="updateTip(25)" class="per-btn" type="button" id="btn-twenty-five">25%</button>
+            <button onclick="updateTip(50)" class="per-btn" type="button" id="btn-fifty">50%</button>
+            <input type="number" id="custom-tip-input" name="custom-tip-input" placeholder="custom">
+        </div>
+      </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <div class="ppl-input-container">
+        <label for="ppl-number">Number of People</label>
+        <input type="number" id="ppl-number" name="ppl-number" placeholder="1" class="special-ppl">
+      </div>
+    </div>
 
-  Number of People
+    <div class="right-container">
 
-  Tip Amount
-  / person
+      <div class="tip-amount-container">
+        <div class="flex-box-tip">
+          <p>Tip amount<br><span style="color:hsl(184, 14%, 56%)">/ person</span></p>
+        </div>
+        <div class="flex-box-tip">
+          <input type="text" id="tip-amount-input" readonly placeholder="$0.00">
+        </div>
+      </div>
 
-  Total
-  / person
+      <div class="total-container">
+        <div class="flex-box-total">
+          <p>Total<br> <span style="color:hsl(184, 14%, 56%)">/ person</span></p>
+        </div>
+        <div class="flex-box-total">
+          <input type="text"  id="total-amount-input" readonly placeholder="$0.00">
+        </div>
+      </div>
+      <div class="reset-btn-container">
+        <button type="button" class="reset-btn" id="reset-btn">Reset</button>
+      </div>
+    </div>
 
-  Reset
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
