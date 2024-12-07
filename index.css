@@ -1,0 +1,211 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 850px;
+    height: 440px;
+    gap: 30px;
+}
+
+.rightSide {
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 380px;
+    height: 380px;
+    margin-right: auto;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+    height: 380px;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tipPersonAndTotalPerson {
+    width: 360px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.resetButton {
+    background-color: rgb(87, 201, 176);
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    border: none;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.resetButton:hover {
+    color: black;
+    background-color: rgb(115, 223, 199);
+}
+
+.tipPersonWithTheAmount,
+.totalPersonWithTheAmount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    height: 65px;
+}
+
+.tipAndPerson {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 65px;
+    flex-direction: column;
+}
+
+.totalAndPerson {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 65px;
+    flex-direction: column;
+}
+
+.person {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+.amountOfTheTip,
+.amountOfTheTotal {
+    color: hsl(172, 67%, 45%);
+    margin-left: 4.9rem;
+    font-size: 1.81rem;
+    margin-top: 1.31rem;
+}
+
+
+.billAndTextBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 90px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.selectTipAndButtons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 90px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.numberOfPeopleAndTextBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 330px;
+    height: 90px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.textBox {
+    width: 300px;
+    height: 35px;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
+    border-radius: 5px;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px, 10px;
+    background-size: 8px;
+    padding-left: 30px;
+    text-align: right;
+    color: hsl(186, 14%, 43%);
+    font-family: Space Mono;
+}
+
+#NumberOfPeopleInput {
+    background-image: url(./images/icon-person.svg);
+}
+
+/* .selectTip {} */
+
+.tipButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tipButton {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+#customButton {
+    background-color: rgb(238, 233, 233);
+    color: black;
+}
+
+.tipButton:hover {
+    background-color: rgb(87, 201, 176);
+    color: black;
+}
+
+#customButton:hover {
+    background-color: rgb(87, 201, 176);
+}
+
+/* .NumberOfPeople {} */
