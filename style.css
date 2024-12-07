@@ -1,0 +1,202 @@
+
+body {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    color: hsl(186, 14%, 43%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    width: 1440px;
+}
+
+.white-container {
+    max-width: 70%;
+    height: 70%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 50%;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: hsl(183, 100%, 15%);
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    align-items: center;
+}
+
+/*Designing the Input Fields for “Bill” and “Number of People”*/
+ input {
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    margin-top: 5px;
+    color: hsl(183, 100%, 15%);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/*Styling the Input Field with an Icon */
+input.special-amnt, input.special-ppl {
+    background-size: auto;
+    background-color: hsl(189, 41%, 97%);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+
+input.special-amnt {
+    background-image: url('images/icon-dollar.svg');
+}
+
+input.special-ppl {
+    background-image: url('images/icon-person.svg');
+}
+
+/*hiding the "spinner" of the number's input */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* הסתרת הכפתורים */
+    margin: 0; /* הסרת רווח */
+}
+
+.per-btns-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/*Designing the percentage buttons */
+.per-btn {
+    height: 50px;
+    background-color: hsl(183, 100%, 15%);
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    flex: 1 1 calc(33.33% - 10px); /* שליש מהשורה, פחות הרווח */
+    max-width: calc(33.33% - 10px); /* כדי לוודא שהגודל לא יחרוג */
+}
+.per-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+.per-btn:focus {
+    background-color: hsl(185, 41%, 84%);
+    color: white;
+    outline: none; /* מסיר את קו הפוקוס הדפדפני */
+}
+
+/*Designing the custom tip input */
+#custom-tip-input {
+    margin-top: 0px;
+    height: 50px;
+    color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    cursor: pointer; /* מחוון עכבר משתנה ליד */
+    text-align: center; /* יישור טקסט */
+    text-decoration: none; /* הסרת קו תחתון במקרה של תג <a> */
+    font-size: 22px;
+    flex: 1 1 calc(33.33% - 10px); /* שליש מהשורה, פחות הרווח */
+    max-width: calc(33.33% - 10px); /* כדי לוודא שהגודל לא יחרוג */
+}
+#custom-tip-input::placeholder {
+color:hsl(183, 100%, 15%) ;
+}
+
+/*Designing the containers of bill and amount of people containers*/
+.bill-input-container, .ppl-input-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+/*Designing the containers of the tip and total amount per person including the partition between the elements”*/
+.tip-amount-container, .total-container {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    width: 100%;
+}
+
+.flex-box-tip,.flex-box-total {
+    flex: 1; /* equal partition */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*Designing the input boxes of the tip and total amount per person”*/
+#total-amount-input, #tip-amount-input {
+    background-color: transparent; /* הופך את הרקע לשקוף */
+    padding: 10px; /* ריווח פנימי */
+    font-size: 2em; /* גודל הטקסט */
+    color: hsl(172, 67%, 45%); /* צבע הטקסט */
+    font-weight: bold;
+    font-family: "Space Mono", monospace;
+}
+#tip-amount-input::placeholder, #total-amount-input::placeholder {
+    color: hsl(172, 67%, 45%);
+}
+
+/*Designing the reset button”*/
+.reset-btn-container {
+    width: 100%;
+}
+.reset-btn {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer; /* מחוון עכבר משתנה ליד */
+    text-align: center; /* יישור טקסט */
+    text-decoration: none; /* הסרת קו תחתון במקרה של תג <a> */
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+
