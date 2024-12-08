@@ -80,6 +80,9 @@ body {
     width: 16px;
     height: auto;
 }
+.input-wrapper.error input {
+    border: 2px solid red;
+}
 
 .tip p {
     margin-bottom: 16px;
@@ -109,6 +112,10 @@ body {
 .tip-button:hover {
     background-color: #26c2ae;
 }
+.tip-button.selected {
+    background-color: #28c76f;
+    color: white;
+}
 
 #custom-tip {
     width: 100%;
@@ -119,6 +126,12 @@ body {
     background-color: #f9f9f9;
 }
 
+
+
+#custom-tip.selected {
+    border: 2px solid #28c76f;
+    background-color: #f1f1f1;
+}
 .output-panel {
     flex: 1;
     background-color: #00474b;

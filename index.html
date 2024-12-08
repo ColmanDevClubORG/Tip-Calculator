@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Splitter</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -23,23 +23,23 @@
             <input type="number" id="bill"  placeholder="0">
           </div>
         </div>
-
+        
         <div class="tip">
           <p>Select Tip %</p>
           <div class="tip-buttons">
-            <button class="tip-button" onclick="calculateTip(0.05)">5%</button>
-            <button class="tip-button" onclick="calculateTip(0.1)">10%</button>
-            <button class="tip-button" onclick="calculateTip(0.15)">15%</button>
-            <button class="tip-button" onclick="calculateTip(0.25)">25%</button>
-            <button class="tip-button" onclick="calculateTip(0.5)">50%</button>
-            <input type="number" id="custom-tip" onchange="calculateTip(value/100)" placeholder="Custom">
+            <button class="tip-button">5%</button>
+            <button class="tip-button" >10%</button>
+            <button class="tip-button">15%</button>
+            <button class="tip-button">25%</button>
+            <button class="tip-button" >50%</button>
+            <input type="number" id="custom-tip"  placeholder="Custom">
           </div>
         </div>
         <div class="input-group">
           <label for="people">Number of People</label>
           <div class="input-wrapper">
             <img src="images\icon-person.svg" alt="person sign" class="icon">
-            <input type="number" id="people" placeholder="0">
+            <input type="number" id="people" placeholder="1">
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@
             <p class="person">/ person</p>
           </div>
         </div>
-        <button class="reset" onclick="reset()">RESET</button>
+        <button class="reset">RESET</button>
       </section>
     </main>
   </div>
