@@ -81,8 +81,8 @@ resetBtn.addEventListener("click", ()=>{
     price=0;
 
     document.getElementById("bill-input").value= "";
-    document.getElementById("people-input").value="";
-    document.getElementById("custom").value="";
+    document.getElementById("people-input").value= "";
+    document.getElementById("custom").value= "";
 
     document.getElementById("tipPerPerson").textContent= "$0";
     document.getElementById("totalAmount").textContent= "$0";
