@@ -210,3 +210,11 @@ body {
   font-weight: bold;
   color: hsl(183, 100%, 15%);
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
