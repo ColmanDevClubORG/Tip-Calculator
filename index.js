@@ -56,4 +56,7 @@ const resetCalc = () => {
   buttons.forEach((btn) => {
     btn.classList.remove("active");
   });
+  tipPrc = 0;
+  customTip = 0;
+  billAmt = 0;
 };
