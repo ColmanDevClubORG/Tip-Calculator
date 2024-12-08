@@ -59,13 +59,12 @@ const calculateTip = () => {
 const handleTipSelection = (value, isCustom = false) => {
     clearSelection();
     if (isCustom) {
-        document.getElementById('custom-tip').classList.add('selected');
         state.tipPercentage = parseFloat(value) / 100 || 0;
+        document.getElementById('custom-tip').classList.add('selected');
     } else {
-        value.classList.add('selected');
         state.tipPercentage = parseFloat(value.dataset.value) || 0;
+        value.classList.add('selected');
     }
-    console.log(state.tipPercentage);
     calculateTip();
 };
 
@@ -84,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.tip-buttons').addEventListener('click', (e) => {
         if (e.target.classList.contains('tip-button')) {
             handleTipSelection(e.target);
+            document.getElementById('custom-tip').value = ''; // Clear custom tip input
         }
     });
 
