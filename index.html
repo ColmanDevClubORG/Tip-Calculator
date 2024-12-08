@@ -1,39 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="en" >
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <head>
+        <!-- Meta Settings -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- -- Dependencies -- -->
+        <!-- Style -->
+        <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Tab Bar Box Styling -->
+        <link rel="icon" type="image/png" href="./public/images/favicon-32x32.png" sizes="32x32">
+        <title>Frontend Mentor | Tip Calculator App</title>
 
-  Bill
+    </head>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <body>
+        <!-- Title -->
+        <h1 class="--gray-cyan"> 
+            SPLI<br>
+            TTER
+        </h1>
+        
+        <div id="app" class="flex"> <!-- App Frame -->
+            <!-- Left Panel - Form to Fill -->
+            <div class="flex--inline --col --corner-15" > <!-- Form Panel -->
+                <div class="flex--inline --col"> <!-- Form Field: Bill Amount -->
+                    <p class="m-txt --gray-cyan">Bill</p>
+                    <div class="input-wrapper"> <!-- [text-input + icon] wrapper -->
+                        <img src="public/images/icon-dollar.svg" alt="Dollar Sign" />
+                        <input type="number" id="bill-input" class="box--input l-txt" value=0 placeholder="..." min=0 />
+                    </div>
+                </div>
 
-  Number of People
+                <div class="flex--inline --col"> <!-- Form Field: Tip Selection -->
+                    <p class="m-txt --gray-cyan">Select Tip %</p>
 
-  Tip Amount
-  / person
+                    <div class="grid--inline l-txt"> <!-- Tip Selection Grid -->
+                        <button type="button" id="b1" value=5 class="btn option --bg-primary l-txt"> 
+                            5%
+                        </button>
+                        <button type="button" id="b2" value=10 class="btn option --bg-primary l-txt"> 
+                            10%
+                        </button>
+                        <button type="button" id="b3" value=15 class="btn option --bg-primary l-txt --bg-selected"> 
+                            15%
+                        </button>
 
-  Total
-  / person
+                        <button type="button" id="b4" value=20 class="btn option --bg-primary l-txt"> 
+                            20%
+                        </button>
+                        <button type="button" id="b5" value=50 class="btn option --bg-primary l-txt"> 
+                            50%
+                        </button>
+                        <input type="number" id="b-custm" class="btn option l-txt" placeholder="Custom" min=0 /> 
+                    </div>
+                </div>
 
-  Reset
-</body>
+                <div class="flex--inline --col"> <!-- Form Field: Num of People -->
+                    <p class="m-txt --gray-cyan">Num of People</p>
+
+                    <div class="input-wrapper"> <!-- [text-input + icon] wrapper -->
+                        <img src="public/images/icon-person.svg" alt="Person Icon" />
+                        <input type="number" id="people-count" class="l-txt" value=1 placeholder="..." min=1 />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Calculation Results -->
+            <div class="flex--inline --col --corner-15 --bg-primary --space-between --block-padding --block-padding">
+                <div class="flex--inline --col res-info-wrapper"> <!-- Results Dislpay-->
+                    <!-- Result Row 1: tip amount -->
+                    <div class="flex--inline res-info-wrapper">
+                        <p class="m-txt">Tip Amount <br>
+                            <span class="s-txt --dark-gray-cyan">/person</span>
+                        </p>
+                        <p id="tip-amount" class="xl-txt">00.00</p>
+                    </div>
+
+                    <!-- Result Row 2: total amount -->
+                    <div class="flex--inline res-info-wrapper">
+                        <p class="m-txt">Total Amount <br>
+                            <span class="s-txt --dark-gray-cyan">/person</span>
+                        </p>
+                        <p id="total-amount" class="xl-txt">00.00</p>
+                    </div>
+                </div>  
+                <button type="button" id="reset-btn" class="btn --bg-selected l-txt">Reset</button>
+            </div>
+        </div>
+
+        <script src="src/index.js"></script>
+
+    </body>
+
 </html>
