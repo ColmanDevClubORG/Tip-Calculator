@@ -15,41 +15,28 @@ const selectedBill=(e)=>{
     console.log(e.target.value)
     bill= parseFloat(e.target.value);
 
-    numOfPeople!=null? update() : sendError(true)
+    numOfPeople!=null||bill<0? update() : sendError(true)
     
 }
 const selectedNumOfPpl=(e)=>{
     console.log(e.target.value)
     numOfPeople=e.target.value
-    e.target.value===""||e.target.value===0? sendError(true):update(); 
-
-    // numOfPeople!=null|| numOfPeople!=0? update() : sendError(true)
-
+    e.target.value===""||e.target.value===0|| e.target.value <0 ? 
+    sendError(true):update(); 
 }
 const customTip= (e)=>{
     console.log(e.target.value)
     tip=parseFloat(e.target.value/100)
-    update(); 
+    tip>=0? update() : ""
+    
 }
 
 
 const totalBill=()=>{
-    if(numOfPeople!=null ){
-        total.innerHTML='$'+((tip * bill + bill) / numOfPeople).toFixed(2) 
-    }
-    else{
-        sendError()
-    }
+    total.innerHTML='$'+((tip * bill + bill) / numOfPeople).toFixed(2) 
 }
-
 const totalTip=()=>{
-    
-    if(numOfPeople!=null){
-        tipAmount.innerHTML= '$'+ (tip*bill/numOfPeople).toFixed(2); 
-    }
-    else{
-        sendError()
-    }
+    tipAmount.innerHTML= '$'+ (tip*bill/numOfPeople).toFixed(2); 
 }
 
 const update=()=>{
