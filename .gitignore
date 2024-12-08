@@ -1,4 +1,4 @@
-# Avoid accidental upload of the Sketch and Figma design files
+git revert HEAD# Avoid accidental upload of the Sketch and Figma design files
 #####################################################
 ## Please do not remove lines 5 and 6 - thanks! 🙂 ##
 #####################################################
@@ -14,3 +14,6 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# Developement Mode Components
+./docs

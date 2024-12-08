@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* --------------------------------- */
+/* Colors:
+* light blue - #C5E4E8
+-- >>
+* Strong cyan: hsl(172, 67%, 45%)
+* Very dark cyan: hsl(183, 100%, 15%)
+* Dark grayish cyan: hsl(186, 14%, 43%)
+* Grayish cyan: hsl(184, 14%, 56%)
+* Light grayish cyan: hsl(185, 41%, 84%)
+* Very light grayish cyan: hsl(189, 41%, 97%)
+* White: hsl(0, 0%, 100%)
+*/
+
+/* >> GENERAL STYLES -> the defaults */
+
+body {
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    font: 800 1rem "Space Mono", 'sans-serif';
+    justify-content: center;
+}
+
+h1 {
+    color: hsl(186, 14%, 43%);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 2rem;
+    letter-spacing: 0.5rem;
+}
+
+input {
+    background-color: hsl(189, 41%, 97%);
+    border: 0;
+    border-radius: 5px;
+    color:hsl(183, 100%, 15%);
+    font: 800 1rem "Space Mono", 'sans-serif';
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    font: 800 1rem "Space Mono", 'sans-serif';
+}
+
+/* Hides the arraows of a number input box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { 
+    appearance: none;
+}
+
+/* >>  CONTAINERS -> default containers styles */
+/* ------------------------------------------- */
+
+.container {
+    align-items: center;
+    display: flex;
+    color: hsl(184, 14%, 56%);
+    height: 100%;
+    justify-content: center;
+    width: auto;
+}
+
+.container .col-dir { /* specifies a column flex box */
+    flex-direction: column;
+}
+
+/* >> TYOPGRAPHICS -> font sizes & colors */
+/* ---------------------------------------- */
+.s-txt { font-size: 0.75rem; }
+
+.m-txt { font-size: 1rem; }
+
+.l-txt { font-size: 1.5rem; }
+
+.xl-txt { font-size: 2.5rem; }
+
+input::placeholder { color: hsl(184, 14%, 56%); }
+
+/* >> UTILITIES -> conditional properties */
+/* -------------------------------------- */
+.container .bg-primary {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+.select-option.selected {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+
+.p-25 { padding: 25px; }
+
+.p-15 { padding: 15px; }
+
+.s-between { justify-content: space-between;}
+
+/* >> SITEWIDE -> site-scope elements (header/footer/nav-menu) */
+/* ----------------------------------------------------------- */
+
+
+/* >> PAGE ELEMENTS -> styles divided by logical/physical relations */
+/* ---------------------------------------------------------------- */
+#app {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    height: 480px;
+    width: 920px;
+    gap: 20px;
+}
+
+.panel {
+    align-items: flex-start;
+    border-radius: 15px;
+    height: 100%;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 2rem;
+    width: 100%;
+}
+
+.bg-primary.panel {
+    padding-inline: 2rem;
+}
+
+.grid {
+    display: inline-grid;
+    gap: 10px;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.select-option { 
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+#reset-btn:hover,
+.select-option:hover {
+    background-color: hsl(182, 21%, 72%);
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+.panel > .form-field {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: min-content;
+}
+
+.form-field > p {
+    align-self: flex-start;
+    line-height: 0;
+}
+
+.input-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper > img { 
+    left: 1rem;
+    position: absolute;
+    size: auto-fit;
+    z-index: 1;
+}
+
+.input-wrapper > input {
+    text-align: right;
+    padding-inline: 1rem 0.5rem;
+    width: 100%;
+}
+
+.container .res-info {
+    height: min-content;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.panel .res-row {
+    display: inline-flex;
+    align-items: center;  
+    color: white;
+    height: min-content;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.res-row > p {
+    height: min-content;
+}
+
+.res-row > p > span {
+    color: hsl(184, 14%, 56%);
+}
+
+#tip-amount,
+#total-amount {
+    color: hsl(172, 67%, 45%);
+}
+
+#reset-btn {
+    background-color: hsl(172, 67%, 45%);
+    border: 0;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    width: 100%;
+    height: 3rem;
+}
+
+
