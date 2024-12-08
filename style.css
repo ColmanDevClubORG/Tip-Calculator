@@ -58,7 +58,7 @@ body {
     font-family: Space Mono;
 }
 
-#chooseTipDifferent {
+#chooseTipDifferentInput {
     background-color: hsl(184, 14%, 56%);
     color: hsl(0, 0%, 100%);
     border: 2px solid hsl(0, 0%, 100%);
@@ -68,11 +68,17 @@ body {
     font-family: Space Mono;
     text-align: center;
 }
-#chooseTipDifferent::placeholder{
+#chooseTipDifferentInput::-webkit-inner-spin-button,
+#chooseTipDifferentInput::-webkit-outer-spin-button {
+    /* that's the way to delete the default spinner in type=number, margin:0 to make sure we delete the space of the spinner */
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+#chooseTipDifferentInput::placeholder{
     color: hsl(0, 0%, 100%);  
 }
 .chooseTip:hover,
-#chooseTipDifferent:hover {
+#chooseTipDifferentInput:hover {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
     cursor: pointer;
@@ -199,7 +205,7 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 0fr); 
     }
-    .chooseTip, #chooseTipDifferent{
+    .chooseTip, #chooseTipDifferentInput{
         width:5.5rem;
     }
     .rightSide{
