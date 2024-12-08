@@ -24,9 +24,9 @@ if(amountP>0 && price>=0 && tip>=0) //to make sure we choose on all the options 
 {
     adjustFontSize("amountNumber");
     adjustFontSize("amountPrice");
-    tipAmount.innerHTML = '$' + (price*tip/amountP).toFixed(2)
+    tipAmount.textContent = '$' + (price*tip/amountP).toFixed(2)
     console.log(price/amountP)
-    TotalPrice.innerHTML = '$' + ((price*tip/amountP) + (price/amountP)).toFixed(2)
+    TotalPrice.textContent = '$' + ((price*tip/amountP) + (price/amountP)).toFixed(2)
 }
 }
 
@@ -44,14 +44,18 @@ const Tip = (button, value) => {
 }
 
 const chooseTipDifferent = () => {
-    const selectYourTip = document.getElementById('chooseTipDifferent').value
+    const selectYourTip = document.getElementById('chooseTipDifferentInput').value
 
-    if (isNaN(selectYourTip) || selectYourTip <= 0) {
+    if (selectYourTip <= 0) {
         alert('Please enter a valid percentage greater than 0')
         return
     }
+    // if (isNaN(selectYourTip) || selectYourTip <= 0) {
+    //     alert('Please enter a valid percentage greater than 0')
+    //     return
+    // }
     console.log('tip you choose' + selectYourTip/100)
-    const inputTipChoosen = document.getElementById('chooseTipDifferent')
+    const inputTipChoosen = document.getElementById('chooseTipDifferentInput')
     Tip(inputTipChoosen, selectYourTip/100)
 }
 
@@ -61,7 +65,7 @@ const resetAll = () =>{
 
     priceInput.value = 0
     amountOfPeople.value = 0
-    document.getElementById('chooseTipDifferent').value = "Custom"
+    document.getElementById('chooseTipDifferentInput').value = "Custom"
     document.querySelectorAll('.chooseTip').forEach(button => {
         button.style.backgroundColor = "hsl(183, 100%, 15%)"
     })
