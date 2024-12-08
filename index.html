@@ -30,12 +30,12 @@
         </div>
         <label for="bill">Select Tip % </label>
         <div class="tip-percent-btn">
-          <button id="b5" onclick="printry()">5% </button>
-          <button id="b10">10%</button>
-          <button id="b15">15%</button>
-          <button id="b25">25%</button>
-          <button id="b50">50%</button>
-          <button class="custom-btn">Custom</button>
+          <button onclick="SetTip(5)">5% </button>
+          <button onclick="SetTip(10)">10%</button>
+          <button onclick="SetTip(15)">15%</button>
+          <button onclick="SetTip(25)">25%</button>
+          <button onclick="SetTip(50)">50%</button>
+          <button id="custom-btn" class="custom-btn">Custom</button>
           <input type="number" id="custom-tip" class="Custom-tip" placeholder="custom" style="display: none;">
         </div>
         <label for="people">Number of People</label>
@@ -49,13 +49,13 @@
       <div class="output-section">
         <div class="result">
           <p>Tip Amount<br><span>/person</span></p>
-          <p class="value">$0.00</p>
+          <p id="tip-amount" class="value" >$0.00</p>
         </div>
         <div class="result">
           <p>Total<br><span>/person</span></p>
-          <p class="value">$0.00</p>
+          <p id="total" class="value">$0.00</p>
         </div>
-        <button class="reset-btn">RESET</button>
+        <button id="reset-btn" class="reset-btn">RESET</button>
       </div>
     </div>
   </div>

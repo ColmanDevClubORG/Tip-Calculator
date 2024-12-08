@@ -108,6 +108,13 @@
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
   }
+  #custom-tip {
+    display: none;
+    width: 80px; /* Adjust the width of the input as needed */
+    margin-top: 10px; /* Space between button and input */
+    font-size: 16px; /* Font size for readability */
+    text-align: center; /* Center align the text in the input */
+  }
 
   /*icons inside the input fields .*/
   .input-person-container {
