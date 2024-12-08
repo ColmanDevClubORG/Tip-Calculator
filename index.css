@@ -8,11 +8,11 @@ body {
     padding: 0;
 }
 
-.FirstContainer {
+.firstContainer {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    margin: auto; /*מרכוז הרכבים בתוך הקונטיינר */
+    margin: auto; /*center the elements in the container*/
     text-align: center;
     padding: 2rem;
     width: 90%; 
@@ -23,7 +23,7 @@ body {
     margin-top: 2rem;
     background-color: white;
     display: flex;
-    flex-wrap: wrap; /*כדי ליצור רספונסיביות*/
+    flex-wrap: wrap; /*responsive*/
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
@@ -32,7 +32,7 @@ body {
 
 .input-bill {
     flex: 1;
-    min-width: 15rem; /* התאמה למסכים קטנים */
+    min-width: 15rem; /* adjust to smaller screens */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -42,7 +42,7 @@ body {
 
 .output-bill{
     flex: 1;
-    min-width: 15rem; /* התאמה למסכים קטנים */
+    min-width: 15rem; /*adjust to smaller screens*/
 }
 
 
@@ -125,16 +125,12 @@ body {
     font-weight: 400;
     font-style: normal;
     display: block;
-    margin: 1rem auto; /* מבטיח שהכפתור יישאר ממורכז */
+    margin: 1rem auto; /* center the button*/
     border-radius: 0.5rem;
 }
 
 div h2 {
     color: hsl(172, 67%, 45%);
-}
-
-div p {
-    color: white;
 }
 
 div p span {
@@ -153,18 +149,18 @@ div p span {
 
 @media (max-width: 375px) {
     .container {
-        padding: 1rem; /* פחות ריווח במסכים קטנים */
-        width: 100%; /* רוחב מלא במסכים קטנים */
+        padding: 1rem; 
+        width: 100%; /* full size in smaller screens */
     }
 
     .calculator {
         flex-direction: column; 
-        gap: 1rem; /* ריווח בין החלקים */
+        gap: 1rem; 
     }
 
     .output-bill,
     .input-section {
-        min-width: 100%; /* מנצל את כל הרוחב הזמין */
+        min-width: 100%; /*  maximize the space*/
     }
 
     .tip-btn {
