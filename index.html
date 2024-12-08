@@ -22,25 +22,25 @@
     <div class="input-container">
       <div class="bill-container">
         <p>Bill</p>
-        <input type="text" id="amountOfBill" class="bill-input" placeholder="0.00">
+        <input type="text" id="bill-input" class="bill-input" placeholder="0.00">
       </div>
 
 
       <div class="selection-container">
         <p>Select Tip %</p>
         <div class="tip-buttons">
-          <button class="tipButton" onclick="calculateTip(1.05)">5%</button>
-          <button class="tipButton" onclick="calculateTip(1.1)">10%</button>
-          <button class="tipButton" onclick="calculateTip(1.15)">15%</button>
-          <button class="tipButton" onclick="calculateTip(1.25)">25%</button>
-          <button class="tipButton" onclick="calculateTip(1.50)">50%</button>
-          <input type="text" class="customTip" placeholder="Custom">
+          <button class="tip-button" onclick="calculateTip(1.05)">5%</button>
+          <button class="tip-button" onclick="calculateTip(1.1)">10%</button>
+          <button class="tip-button" onclick="calculateTip(1.15)">15%</button>
+          <button class="tip-button" onclick="calculateTip(1.25)">25%</button>
+          <button class="tip-button" onclick="calculateTip(1.50)">50%</button>
+          <input type="text" class="custom-tip" placeholder="Custom">
         </div>
       </div>
 
       <div class="people-container">
         <p>Number of People</p>
-        <input type="number" id="numOfPeople" class="people-input" placeholder="0" oninput="updatePeople()">
+        <input type="number" id="num-of-people-input" class="people-input" placeholder="0" oninput="updatePeople()">
       </div>
     </div>
   

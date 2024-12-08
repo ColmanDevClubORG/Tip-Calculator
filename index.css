@@ -43,16 +43,16 @@ header{
     background-size: 20px;
     transform: translateY(-50%);
     pointer-events: none; /* Prevent interaction with the symbol */
-    color: #aaa; /* Adjust color to match your design */
+    color: #aaa; 
   }
 
   .person-icon {
     position: absolute;
-    left: 26.5%; /* Adjust based on your design */
+    left: 26.5%;
     top: 75.7%;
     transform: translateY(-50%);
     pointer-events: none; /* Prevent interaction with the symbol */
-    color: #aaa; /* Adjust color to match your design */
+    color: #aaa; 
   }
   
 
@@ -113,7 +113,7 @@ input::placeholder {
     gap: 10px; /* Space between items */
   }
 
-  .tipButton, .customTip {
+  .tip-button, .custom-tip {
     border: none;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
@@ -125,18 +125,18 @@ input::placeholder {
     cursor: pointer;
   }
 
-  .tipButton {
+  .tip-button {
     background-color: hsl(183, 100%, 15%);
     color: white;
     transition: background-color 0.3s;
   }
 
-  .tipButton:hover {
+  .tip-button:hover {
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
   }
 
-  .customTip {
+  .custom-tip {
     background-color: hsl(189, 41%, 97%);
     font-size: 16px;
     width: 100%;
