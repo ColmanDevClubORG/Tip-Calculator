@@ -25,15 +25,13 @@ let tipAmount;
 let totalPrice;
 let bill;
 let numberOfPeople;
-let amountPerPerson; // In case we want to calculate how much each person pay
 
 // Reset Calculator
 const init = () => {
   if (selectedPercentage) toggleActivePercentage();
   percentage = 15;
-  tipAmount = 0;
-  totalPrice = 0;
-  amountPerPerson = 0;
+  tipAmount = 0.0;
+  totalPrice = 0.0;
   bill = 0;
   numberOfPeople = 1;
   selectedPercentage = fifteenPercentageButton;
@@ -42,8 +40,8 @@ const init = () => {
   billInput.value = "";
   numberOfPeopleInput.value = 1;
   customPercentageInput.value = "";
-  tipAmountLabel.textContent = tipAmount;
-  totalPriceLabel.textContent = totalPrice;
+  tipAmountLabel.textContent = tipAmount.toFixed(2);
+  totalPriceLabel.textContent = totalPrice.toFixed(2);
   toggleActivePercentage();
 };
 
@@ -84,17 +82,22 @@ percentageButtons.forEach((button) => {
 });
 
 const onCustomPercentageChange = (e) => {
-  percentageValue = e.target.value;
-  if (percentageValue !== "" || percentageValue > 0) {
+  const percentageInputValue = parseFloat(e.target.value);
+  if (
+    percentageInputValue &&
+    percentageInputValue !== "" &&
+    percentageInputValue > 0
+  ) {
     toggleActivePercentage();
     selectedPercentage = customPercentageInput;
     toggleActivePercentage();
-    percentage = percentageValue;
+    percentage = percentageInputValue;
   } else {
-    // Empty text - return to default
+    // Invalid input or empty text - return to default (15%) - NaN == False
     toggleActivePercentage();
     selectedPercentage = fifteenPercentageButton;
     percentage = 15;
+    e.target.value = "";
     toggleActivePercentage();
   }
   calculateTip();
@@ -132,7 +135,7 @@ const onNumberOfPeopleInputChange = (e) => {
     );
   } else {
     toggleInputError(e.target, numberOfPeopleErrorMessage, "");
-    numberOfPeople = Number(numberOfPeople);
+    numberOfPeople = Number(numberOfPeopleValue);
     calculateTip();
   }
 };
@@ -146,17 +149,15 @@ const calculateTip = () => {
     // Valid Bill
     tipAmount = bill * (percentage / 100);
     totalPrice = bill + tipAmount;
-    amountPerPerson = totalPrice / numberOfPeople;
   } else {
     // Invalid Bill
     tipAmount = 0;
     totalPrice = 0;
-    amountPerPerson = 0;
   }
 
   // Update UI
-  tipAmountLabel.textContent = tipAmount.toFixed(2);
-  totalPriceLabel.textContent = totalPrice.toFixed(2);
+  tipAmountLabel.textContent = (tipAmount / numberOfPeople).toFixed(2);
+  totalPriceLabel.textContent = (totalPrice / numberOfPeople).toFixed(2);
 };
 
 // Reset Button Handler
