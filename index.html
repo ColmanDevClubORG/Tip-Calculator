@@ -33,8 +33,10 @@
             <div class="flex--inline --col --corner-15" > <!-- Form Panel -->
                 <div class="flex--inline --col"> <!-- Form Field: Bill Amount -->
                     <p class="m-txt --gray-cyan">Bill</p>
+                    
                     <div class="input-wrapper"> <!-- [text-input + icon] wrapper -->
                         <img src="public/images/icon-dollar.svg" alt="Dollar Sign" />
+                        
                         <input type="number" id="bill-input" class="box--input l-txt" value=0 placeholder="..." min=0 />
                     </div>
                 </div>
@@ -59,7 +61,7 @@
                         <button type="button" id="b5" value=50 class="btn option --bg-primary l-txt"> 
                             50%
                         </button>
-                        <input type="number" id="b-custm" class="btn option l-txt" placeholder="Custom" min=0 /> 
+                        <input type="number" id="custom-tip" class="btn option l-txt" placeholder="Custom" min=0 /> 
                     </div>
                 </div>
 
@@ -74,7 +76,7 @@
             </div>
 
             <!-- Right Panel - Calculation Results -->
-            <div class="flex--inline --col --corner-15 --bg-primary --space-between --block-padding --block-padding">
+            <div class="flex--inline --col --corner-15 --bg-primary --space-between --block-padding">
                 <div class="flex--inline --col res-info-wrapper"> <!-- Results Dislpay-->
                     <!-- Result Row 1: tip amount -->
                     <div class="flex--inline res-info-wrapper">
@@ -96,7 +98,8 @@
             </div>
         </div>
 
-        <script src="src/index.js"></script>
+        <script src="src/script.js" defer></script>
+        <!-- <script src="src/index.js"></script> -->
 
     </body>
 
