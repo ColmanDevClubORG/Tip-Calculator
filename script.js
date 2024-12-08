@@ -1,98 +1,59 @@
-const state = {
-    bill: 0,
-    tipPercentage: 0,
-    peopleNumber: 1,
-};
+let bill;
+let numOfPeople;
+let tipPercentage;
 
-// Helper to get the input value or default to 0
-const getInputValue = (id) => parseFloat(document.getElementById(id).value) || 0;
+const onBillChange = (e) => {
+    bill = parseFloat(e.target.value);
+    updateDisplay();
+}
 
-// Helper to update the displayed amounts
-const updateDisplay = (id, value) => {
-    document.getElementById(id).textContent = `${value.toFixed(2)}$`;
-};
 
-// Helper to toggle error classes
-const toggleError = (id, condition) => {
-    const wrapper = document.getElementById(id).closest('.input-wrapper');
-    wrapper?.classList.toggle('error', condition);
-};
+const onNumOfPeopleChange = (e) => {
+    numOfPeople = parseInt(e.target.value);
+    updateDisplay();
+}
 
-// Helper to clear all selected states
-const clearSelection = () => {
-    document.querySelectorAll('.tip-button').forEach(button => button.classList.remove('selected'));
-    document.getElementById('custom-tip').classList.remove('selected');
-};
 
-// Reset the state and UI
-const resetStateAndUI = () => {
-    Object.assign(state, { bill: 0, tipPercentage: 0, peopleNumber: 1 });
-    ['bill', 'people', 'custom-tip'].forEach(id => document.getElementById(id).value = '');
-    updateDisplay('tip-amount', 0);
-    updateDisplay('total-amount', 0);
-    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-    clearSelection();
-};
-
-// Validate inputs
-const validateInputs = () => {
-    const { bill, peopleNumber } = state;
-    toggleError('bill', bill <= 0);
-    toggleError('people', peopleNumber <= 0);
-    return bill > 0 && peopleNumber > 0;
-};
-
-// Calculate and update the tip and total amounts
-const calculateTip = () => {
-    if (!validateInputs()) return;
-
-    const { bill, tipPercentage, peopleNumber } = state;
-
-    const tipAmount = (bill * tipPercentage) / peopleNumber;
-    const totalAmount = bill / peopleNumber + tipAmount;
-
-    updateDisplay('tip-amount', tipAmount);
-    updateDisplay('total-amount', totalAmount);
-};
-
-// Handle tip selection (buttons or custom input)
-const handleTipSelection = (value, isCustom = false) => {
-    clearSelection();
-    if (isCustom) {
-        state.tipPercentage = parseFloat(value) / 100 || 0;
-        document.getElementById('custom-tip').classList.add('selected');
-    } else {
-        state.tipPercentage = parseFloat(value.dataset.value) || 0;
-        value.classList.add('selected');
+const onTipPercentageChange = (e) => {
+    tipPercentage = parseFloat(e.target.value);
+    if(e.target.classList.contains('tip-button')) {
+        const customTip = document.getElementById('custom-tip-input');
+        customTip.value = '';
     }
-    calculateTip();
-};
+    updateDisplay();
+}
 
-// Attach event listeners
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('bill').addEventListener('input', () => {
-        state.bill = getInputValue('bill');
-        calculateTip();
-    });
+const updateDisplay = () => {
+    if (!bill || !numOfPeople || !tipPercentage) {
+        return;
+    }
+    const tipAmount = (bill * tipPercentage) / 100;
+    const totalAmount = bill + tipAmount;
 
-    document.getElementById('people').addEventListener('input', () => {
-        state.peopleNumber = getInputValue('people');
-        calculateTip();
-    });
+    const amountPerPerson = totalAmount / numOfPeople;
+    const tipPerPerson = tipAmount / numOfPeople
 
-    document.querySelector('.tip-buttons').addEventListener('click', (e) => {
-        if (e.target.classList.contains('tip-button')) {
-            handleTipSelection(e.target);
-            document.getElementById('custom-tip').value = ''; // Clear custom tip input
+    const tipButtons = document.getElementsByClassName('tip-button');
+    for (let i = 0; i < tipButtons.length; i++) {
+        if (parseInt(tipButtons[i].value) === tipPercentage) {
+            tipButtons[i].classList.add('selected');
         }
-    });
-
-    document.getElementById('custom-tip').addEventListener('input', (e) => {
-        const customTip = parseFloat(e.target.value);
-        if (!isNaN(customTip)) {
-            handleTipSelection(customTip, true);
+        else {
+            tipButtons[i].classList.remove('selected');
         }
-    });
+    }
+    document.getElementById('tip-amount').innerText = `${tipPerPerson.toFixed(2)}`;
+    document.getElementById('total-amount').innerText = `${amountPerPerson.toFixed(2)}`;
+}
 
-    document.querySelector('.reset').addEventListener('click', resetStateAndUI);
-});
+const reset = () => {
+    bill = null;
+    numOfPeople = null;
+    tipPercentage = null;
+
+    document.getElementById('bill-input').value = '';
+    document.getElementById('people-input').value = '';
+
+    document.getElementById('tip-amount').innerText = '0.00';
+    document.getElementById('total-amount').innerText = '0.00';
+}

@@ -20,26 +20,26 @@
           <label for="bill">Bill</label>
           <div class="input-wrapper">
             <img src="images\icon-dollar.svg" alt="dollar sign" class="icon">
-            <input type="number" id="bill"  placeholder="0">
+            <input type="number" id="bill-input" oninput="onBillChange(event)" placeholder="0">
           </div>
         </div>
         
         <div class="tip">
           <p>Select Tip %</p>
           <div class="tip-buttons">
-            <button class="tip-button" data-value="0.05">5%</button>
-            <button class="tip-button" data-value="0.1">10%</button>
-            <button class="tip-button" data-value="0.15">15%</button>
-            <button class="tip-button" data-value="0.25">25%</button>
-            <button class="tip-button" data-value="0.5">50%</button>
-            <input type="number" id="custom-tip"  placeholder="Custom">
+            <button class="tip-button" onclick="onTipPercentageChange(event)" value="5">5%</button>
+            <button class="tip-button" onclick="onTipPercentageChange(event)" value="10">10%</button>
+            <button class="tip-button" onclick="onTipPercentageChange(event)" value="15">15%</button>
+            <button class="tip-button" onclick="onTipPercentageChange(event)" value="25">25%</button>
+            <button class="tip-button" onclick="onTipPercentageChange(event)" value="50">50%</button>
+            <input type="number" id="custom-tip-input" oninput="onTipPercentageChange(event)"  placeholder="Custom">
           </div>
         </div>
         <div class="input-group">
           <label for="people">Number of People</label>
           <div class="input-wrapper">
             <img src="images\icon-person.svg" alt="person sign" class="icon">
-            <input type="number" id="people" placeholder="1">
+            <input type="number" id="people-input" oninput="onNumOfPeopleChange(event)" placeholder="1">
           </div>
         </div>
       </section>
