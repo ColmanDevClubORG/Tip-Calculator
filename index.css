@@ -9,6 +9,14 @@ body
   background-color: hsl(185, 41%, 84%);
   margin: 0;
 }
+.attribution
+{
+    font-size: 11px; text-align: center;
+}
+.attribution a 
+{ 
+    color: hsl(228, 45%, 44%); 
+}
 .container
 {
     display: flex;
