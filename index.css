@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+
+
+
+.selectTipCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-family:"Space Mono";
+    background-color: white;
+
+    width: 55vw;
+    height: 55vh;
+    gap: 3vw;
+
+    padding: 1.4vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    border-radius: 2.5vh;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#logo{
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+button:hover{
+    transition: 0.5s;
+}
+
+
+::selection{
+    background-color:hsl(185, 41%, 84%);;
+}
+
+/* ------------------------------------------------- RIGHT CONTAINER --------------------------------------------*/
+
+.summaryBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.boldFont{
+    font-family:"Space Mono";
+    font-weight: 700;
+    color:white;
+    font-size:2.5vh;
+}
+
+.amountOf
+{
+    font-size:5vh;
+    color:hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+#rightContainer{
+   background-color: hsl(183, 100%, 15%);
+
+   display: flex;
+   flex-direction: column;
+
+   min-width: 25vw;
+   min-height:10vh;
+   border-radius: 1.5vh;
+   padding: 5vh;
+   padding-top: 7vh;
+   padding-bottom: 10vw;
+}
+
+.personTitle{
+    font-family:"Space Mono";
+    color:hsl(184, 14%, 56%);
+    font-size: 2.2vh;
+}
+
+#resetBtn
+{
+    font-family:"Space Mono";
+    font-weight:700;
+    color: hsl(183, 100%, 15%);
+    font-size:3vh;
+
+    padding-top:0.4vw;
+    padding-bottom: 0.4vw;
+
+    background-color: hsl(172, 67%, 45%);
+    border-color: transparent;
+    border-radius: 0.5vh;
+
+    margin-top:1.8vh;
+}
+
+
+#resetBtn:hover{
+    
+    background-color: hsl(172, 61%, 73%);
+}
+
+#totalAmountContainer{
+    margin-top:6vh;
+    margin-bottom: 15vh;
+}
+
+/* ------------------------------------------------- END --------------------------------------------*/
+
+
+/* ------------------------------------------ LEFT CONTAINER ----------------------------------------*/
+#leftContainer{
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+#dollarIcon{
+
+    width:0.8vw;
+    height: 1.2vw;
+}
+
+#personIcon{
+    width:1vw;
+    height: 1.2vw;
+}
+
+.icons{
+
+    margin-top: 0.65vw;
+    margin-left: 0.7vw;
+
+    position: absolute;
+}
+
+.inputContainer{
+    display: flex;
+    position: relative;
+    margin-top:2vh;
+
+}
+
+input{
+    border-color:transparent;
+    background-color: hsl(189, 41%, 97%);
+
+    
+    font-family: "Space Mono";
+    color:hsl(183, 100%, 15%);;
+    font-weight: 700;
+    font-size: 3vh;
+
+    
+    border-radius: 0.5vh;
+
+    width:100%;
+
+
+    transition: 0.5s;
+    outline: none;
+}
+
+#numPplInput, #billInput
+{
+    padding-left: 1.5vw;
+
+}
+
+input:focus{
+    caret-color: hsl(172, 67%, 45%);;
+    outline: none;
+    box-shadow: 0 0 0 1.8px hsl(172, 67%, 45%);
+}
+
+.selectTipBtns
+{
+    font-family:"Space Mono";
+    font-weight: 700;
+    color:white;
+    font-size:3vh;
+
+    border-color:transparent;
+    background-color: hsl(183, 100%, 15%);;
+    border-radius: 0.5vh;
+
+    width:6.5vw;
+    height: 20%;
+    
+}
+
+.selectTipBtns:hover{
+    color:hsl(183, 100%, 15%);;
+    background-color: hsl(172, 61%, 73%);
+
+}
+
+#selectCustomTip{
+    width:5.9vw;
+    margin-top:0;
+    height: 22%;
+}
+
+#selectCustomTip::placeholder {
+    text-align: center; 
+ }
+
+ #tipOptionsContainer
+ {
+    display: flex;;
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 2vh;
+    margin-bottom:5vh;
+ }
+
+ .titles
+ {
+    font-family:"Space Mono";
+    color:hsl(184, 14%, 56%);
+    font-size: 2.5vh;
+    font-weight: 700;
+ }
+
+ #selectTipTitle
+ {
+    margin-top: 8vh;
+ }
