@@ -9,20 +9,22 @@ let tipPrecent;
 
 const selectedTip =(e)=>{
     tip=e/100;
-    totalBill()
-    totalTip()
+   numOfPeople!=null? update() : sendError(true)
 }
 const selectedBill=(e)=>{
     console.log(e.target.value)
     bill= parseFloat(e.target.value);
-    totalBill()
-    totalTip()
+
+    numOfPeople!=null? update() : sendError(true)
+    
 }
 const selectedNumOfPpl=(e)=>{
     console.log(e.target.value)
     numOfPeople=e.target.value
-    totalBill()
-    totalTip()
+    e.target.value===""||e.target.value===0? sendError(true):update(); 
+
+    // numOfPeople!=null|| numOfPeople!=0? update() : sendError(true)
+
 }
 
 
@@ -45,15 +47,27 @@ const totalTip=()=>{
     }
 }
 
-//total.innerHTML=bill;
-// const calculateTotal=()=>{
-    
-//    if
+const update=()=>{
+    totalBill()
+    totalTip()
+    sendError(false)
+}
 
+const sendError=(flag)=>{
+    let error=document.getElementById("error");
+    flag? error.style.visibility='visible':error.style.visibility='hidden'
+   
+}
 
-// }
+const reset=()=>{
+    bill = 0;
+    tip = 0;
+    numOfPeople = null;
+    total.innerHTML = "$0.00";
+    tipAmount.innerHTML = "$0.00";
+    document.getElementById("bill").value = "";
+    document.getElementById("ppl-counter").value = "";
+    sendError(false);
+   
+}
 
-
-// const custom = ()=>{
-    
-// }

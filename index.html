@@ -52,7 +52,8 @@
 
       <div class="mini">
         <label >Number of People</label>
-        <input id="ppl-counter" class="ppl" type="number" placeholder="0" required oninput="selectedNumOfPpl(event)">
+        <p  id="error" class="error">Can't be zero!</p>
+        <input id="ppl-counter" class="ppl" type="number" placeholder="0" required oninput="selectedNumOfPpl(event)" min="0">
       </div>
   </div>
 
@@ -71,7 +72,7 @@
       </div>
   </div>
 
-    <button class="btn reset"> RESET</button>
+    <button class="btn reset" onclick="reset()"> RESET</button>
   </div>
 
 

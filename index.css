@@ -113,8 +113,10 @@ input:focus{
     font-family: 'Space Mono' , monospace;
     font-size: 15px;
     border: none;
-
-
+}
+.btn:focus{
+    background-color: hsl(172, 67%, 45%);
+    color: black;
 }
 input.custom{
     background-color:hsl(189, 41%, 97%) ;
@@ -168,4 +170,12 @@ h2{
 }
 p{
     color:hsl(186, 14%, 43%);;
+}
+
+.error{
+    color: red;
+   justify-self: end;
+   align-self: flex-end;
+   font-size: 12px;
+   visibility: hidden;
 }
