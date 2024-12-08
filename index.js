@@ -26,6 +26,11 @@ const selectedNumOfPpl=(e)=>{
     // numOfPeople!=null|| numOfPeople!=0? update() : sendError(true)
 
 }
+const customTip= (e)=>{
+    console.log(e.target.value)
+    tip=parseFloat(e.target.value/100)
+    update(); 
+}
 
 
 const totalBill=()=>{
