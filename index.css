@@ -1,0 +1,168 @@
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+
+.heading {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 10px;
+  color: hsl(187, 14%, 34%);
+  margin-top: 2rem;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  width: 75%;
+  height: 550px;
+  margin-left: 11rem;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  width: 50%;
+}
+
+.tip-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tip-button {
+  padding: 10px 20px;
+  border: 5px solid white;
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 140px;
+  gap: 20px;
+}
+
+.tip-button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.tip-button.active {
+  background-color: hsl(172, 67%, 45%);
+  border-color: hsl(183, 100%, 15%);
+}
+
+#custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  width: 90px;
+}
+
+::placeholder {
+  color: hsl(183, 100%, 15%);
+  opacity: 1; /* Firefox */
+}
+
+.input {
+  width: 95%;
+  padding: 10px;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  margin-top: 5px;
+  border: 5px solid white;
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.input-sign {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 24px;
+  color: hsl(184, 14%, 56%);
+}
+
+#person-symbol {
+  margin-top: 30px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 50%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 20px;
+  margin: 25px;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-size: 19px;
+  color: hsl(189, 41%, 97%);
+}
+
+.right-side-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.p-style {
+  margin: 0;
+}
+
+.person-p {
+  color: hsl(184, 14%, 56%);
+  margin-top: 0;
+}
+
+.money {
+  font-size: 44px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset {
+  padding: 10px 20px;
+  border: 1px solid hsl(183, 100%, 15%);
+  border-radius: 10px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  margin-top: 120px;
+  width: 100%;
+}
+
+@media (max-width: 1030px) {
+  .container {
+    flex-direction: column;
+    height: 75%;
+    width: 100%;
+    margin-left: 0;
+  }
+  .right-side {
+    width: 80%;
+  }
+  .left-side {
+    width: 90%;
+  }
+}
