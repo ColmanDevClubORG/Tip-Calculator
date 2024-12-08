@@ -1,0 +1,230 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Space Mono;
+}
+
+#logo {
+    height: 2rem;
+    padding: 3.125rem;
+    margin-top: -6rem;
+}
+
+.container {
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    width: 38rem;
+    height: 19rem;
+    border-radius: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.leftSide {
+    padding: 0.56rem;
+}
+
+#part1,
+#part2,
+#part3 {
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#part1 {
+    margin-top: 0.75rem;
+}
+
+.choosingATip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 0.30fr));
+    gap: 0.5rem;
+
+}
+
+.chooseTip {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    width: 4.5rem;
+    height: 1.9rem;
+    border-radius: 0.31rem;
+    font-family: Space Mono;
+}
+
+#chooseTipDifferentInput {
+    background-color: hsl(184, 14%, 56%);
+    color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(0, 0%, 100%);
+    width: 4.1rem;
+    height: 1.7rem;
+    border-radius: 0.31rem;
+    font-family: Space Mono;
+    text-align: center;
+}
+#chooseTipDifferentInput::-webkit-inner-spin-button,
+#chooseTipDifferentInput::-webkit-outer-spin-button {
+    /* that's the way to delete the default spinner in type=number, margin:0 to make sure we delete the space of the spinner */
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+#chooseTipDifferentInput::placeholder{
+    color: hsl(0, 0%, 100%);  
+}
+.chooseTip:hover,
+#chooseTipDifferentInput:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+#fTextL {
+    font-size: 0.7rem;
+    color: hsl(184, 14%, 56%)
+}
+
+#fPrice,
+#fNum {
+    width: 13.25rem;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid hsl(189, 41%, 97%);
+    height: 1.5rem;
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 0.43rem, 0.43rem;
+    background-size: 0.5rem;
+    padding-left: 30px;
+    text-align: right;
+    color: hsl(186, 14%, 43%);
+    font-family: Space Mono;
+}
+#fPrice::placeholder, #fNum::placeholder{
+    color:hsl(183, 100%, 15%);
+    font-size:0.93rem;
+}
+
+#createdText {
+    color: hsl(183, 100%, 15%);
+    font-size: 0.875rem;
+}
+
+#fNum {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 0.43rem, 0.43rem;
+    background-size: 0.5rem;
+}
+
+#fPrice:hover,
+#fNum:hover {
+    border: 2px solid white !important;
+    outline: none !important;
+}
+
+.rightSide {
+    background-color: hsl(183, 100%, 15%);
+    width: 17rem;
+    border-radius: 0.6rem;
+    height: 18rem;
+    margin-top: 0.56rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tipAmount,
+#totalPrice {
+    display: flex;
+    flex-direction: row;
+    line-height: 0.2rem;
+    margin-top: 1rem;
+}
+#totalPrice{
+    gap: 1.25rem;
+}
+
+#text101 {
+    color: hsl(0, 0%, 100%);
+    font-size: 0.72rem;
+}
+
+#text102 {
+    font-size: 0.6rem;
+    color: hsl(186, 14%, 43%);
+}
+
+#amountNumber,
+#amountPrice {
+    color: hsl(172, 67%, 45%);
+    font-size: 1.81rem;
+    margin-top: 1.31rem;
+    margin-left:1.9rem;
+    width: 6rem;
+    text-align: right; 
+}
+
+#resetB {
+    background-color: hsl(172, 67%, 45%);
+    width: 14.5rem;
+    border-radius: 0.3rem;
+    height: 2.2rem;
+    margin-top: 6.875rem;
+}
+
+#textReset {
+    font-size: 0.75rem;
+    margin-top: 0.562rem;
+}
+
+@media(max-width:376px){
+    body{
+        /* margin-top: -1.56rem; */
+        height:51rem;
+    }
+    #logo{
+        width: 4.5rem;
+        height: 2.5rem;
+        padding: 1.5rem;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+        border-radius: 1.5rem;
+        height: fit-content;
+        align-items: center;
+        padding: 0;
+    }
+    .choosingATip{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr); 
+    }
+    .chooseTip, #chooseTipDifferentInput{
+        width:5.5rem;
+    }
+    .rightSide{
+        width: 23.75rem;
+        justify-content: start;
+        
+    }
+    #part1, #part2, #part3{
+        margin-top: 0.75rem;
+    }
+    #tipAmount,
+    #totalPrice {
+        width:18.43rem;
+    }
+    #amountNumber, #amountPrice{
+        margin-left:8rem;
+    }
+    #resetB{
+        margin-top: 1.5rem;
+        width:18.5rem;
+    }
+}
