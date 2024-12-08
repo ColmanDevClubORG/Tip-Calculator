@@ -53,6 +53,11 @@ button:hover{
     flex-direction: row;
     justify-content: space-between;
 }
+.sumaryBoxs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
 
 .boldFont{
     font-family:"Space Mono";
@@ -73,13 +78,11 @@ button:hover{
 
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
 
-   min-width: 25vw;
-   min-height:10vh;
    border-radius: 1.5vh;
-   padding: 5vh;
-   padding-top: 7vh;
-   padding-bottom: 10vw;
+   padding: 20px;
+
 }
 
 .personTitle{
@@ -102,7 +105,6 @@ button:hover{
     border-color: transparent;
     border-radius: 0.5vh;
 
-    margin-top:1.8vh;
 }
 
 
@@ -112,8 +114,7 @@ button:hover{
 }
 
 #totalAmountContainer{
-    margin-top:6vh;
-    margin-bottom: 15vh;
+
 }
 
 /* ------------------------------------------------- END --------------------------------------------*/
@@ -121,8 +122,9 @@ button:hover{
 
 /* ------------------------------------------ LEFT CONTAINER ----------------------------------------*/
 #leftContainer{
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 #dollarIcon{
@@ -147,7 +149,6 @@ button:hover{
 .inputContainer{
     display: flex;
     position: relative;
-    margin-top:2vh;
 
 }
 
@@ -195,7 +196,7 @@ input:focus{
     border-radius: 0.5vh;
 
     width:6.5vw;
-    height: 20%;
+    height: 50px;
     
 }
 
@@ -207,21 +208,25 @@ input:focus{
 
 #selectCustomTip{
     width:5.9vw;
-    margin-top:0;
-    height: 22%;
+    font-size: 14px;
+    height: 50px;
 }
 
 #selectCustomTip::placeholder {
     text-align: center; 
  }
-
+ .buttonRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5vw;
+ }
  #tipOptionsContainer
  {
     display: flex;;
     flex-direction: column;
     gap: 2vh;
-    margin-top: 2vh;
-    margin-bottom:5vh;
+
  }
 
  .titles
@@ -234,5 +239,4 @@ input:focus{
 
  #selectTipTitle
  {
-    margin-top: 8vh;
  }

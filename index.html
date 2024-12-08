@@ -22,52 +22,59 @@
         <div class="selectTipCard">
 
         <div id="leftContainer">
-          <section class="titles">Bill</section>
-          <div class="inputContainer"><img id="dollarIcon" class="icons" src="images/icon-dollar.svg" alt="dollar"><input dir="rtl" id="billInput" onkeyup="updateDataWithNewBill()"></div>
+          <div class="billSection">
+            <section class="titles">Bill</section>
+            <div class="inputContainer"><img id="dollarIcon" class="icons" src="images/icon-dollar.svg" alt="dollar"><input dir="rtl" id="billInput" onkeyup="updateDataWithNewBill()"></div>
+          </div>
+          <div class="tipSection">
 
           <section class="titles" id="selectTipTitle">Select Tip %</section>
 
             <div id="tipOptionsContainer">
 
-              <div>
+              <div class="buttonRow">
                 <button onclick="getBtnVal(this)" class="selectTipBtns" value="5">5%</button>
                 <button onclick="getBtnVal(this)" class="selectTipBtns" value="10">10%</button>
                 <button onclick="getBtnVal(this)" class="selectTipBtns" value="15">15%</button>
               </div>
 
-              <div>
+              <div class="buttonRow">
                 <button  onclick="getBtnVal(this)" class="selectTipBtns" value="25">25%</button>
                 <button  onclick="getBtnVal(this)" class="selectTipBtns" value="50">50%</button>
                 <input  onfocus="getBtnVal(this)" onkeyup="getBtnVal(this)" dir="rtl" placeholder="Custom" id="selectCustomTip">
               </div>
 
             </div>
-
+          </div>
+          <div class="peopleSection">
             <section class="titles">Number of People</section>
             <div class="inputContainer"><img class="icons" id="personIcon" src="images/icon-person.svg" alt="person"><input onkeyup="updateDataWithNewNumPpl()" dir="rtl" id="numPplInput"></div>
-        </div>
+          </div>
+          </div>
 
 
         <div id="rightContainer">
-          
-          <div class="summaryBox">
+          <div class="sumaryBoxs">
+ 
+            <div class="summaryBox">
 
-            <div class="boldFont">Tip Amount 
-              <div class="personTitle">/ person</div>
-            </div>
-            <div class="amountOf" id="tipAmount">$0.00</div>
+              <div class="boldFont">Tip Amount 
+                <div class="personTitle">/ person</div>
+              </div>
+              <div class="amountOf" id="tipAmount">$0.00</div>
 
-          </div>
-
-          <div class="summaryBox" id="totalAmountContainer">
-
-            <div  class="boldFont">Total 
-              <div class="personTitle">/ person</div>
             </div>
 
-            <div class="amountOf" id="total">$0.00</div>
-          </div>
+            <div class="summaryBox" id="totalAmountContainer"> 
 
+              <div  class="boldFont">Total 
+                <div class="personTitle">/ person</div>
+              </div>
+
+              <div class="amountOf" id="total">$0.00</div>
+            </div>
+
+          </div>
           <button id="resetBtn" onclick="reset()">RESET</button>
         </div>
     </div>
