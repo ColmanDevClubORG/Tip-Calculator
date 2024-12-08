@@ -225,9 +225,9 @@
     }
     .splitter-logo {
       display: block;
-      position: absolute;
-      top: -3.5rem;
+      top: -3.4rem;
     }
+    
   
     .calculator {
       grid-template-columns: 1fr;
