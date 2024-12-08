@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Overpass:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:wght@700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+<div class="container">
+  <section class="left">
+    <h3>Bill</h2>
+    <input id="bill-input" type="number" placeholder="">
+    <h3>Select Tip %</h2>
+    <div id="btn">
+      <button onclick="tip(5,this)">5%</button>
+      <button onclick="tip(10,this)">10%</button>
+      <button onclick="tip(15,this)">15%</button>
+      <button onclick="tip(25,this)">25%</button>
+      <button onclick="tip(50,this)">50%</button>
+      <input id="custom" type="number" placeholder="Custom">
+    </div>
+    <h3>Number of People</h2>
+    <input id="people-input" type="number" placeholder="">
+    </section>
+  
+  <section class="right">
+    <div id="tip-amount">
+      <div id="text">
+        <h3>Tip Amount</h3>
+        <h5>/ person</h5>
+      </div>
+      <div id="num-amount"><h1 id="tipPerPerson">$0</h1></div>
+    </div>
+    <div id="tip-amount">
+      <div id="text">
+        <h3> Total</h3>
+        <h5>/ person</h5>
+      </div>
+      <div id="num-price"><h1 id="totalAmount">$0</h1></div>
+    </div>
+    <footer class="footer">
+      <button id="reset"> RESET</button>
+    </footer>
+  </section>
+</div>
+  
+<script src="index.js"></script>
 </body>
 </html>
