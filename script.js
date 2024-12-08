@@ -63,7 +63,7 @@ const handleTipSelection = (value, isCustom = false) => {
         state.tipPercentage = parseFloat(value) / 100 || 0;
     } else {
         value.classList.add('selected');
-        state.tipPercentage = parseFloat(value.textContent) / 100 || 0;
+        state.tipPercentage = parseFloat(value.dataset.value) || 0;
     }
     console.log(state.tipPercentage);
     calculateTip();
