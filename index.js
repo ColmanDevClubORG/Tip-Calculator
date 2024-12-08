@@ -19,18 +19,26 @@ const getPeople= () =>
     checkAndCalculate();
 }
 
+const resetButtonStyles = (selectedButton = null) => {
+    const buttons = document.querySelectorAll("#btn button");
+    buttons.forEach(button => {
+        button.style.backgroundColor = "hsl(183, 100%, 15%)";
+        button.style.color = "#ffffff";
+    });
+
+    if (selectedButton) {
+        selectedButton.style.backgroundColor = "hsl(172, 67%, 45%)";
+        selectedButton.style.color = "hsl(183, 100%, 15%)";
+    }
+};
+
 const tip = (value,btn) => {
     selectedTip = value;
     console.log(selectedTip)
 
-    const buttons = document.querySelectorAll("#btn button");
-    buttons.forEach(button => {
-        button.style.backgroundColor = "hsl(183, 100%, 15%)"; 
-        button.style.color = "#ffffff"; 
-    });
-
-    btn.style.backgroundColor = "hsl(172, 67%, 45%)";
-    btn.style.color = "hsl(183, 100%, 15%)";
+    resetButtonStyles(btn);
+    const custom = document.getElementById("custom");
+    custom.value = "";
     checkAndCalculate();
 }
 
@@ -62,6 +70,8 @@ const checkAndCalculate = () => {
 const custom= document.getElementById("custom");
 custom.addEventListener("change", ()=>{
     selectedTip= custom.value;
+    resetButtonStyles();
+    checkAndCalculate();
 })
 
 const resetBtn= document.getElementById("reset");
