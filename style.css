@@ -207,7 +207,7 @@
     background-color: var(--strong-cyan);
   }
   
-  /*Adjusts for a mobile-friendly experience.*/
+  /*Adjusts for a mobile-friendly experience*/
   @media (max-width: 768px) {
     .body{
       background-color: var(--light-grayish-cyan);
