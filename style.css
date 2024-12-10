@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  justify-content: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  color: hsl(186, 14%, 43%);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form input {
+  font-size: 24px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid hsl(189, 41%, 97%);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.tip-btn {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.catch-and-tip-title,
+.catch-and-bill-title,
+.catch-and-people-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+.errorMessage {
+  padding: 5px;
+  align-self: center;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.tip-buttons input,
+.input-container input {
+  box-sizing: border-box;
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: translateY(-3px);
+    filter: blur(3px);
+  }
+  33% {
+    filter: blur(3px);
+    transform: translateX(-3px);
+  }
+  66% {
+    transform: translateY(3px);
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(3px);
+    transform: translateX(-3px);
+  }
+}
+
+.output {
+  flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.tip-amount-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tip-amount-total > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  font-size: 36px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+
+.reset-btn {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.input-container {
+  position: relative;
+}
+.input-container .icon {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+
+input.placeholder {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: 100vh;
+  }
+  .form-container {
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .form {
+    flex: 1;
+  }
+
+  .output {
+    min-height: 200px;
+  }
+}
