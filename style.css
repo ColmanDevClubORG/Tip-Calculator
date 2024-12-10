@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
   margin: 0;
@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(185, 41%, 84%);
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 .container {
@@ -56,7 +56,7 @@ body {
   border: 2px solid hsl(189, 41%, 97%);
   width: 100%;
   box-sizing: border-box;
-  text-align: right; 
+  text-align: right;
 }
 
 .tip-buttons {
@@ -76,15 +76,43 @@ body {
   cursor: pointer;
 }
 
-.custom-tip {
-  width: 100%;
-  height: 50px;
-  font-size: 24px;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 2px solid hsl(189, 41%, 97%);
+.catch-and-tip-title,
+.catch-and-bill-title,
+.catch-and-people-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+.errorMessage {
+  padding: 5px;
+  align-self: center;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.tip-buttons input,
+.input-container input {
   box-sizing: border-box;
-  justify-content: center;
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: translateY(-3px);
+    filter: blur(3px);
+  }
+  33% {
+    filter: blur(3px);
+    transform: translateX(-3px);
+  }
+  66% {
+    transform: translateY(3px);
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(3px);
+    transform: translateX(-3px);
+  }
 }
 
 .output {
@@ -129,41 +157,38 @@ body {
   cursor: pointer;
   text-transform: uppercase;
 }
-.input-container{
-    position: relative;
+.input-container {
+  position: relative;
 }
 .input-container .icon {
-    position: absolute;
-    top:25%;
-    left: 3%;
+  position: absolute;
+  top: 25%;
+  left: 3%;
 }
 
-input.placeholder{
-    text-align: center;
+input.placeholder {
+  text-align: center;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number]{
-    -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .container{
+@media (max-width: 900px) {
+  .container {
     height: 100vh;
   }
   .form-container {
     flex-direction: column;
     width: 90vw;
   }
-  
+
   .form {
-    flex:1;
+    flex: 1;
   }
-  
+
   .output {
     min-height: 200px;
   }
