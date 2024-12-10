@@ -5,13 +5,13 @@ const calculateTotal = (inputs) => {
 
     const billAmount = inputs.bill;
     const tipPercent = inputs.tip / 100;
-    const totalTip = billAmount * tipPercent;
+    const totalTipPerson = billAmount * tipPercent / inputs.people;
 
-    const totalAmount = billAmount + totalTip;
-    const totalPerPerson =  totalAmount/inputs.people;
+    const totalAmountPerson = billAmount / inputs.people;
+    const totalPerPerson =  totalAmountPerson + totalTipPerson;
 
-    tipAmount.innerHTML = `$${totalTip.toFixed(2)}`;
-    peopleAmount.innerHTML = `$${totalPerPerson.toFixed(1)}`;
+    tipAmount.innerHTML = `$${totalTipPerson.toFixed(2)}`;
+    peopleAmount.innerHTML = `$${totalPerPerson.toFixed(2)}`;
 }
 
 
