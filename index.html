@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Splitter</title>
+  <title>Tip Calculator by Edri's Group</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,20 +17,21 @@
       <section class="input-panel">
         <div class="input-group">
           <label for="bill">Bill</label>
+          <!-- Bill amount area -->
           <div class="input-wrapper">
             <img src="images\icon-dollar.svg" alt="dollar sign" class="icon">
             <input type="number" id="bill" placeholder="0">
           </div>
         </div>
-
+        <!-- Tip Percent area -->
         <div class="tip">
           <p>Select Tip %</p>
           <div class="tip-buttons">
-            <button class="tip-button">5%</button>
-            <button class="tip-button">10%</button>
-            <button class="tip-button">15%</button>
-            <button class="tip-button">25%</button>
-            <button class="tip-button">50%</button>
+            <button class="tip-button" data-value="5">5%</button>
+            <button class="tip-button" data-value="10">10%</button>
+            <button class="tip-button" data-value="15">15%</button>
+            <button class="tip-button" data-value="25">25%</button>
+            <button class="tip-button" data-value="50">50%</button>
             <input type="number" id="custom-tip" placeholder="Custom">
           </div>
         </div>
@@ -38,7 +39,7 @@
           <label for="people">Number of People</label>
           <div class="input-wrapper">
             <img src="images\icon-person.svg" alt="person sign" class="icon">
-            <input type="number" id="people" placeholder="0">
+            <input type="number" id="people" placeholder="1">
           </div>
         </div>
       </section>
@@ -46,16 +47,16 @@
         <div class="output-group">
           <div class="output">
             <p >Tip Amount</p>
-            <span class="amount">$0.00</span>
+            <span class="amount" id="tipAmount">$0.00</span>
             <p class="person">/ person</p>
           </div>
           <div class="output">
-            <p >Total</p>
-            <span class="amount">$0.00</span>
+            <p >Total (Bill + Tip)</p>
+            <span class="amount" id="totalAmount">$0.00</span>
             <p class="person">/ person</p>
           </div>
         </div>
-        <button class="reset" disabled>RESET</button>
+        <button class="reset" id="resetBtn">RESET</button>
       </section>
     </main>
   </div>
