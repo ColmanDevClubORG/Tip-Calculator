@@ -1,0 +1,219 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Space Mono", monospace;
+    background-color: hsl(185, 41%, 84%);
+    overflow-y: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    gap: 1.2rem;
+    max-width: 51vw;
+    margin: 0 auto;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input .bill,
+.input .label-container,
+.input .people {
+    display: flex;
+    flex-direction: column;
+}
+
+.input .first_line{
+    color: hsl(186, 14%, 43%);
+}
+.input .percentages-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.input .label_percent, .input-custom-percent {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+
+
+.input .input-custom-percent {
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    padding: 0.3rem 1.2rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Space Mono", monospace;
+    display: block;
+    width: 100%; 
+    box-sizing: border-box; 
+    outline: none;
+}
+
+
+.input .radio-percent {
+    display: none;
+}
+
+
+.input .label_percent {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    padding: 0.3rem 1rem; 
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+}
+
+.input .percentp{
+   background-color:hsl(172, 67%, 45%); 
+   color:hsl(183, 100%, 15%); 
+   padding: 0.3rem 1rem; 
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 1rem;
+   display: block;
+}
+
+.input .input-custom-percent {
+    border: none;
+    background-color: hsl(189, 41%, 97%); 
+    color: hsl(183, 100%, 15%);           
+    padding: 0.3rem 0.8rem; 
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+    outline: none;
+}
+
+.input .filling {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 133%;
+}
+
+.input .filling img {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    width: 0.8rem;
+    height: 1rem;
+}
+
+.input .input_num {
+    width: 70%;
+    background-color: hsl(189, 41%, 97%);
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    padding:10px;
+    text-align: right;
+    font-family: "Space Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.input_num::placeholder{
+    color: hsl(183, 100%, 15%);    
+    
+}
+
+
+.input .head_line {
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 0.3rem;
+}
+
+
+.output {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.output .output-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.output .output-label {
+    color: hsl(0, 0%, 100%);
+}
+
+.output .output-sub-label {
+    color: hsl(184, 14%, 56%);
+}
+
+.output .output-amount-wrapper svg {
+    width: 1rem;
+    height: 1rem;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+}
+
+.output .output-amount-wrapper span {
+    font-size: 2.1rem;
+    color: hsl(172, 67%, 45%);
+    vertical-align: middle;
+    max-width: 10rem;
+    display: inline-block;
+}
+
+.output .btn_rest {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    text-transform: uppercase;
+    font-family: "Space Mono", monospace;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
